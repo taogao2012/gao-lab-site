@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { galleryItems, categoryLabels } from '../data/gallery';
+import type { GalleryItem } from '../data/gallery';
+
+const order: GalleryItem['category'][] = ['highlights', 'group', 'event', 'equipment', 'campus', 'utah'];
+
+// Sort each category's items in reverse chronological order. Items without
+// a `date` field fall to the bottom of their section.
+function sortDesc(items: GalleryItem[]) {
+  return [...items].sort((a, b) => {
+    if (a.date && b.date) return b.date.localeCompare(a.date);
+    if (a.date) return -1;
+    if (b.date) return 1;
+    return 0;
+  });
+}
+
+const grouped = order
+  .map((cat) => ({ cat, items: sortDesc(galleryItems.filter((i) => i.category === cat)) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<BaseLayout
+  title="Gallery"
+  description="Photos from the SuPER-AI Lab — group events, lab tours, members, and campus life."
+>
+  <section class="container-page py-10">
+    <nav aria-label="Categories" class="flex flex-wrap gap-2 mb-12">
+      {grouped.map(({ cat, items }) => (
+        <a href={`#cat-${cat}`} class="text-xs px-3 py-1.5 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+          {categoryLabels[cat]} <span class="text-ink-muted">({items.length})</span>
+        </a>
+      ))}
+    </nav>
+
+    {grouped.map(({ cat, items }) => (
+      <section id={`cat-${cat}`} class="scroll-mt-24 mb-16">
+        <h2 class="font-serif text-2xl border-b border-rule pb-3 mb-6">{categoryLabels[cat]}</h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {items.map((item) => (
+            <figure class="group">
+              <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
+                <img
+                  src={item.src}
+                  alt={item.alt}
+                  loading="lazy"
+                  decoding="async"
+                  class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                />
+              </a>
+              {(item.caption || item.date) && (
+                <figcaption class="mt-2 flex items-baseline gap-3 text-xs text-ink-muted">
+                  {item.caption && <span class="text-ink-soft">{item.caption}</span>}
+                  {item.date && <span class="ml-auto font-mono">{item.date}</span>}
+                </figcaption>
+              )}
+            </figure>
+          ))}
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>

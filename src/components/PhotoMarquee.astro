@@ -1,0 +1,50 @@
+---
+import { galleryItems } from '../data/gallery';
+
+// Pull group + event photos for the moving strip.
+const photos = galleryItems.filter(
+  (g) => g.category === 'group' || g.category === 'event'
+);
+
+// Duplicate the list so the marquee can loop seamlessly.
+const loop = [...photos, ...photos];
+---
+
+<section class="overflow-hidden border-y border-rule bg-[#1a1a1a]" aria-label="Lab highlights">
+  <div class="marquee-track flex gap-3 py-3">
+    {loop.map((p) => (
+      <a href="/gallery/" class="flex-none w-56 md:w-72 h-32 md:h-44 relative group no-underline overflow-hidden">
+        <img
+          src={p.src}
+          alt={p.alt}
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+          loading="lazy"
+        />
+        {p.caption && (
+          <p class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-transparent text-white text-xs font-medium px-2 py-1.5">
+            {p.caption}
+          </p>
+        )}
+      </a>
+    ))}
+  </div>
+</section>
+
+<style>
+  .marquee-track {
+    animation: marquee 60s linear infinite;
+    width: max-content;
+  }
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+</style>

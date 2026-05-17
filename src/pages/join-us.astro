@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import SocialLinks from '../components/SocialLinks.astro';
+import Icon from '../components/Icon.astro';
+import { site } from '../config';
+import cv from '../data/cv.json';
+---
+
+<BaseLayout
+  title="Join Us / Contact"
+  description={`Open positions and contact information for the ${site.name} at North Carolina State University.`}
+>
+  <section class="container-page py-12 grid lg:grid-cols-3 gap-12">
+    <article class="lg:col-span-2 prose prose-lg max-w-prose">
+      <h2>PhD students</h2>
+      <p>
+        We accept applications through the <a href="https://cbe.ncsu.edu/graduate/" target="_blank" rel="noopener">Department of Chemical and Biomolecular Engineering graduate program</a>. Indicate Prof. Gao as a faculty of interest in your application.
+      </p>
+      <p>
+        Strong candidates have hands-on experimental experience, comfort with first-principles thinking, and curiosity about real-world impact. We work across batteries, electrochemical separations, and electrolytic manufacturing — say which excites you and why.
+      </p>
+
+      <h2>Postdoctoral researchers</h2>
+      <p>
+        Email Prof. Gao directly (<a href={site.social.email}>{cv.person.email}</a>) with:
+      </p>
+      <ul>
+        <li>A one-paragraph research statement</li>
+        <li>Your CV with publications</li>
+        <li>Names of three references</li>
+        <li>Your earliest available start date</li>
+      </ul>
+
+      <h2>Undergraduate researchers</h2>
+      <p>
+        We welcome undergraduate researchers — NSF REU scholars, capstone teams, and students through NC State's Office of Undergraduate Research. Email the PI with your transcript, a one-paragraph statement of what draws you to the lab, and which project on the <a href="/research/">research page</a> looks most interesting.
+      </p>
+
+      <h2>Visiting scholars and high-school students</h2>
+      <p>
+        Visiting scholars and motivated high-school students (typically through summer programs) are welcome. Email with timing and a project interest.
+      </p>
+
+      <hr />
+
+      <h2>Collaboration & industry</h2>
+      <p>
+        We work with academic and industry partners on batteries, electrochemical separation, and decarbonization. Email Prof. Gao directly with a one-paragraph summary.
+      </p>
+
+      <h2>Press & speaking</h2>
+      <p>
+        For media inquiries and speaking invitations, please reach out by email with your timeline and audience.
+      </p>
+
+      <p class="text-sm text-ink-muted">
+        The lab values intellectual honesty, careful experimentation, and a collaborative environment. We're committed to building a group where people from any background can thrive.
+      </p>
+    </article>
+
+    <aside class="space-y-6">
+      <div class="border border-rule p-6">
+        <p class="eyebrow mb-3">Contact</p>
+        <p class="font-serif text-lg text-ink">{cv.person.name}</p>
+        <p class="text-sm text-ink-muted mt-1">{cv.person.title}</p>
+        <p class="text-sm text-ink-soft mt-4">
+          <a href={`mailto:${cv.person.email}`} class="no-underline hover:text-accent inline-flex items-center gap-2">
+            <Icon name="email" size={16} /> {cv.person.email}
+          </a>
+        </p>
+        <p class="text-sm text-ink-soft mt-4 leading-relaxed">
+          {cv.person.department}<br/>
+          {cv.person.institution}<br/>
+          {cv.person.location}
+        </p>
+        <div class="mt-5">
+          <p class="eyebrow mb-3">Connect</p>
+          <SocialLinks size={20} />
+        </div>
+      </div>
+    </aside>
+  </section>
+</BaseLayout>

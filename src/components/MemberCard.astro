@@ -1,0 +1,59 @@
+---
+import { photoFor } from '../data/member-photos';
+
+interface Props {
+  name: string;
+  role?: string;
+  level?: string;
+  period?: string;
+  expected?: string;
+  graduated?: string;
+  now?: string;
+  from?: string;
+  size?: 'sm' | 'md';
+}
+
+const {
+  name,
+  role,
+  level,
+  period,
+  expected,
+  graduated,
+  now,
+  from,
+  size = 'md',
+} = Astro.props;
+
+const photo = photoFor(name);
+
+// Deterministic cartoon avatar from DiceBear when no real photo exists.
+// `lorelei` is a friendly, academic-looking hand-drawn style.
+const seed = encodeURIComponent(name);
+const avatarUrl = `https://api.dicebear.com/9.x/notionists/svg?seed=${seed}&backgroundColor=fafafa&radius=0`;
+const imgSrc = photo ?? avatarUrl;
+
+const photoClasses = size === 'sm'
+  ? 'aspect-square w-20 rounded-full'
+  : 'aspect-square w-full';
+---
+
+<article class={`flex ${size === 'sm' ? 'gap-4 items-start' : 'flex-col gap-3'}`}>
+  <img
+    src={imgSrc}
+    alt={name}
+    loading="lazy"
+    decoding="async"
+    class={`${photoClasses} object-cover bg-paper border border-rule`}
+  />
+  <div class="min-w-0 flex-1">
+    <p class="font-serif text-base text-ink leading-tight">{name}</p>
+    {role && <p class="text-xs text-ink-muted mt-1">{role}</p>}
+    {level && <p class="text-xs text-ink-muted mt-1">{level}</p>}
+    {from && <p class="text-xs text-ink-muted mt-1">{from}</p>}
+    {period && <p class="text-xs text-ink-muted mt-1">{period}</p>}
+    {expected && <p class="text-xs text-ink-muted">Expected {expected}</p>}
+    {graduated && <p class="text-xs text-ink-muted">Graduated {graduated}</p>}
+    {now && <p class="text-xs text-ink-muted italic mt-1">Now: {now}</p>}
+  </div>
+</article>

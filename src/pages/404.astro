@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../config';
+---
+
+<BaseLayout title="Page Not Found" description="That page doesn't exist." noindex>
+  <section class="container-page py-24 text-center">
+    <p class="eyebrow mb-4">404</p>
+    <h1 class="font-serif text-5xl">We couldn't find that page.</h1>
+    <p class="mt-4 text-ink-soft">The link may be old, or the page may have moved in the recent site rebuild.</p>
+    <div class="mt-8 flex flex-wrap gap-3 justify-center text-sm">
+      {site.nav.slice(0, 5).map((n) => (
+        <a href={n.href} class="text-accent no-underline">{n.label}</a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

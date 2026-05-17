@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Icon from '../../components/Icon.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const research = await getCollection('research');
+  return research.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const all = (await getCollection('research')).sort((a, b) => a.data.order - b.data.order);
+const sameKind = all.filter((r) => r.data.kind === entry.data.kind);
+const sameIdx = sameKind.findIndex((r) => r.slug === entry.slug);
+const next = sameKind[sameIdx + 1] ?? null;
+const isTheme = entry.data.kind === 'theme';
+
+const eyebrow = isTheme
+  ? `Fundamental theme ${sameIdx + 1}`
+  : `Applied thrust ${sameIdx + 1}`;
+
+// Challenges that motivate each applied thrust, mirrored from /research/.
+const challengesByThrust: Record<number, { id: string; title: string; description: string } | undefined> = {
+  1: {
+    id: 'Challenge 01',
+    title: 'Sustainable manufacturing and processing',
+    description: 'A new generation of separation and processing technologies with smaller environmental footprints is needed to re-establish the U.S. critical-material supply.',
+  },
+  2: {
+    id: 'Challenge 02',
+    title: 'Energy resilience',
+    description: 'Safer, cheaper, and longer-lasting energy storage is critical to address the intermittency of renewable electricity, the surging demand from AI data centers, and the booming electric transportation.',
+  },
+  3: {
+    id: 'Challenge 03',
+    title: 'Accelerated design and deployment',
+    description: 'The fast pace of climate change requires sustainable manufacturing and clean energy technologies to be designed and deployed at unprecedented speeds.',
+  },
+};
+const challenge = !isTheme ? challengesByThrust[entry.data.order] : undefined;
+---
+
+<BaseLayout title={entry.data.title} description={entry.data.summary}>
+  <PageHeader eyebrow={eyebrow} title={entry.data.title} description={entry.data.summary} />
+
+  {challenge && (
+    <section class="container-page pt-8">
+      <div class="bg-paper border-l-4 border-accent p-5 max-w-prose">
+        <p class="eyebrow text-accent mb-2">{challenge.id}</p>
+        <h3 class="font-serif text-xl text-ink">{challenge.title}</h3>
+        <p class="mt-3 text-sm text-ink-soft leading-relaxed">{challenge.description}</p>
+      </div>
+    </section>
+  )}
+
+  <section class="container-page py-12">
+    <article class="prose prose-lg max-w-prose">
+      <Content />
+    </article>
+  </section>
+
+  <section class="container-page py-10 border-t border-rule">
+    <div class="flex flex-wrap items-center justify-between gap-4">
+      <a href="/research/" class="text-sm text-ink-soft no-underline hover:text-accent inline-flex items-center gap-1">
+        ← All research
+      </a>
+      {next && (
+        <a href={`/research/${next.slug}/`} class="text-sm text-accent no-underline inline-flex items-center gap-1">
+          Next: {next.data.title} <Icon name="arrow-right" size={14} />
+        </a>
+      )}
+    </div>
+  </section>
+</BaseLayout>

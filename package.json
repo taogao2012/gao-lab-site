@@ -1,0 +1,27 @@
+{
+  "name": "gao-lab-site",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build && pagefind --site dist",
+    "preview": "astro preview",
+    "astro": "astro",
+    "fetch:publications": "node scripts/fetch-publications.mjs",
+    "parse:cv": "node scripts/parse-cv.mjs"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^4.0.0",
+    "@astrojs/rss": "^4.0.0",
+    "@astrojs/sitemap": "^3.2.0",
+    "@astrojs/tailwind": "^6.0.0",
+    "@tailwindcss/typography": "^0.5.15",
+    "astro": "^5.0.0",
+    "mammoth": "^1.8.0",
+    "pagefind": "^1.1.0",
+    "sharp": "^0.33.0",
+    "tailwindcss": "^3.4.0"
+  }
+}

@@ -1,0 +1,127 @@
+---
+import { slides } from '../data/slideshow';
+---
+
+<section class="slideshow relative bg-white border border-rule shadow-sm" aria-label="Research highlights">
+  <div class="slides relative aspect-[16/9]">
+    {slides.map((s, i) => (
+      <a
+        href={s.href}
+        target={s.href.startsWith('http') ? '_blank' : undefined}
+        rel={s.href.startsWith('http') ? 'noopener' : undefined}
+        class="slide absolute inset-0 transition-opacity duration-700 no-underline"
+        data-index={i}
+        aria-hidden={i === 0 ? 'false' : 'true'}
+        style={i === 0 ? 'opacity: 1;' : 'opacity: 0; pointer-events: none;'}
+      >
+        <img
+          src={s.image}
+          alt={s.caption}
+          class="w-full h-full object-contain"
+          loading={i === 0 ? 'eager' : 'lazy'}
+        />
+        <p class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/85 via-black/55 to-transparent text-white text-sm md:text-base font-medium px-6 py-5">
+          {s.caption}
+        </p>
+      </a>
+    ))}
+
+    <button
+      type="button"
+      data-action="prev"
+      class="slideshow-btn absolute left-2 md:left-4 top-1/2 -translate-y-1/2 grid place-items-center w-9 h-9 md:w-11 md:h-11 bg-black/40 hover:bg-black/70 text-white text-lg transition-colors"
+      aria-label="Previous slide"
+    >
+      ‹
+    </button>
+    <button
+      type="button"
+      data-action="next"
+      class="slideshow-btn absolute right-2 md:right-4 top-1/2 -translate-y-1/2 grid place-items-center w-9 h-9 md:w-11 md:h-11 bg-black/40 hover:bg-black/70 text-white text-lg transition-colors"
+      aria-label="Next slide"
+    >
+      ›
+    </button>
+
+    <div class="absolute inset-x-0 bottom-2 flex justify-center gap-1.5">
+      {slides.map((_, i) => (
+        <button
+          type="button"
+          data-goto={i}
+          class={`slideshow-dot w-2 h-2 rounded-full transition-colors ${i === 0 ? 'bg-white' : 'bg-white/40'}`}
+          aria-label={`Go to slide ${i + 1}`}
+        />
+      ))}
+    </div>
+  </div>
+</section>
+
+<script>
+  function initSlideshow(root: Element) {
+    const slidesEls = Array.from(root.querySelectorAll<HTMLElement>('.slide'));
+    const dots = Array.from(root.querySelectorAll<HTMLElement>('.slideshow-dot'));
+    if (slidesEls.length === 0) return;
+
+    let current = 0;
+    let timer: number | undefined;
+    const intervalMs = 5000;
+
+    function show(idx: number) {
+      const n = slidesEls.length;
+      current = ((idx % n) + n) % n;
+      slidesEls.forEach((el, i) => {
+        const active = i === current;
+        el.style.opacity = active ? '1' : '0';
+        el.style.pointerEvents = active ? '' : 'none';
+        el.setAttribute('aria-hidden', active ? 'false' : 'true');
+      });
+      dots.forEach((d, i) => {
+        d.classList.toggle('bg-white', i === current);
+        d.classList.toggle('bg-white/40', i !== current);
+      });
+    }
+
+    function start() {
+      stop();
+      timer = window.setInterval(() => show(current + 1), intervalMs);
+    }
+    function stop() {
+      if (timer !== undefined) {
+        window.clearInterval(timer);
+        timer = undefined;
+      }
+    }
+
+    root.querySelectorAll<HTMLElement>('[data-action="prev"]').forEach((b) =>
+      b.addEventListener('click', (e) => {
+        e.preventDefault();
+        show(current - 1);
+        start();
+      })
+    );
+    root.querySelectorAll<HTMLElement>('[data-action="next"]').forEach((b) =>
+      b.addEventListener('click', (e) => {
+        e.preventDefault();
+        show(current + 1);
+        start();
+      })
+    );
+    dots.forEach((d) =>
+      d.addEventListener('click', (e) => {
+        e.preventDefault();
+        const goto = Number(d.dataset.goto ?? 0);
+        show(goto);
+        start();
+      })
+    );
+
+    root.addEventListener('mouseenter', stop);
+    root.addEventListener('mouseleave', start);
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      start();
+    }
+  }
+
+  document.querySelectorAll('.slideshow').forEach(initSlideshow);
+</script>

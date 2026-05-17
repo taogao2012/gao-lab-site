@@ -1,0 +1,39 @@
+name: Refresh publications from OpenAlex
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # daily at 06:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: site
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch publications
+        run: node scripts/fetch-publications.mjs
+
+      - name: Open PR if publications changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          path: .
+          branch: chore/refresh-publications
+          commit-message: 'chore(publications): refresh from OpenAlex'
+          title: 'chore(publications): daily refresh from OpenAlex'
+          body: |
+            Automated daily refresh of `site/src/data/publications.json` from OpenAlex.
+
+            Review the diff for unexpected additions or removals — OpenAlex occasionally pulls works from same-named authors. Use `publications.overrides.json` to add/redact entries.
+          add-paths: site/src/data/publications.json

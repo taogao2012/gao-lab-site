@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Icon from '../../components/Icon.astro';
+import { getCollection } from 'astro:content';
+import { site } from '../../config';
+
+export async function getStaticPaths() {
+  const people = await getCollection('people');
+  return people.map((entry) => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const isPI = entry.data.status === 'pi';
+
+const personJsonLd = isPI ? {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: entry.data.name,
+  jobTitle: entry.data.role,
+  email: entry.data.email,
+  affiliation: { '@type': 'CollegeOrUniversity', name: site.pi.institution, department: site.pi.department },
+  sameAs: [
+    entry.data.scholar,
+    entry.data.linkedin,
+    entry.data.orcid && `https://orcid.org/${entry.data.orcid}`,
+    entry.data.twitter && `https://twitter.com/${entry.data.twitter.replace(/^@/, '')}`,
+  ].filter(Boolean),
+} : undefined;
+---
+
+<BaseLayout title={entry.data.name} description={entry.data.role} type="profile" jsonLd={personJsonLd}>
+  <PageHeader eyebrow={entry.data.role} title={entry.data.name} />
+
+  <section class="container-page py-12">
+    <div class="grid md:grid-cols-3 gap-10">
+      <article class="md:col-span-2 prose prose-lg max-w-prose">
+        <Content />
+      </article>
+      <aside class="border-l border-rule pl-6 space-y-6 text-sm">
+        {entry.data.email && (
+          <div>
+            <p class="eyebrow mb-1">Email</p>
+            <a href={`mailto:${entry.data.email}`} class="text-ink-soft no-underline hover:text-accent break-all">{entry.data.email}</a>
+          </div>
+        )}
+        {entry.data.interests.length > 0 && (
+          <div>
+            <p class="eyebrow mb-2">Interests</p>
+            <ul class="flex flex-wrap gap-2">
+              {entry.data.interests.map((i) => (
+                <li class="text-xs text-ink-muted bg-paper px-2 py-1 border border-rule">{i}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <div>
+          <p class="eyebrow mb-2">Links</p>
+          <ul class="space-y-1.5">
+            {entry.data.scholar && <li><a href={entry.data.scholar} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="scholar" size={14} /> Google Scholar</a></li>}
+            {entry.data.orcid && <li><a href={`https://orcid.org/${entry.data.orcid}`} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="orcid" size={14} /> ORCID</a></li>}
+            {entry.data.linkedin && <li><a href={entry.data.linkedin} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="linkedin" size={14} /> LinkedIn</a></li>}
+            {entry.data.twitter && <li><a href={`https://twitter.com/${entry.data.twitter.replace(/^@/, '')}`} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="x" size={14} /> X / Twitter</a></li>}
+            {entry.data.github && <li><a href={entry.data.github} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="github" size={14} /> GitHub</a></li>}
+          </ul>
+        </div>
+        {isPI && (
+          <div>
+            <p class="eyebrow mb-2">Resources</p>
+            <ul class="space-y-1.5">
+              <li><a href="/awards/" class="text-ink-soft no-underline hover:text-accent">Awards & grants</a></li>
+              <li><a href="/talks/" class="text-ink-soft no-underline hover:text-accent">Talks and Seminars</a></li>
+              <li><a href="/publications/" class="text-ink-soft no-underline hover:text-accent">Publications</a></li>
+            </ul>
+          </div>
+        )}
+      </aside>
+    </div>
+  </section>
+</BaseLayout>

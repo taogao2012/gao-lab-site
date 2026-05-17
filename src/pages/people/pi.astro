@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Icon from '../../components/Icon.astro';
+import SocialLinks from '../../components/SocialLinks.astro';
+import { photoFor } from '../../data/member-photos';
+import { site } from '../../config';
+import cv from '../../data/cv.json';
+import { getEntry } from 'astro:content';
+
+const piEntry = await getEntry('people', 'tao-gao');
+const PiContent = piEntry ? (await piEntry.render()).Content : null;
+const photo = photoFor(cv.person.name);
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: cv.person.name,
+  jobTitle: cv.person.title,
+  email: cv.person.email,
+  affiliation: { '@type': 'CollegeOrUniversity', name: cv.person.institution, department: cv.person.department },
+  alumniOf: cv.education.map((e) => ({ '@type': 'EducationalOrganization', name: e.institution })),
+  url: new URL('/people/pi/', site.url).href,
+  image: photo ? new URL(photo, site.url).href : undefined,
+  sameAs: [site.social.scholar, site.social.orcid, site.social.linkedin, site.social.twitter],
+};
+---
+
+<BaseLayout
+  title="Tao Gao — PI"
+  description={`${cv.person.title}, ${cv.person.department}, ${cv.person.institution}. Research areas: ${cv.person.researchInterest}`}
+  type="profile"
+  jsonLd={personJsonLd}
+>
+  <section class="container-page py-12 grid lg:grid-cols-12 gap-10">
+    <div class="lg:col-span-4">
+      {photo ? (
+        <img src={photo} alt={cv.person.name} class="w-full aspect-[4/5] object-cover bg-paper border border-rule" />
+      ) : (
+        <div class="w-full aspect-[4/5] bg-paper border border-rule" />
+      )}
+      <div class="mt-6 space-y-5 text-sm">
+        <div>
+          <p class="eyebrow mb-1">Contact</p>
+          <a href={`mailto:${cv.person.email}`} class="text-ink-soft no-underline hover:text-accent break-all">{cv.person.email}</a>
+        </div>
+        <div>
+          <p class="eyebrow mb-2">Connect</p>
+          <SocialLinks size={20} />
+        </div>
+        <div>
+          <p class="eyebrow mb-2">Resources</p>
+          <ul class="space-y-1.5">
+            <li><a href="/talks/" class="text-ink-soft no-underline hover:text-accent">Talks and Seminars</a></li>
+            <li><a href="/teaching/" class="text-ink-soft no-underline hover:text-accent">Teaching</a></li>
+            <li><a href="/publications/" class="text-ink-soft no-underline hover:text-accent">Publications</a></li>
+            <li><a href="/join-us/" class="text-ink-soft no-underline hover:text-accent">Join Us / Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="eyebrow mb-2">Metrics</p>
+          <p class="text-sm text-ink-soft">{cv.person.metrics.papers} papers · {cv.person.metrics.citations} citations · h-index {cv.person.metrics.hIndex}</p>
+        </div>
+      </div>
+    </div>
+
+    <article class="lg:col-span-8">
+      <div class="prose prose-lg max-w-prose -mt-2 [&>p:first-child]:mt-0">
+        {PiContent && <PiContent />}
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-2 gap-x-10 gap-y-12">
+        <div class="prose prose-lg max-w-none">
+          <h2 class="font-serif mt-0">Education and Training</h2>
+          <ul class="not-prose space-y-3">
+            {cv.education.map((e) => (
+              <li class="border-l-2 border-rule pl-4">
+                <p class="font-mono text-xs text-ink-muted">{e.years}</p>
+                <p class="font-serif text-base text-ink mt-0.5">{e.institution}</p>
+                <p class="text-sm text-ink-soft">{e.degree}{e.advisor ? ` — Advisor: ${e.advisor}` : ''}</p>
+              </li>
+            ))}
+          </ul>
+
+          <h2 class="font-serif mt-10">Appointments</h2>
+          <ul class="not-prose space-y-3">
+            {cv.appointments.map((a) => (
+              <li class="border-l-2 border-rule pl-4">
+                <p class="font-mono text-xs text-ink-muted">{a.years}</p>
+                <p class="font-serif text-base text-ink mt-0.5">{a.institution}</p>
+                <p class="text-sm text-ink-soft">{a.role}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div class="prose prose-lg max-w-none">
+          <h2 class="font-serif mt-0">Awards and Honors</h2>
+          <ol class="not-prose space-y-3">
+            {cv.awards.map((a: any) => (
+              <li class="border-l-2 border-rule pl-4">
+                <p class="font-mono text-xs text-ink-muted">{a.year}</p>
+                <p class="font-serif text-base text-ink mt-0.5">
+                  {a.url ? (
+                    <a href={a.url} target="_blank" rel="noopener" class="no-underline hover:text-accent">{a.name}</a>
+                  ) : (
+                    a.name
+                  )}
+                </p>
+                <p class="text-sm text-ink-soft">{a.by}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="border-t border-rule">
+    <div class="container-page py-8 flex flex-wrap gap-3 justify-between items-center text-sm">
+      <a href="/people/" class="text-ink-soft no-underline hover:text-accent">← All people</a>
+      <span class="flex gap-4">
+        <a href="/people/current/" class="text-accent no-underline">Current Members <Icon name="arrow-right" size={12} /></a>
+        <a href="/people/alumni/" class="text-accent no-underline">Alumni <Icon name="arrow-right" size={12} /></a>
+      </span>
+    </div>
+  </section>
+</BaseLayout>

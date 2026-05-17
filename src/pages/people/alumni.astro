@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MemberCard from '../../components/MemberCard.astro';
+import cv from '../../data/cv.json';
+
+const alumniGrad = cv.students.graduate.filter((s) => s.graduated);
+const alumniUndergrad = cv.students.undergrad.filter((s) => !/present/i.test(s.period ?? ''));
+const alumniPostdoc = cv.students.postdoc.filter((s) => s.now);
+const alumniHS = cv.students.highSchool;
+const alumniVisiting = cv.students.visiting.filter((v) => v.ended);
+
+const sections = [
+  { id: 'postdoc', label: 'Former postdocs', count: alumniPostdoc.length },
+  { id: 'grad', label: 'Graduate alumni', count: alumniGrad.length },
+  { id: 'undergrad', label: 'Undergraduate alumni', count: alumniUndergrad.length },
+  { id: 'visiting', label: 'Former visiting scholars', count: alumniVisiting.length },
+  { id: 'hs', label: 'High-school alumni', count: alumniHS.length },
+].filter((s) => s.count > 0);
+---
+
+<BaseLayout
+  title="Alumni"
+  description="Past members of the SuPER-AI Lab — graduates and former undergraduates now in academia, industry, and elsewhere."
+>
+  <section class="container-page py-10">
+    <nav aria-label="Member types" class="flex flex-wrap gap-2 mb-10">
+      {sections.map((s) => (
+        <a href={`#${s.id}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+          {s.label} <span class="text-ink-muted">({s.count})</span>
+        </a>
+      ))}
+    </nav>
+
+    <div class="space-y-16">
+      {alumniPostdoc.length > 0 && (
+        <div id="postdoc" class="scroll-mt-24">
+          <h2 class="font-serif text-2xl mb-6">Former postdocs</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {alumniPostdoc.map((p) => (
+              <MemberCard name={p.name} role="Postdoc" period={p.period} now={p.now} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {alumniGrad.length > 0 && (
+        <div id="grad" class="scroll-mt-24">
+          <h2 class="font-serif text-2xl mb-6">Graduate alumni</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {alumniGrad.map((s) => (
+              <MemberCard name={s.name} level={s.level} graduated={s.graduated} now={s.now} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {alumniUndergrad.length > 0 && (
+        <div id="undergrad" class="scroll-mt-24">
+          <h2 class="font-serif text-2xl mb-6">Undergraduate alumni</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {alumniUndergrad.map((s) => (
+              <MemberCard name={s.name} period={s.period} now={s.now} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {alumniVisiting.length > 0 && (
+        <div id="visiting" class="scroll-mt-24">
+          <h2 class="font-serif text-2xl mb-6">Former visiting scholars</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {alumniVisiting.map((v) => (
+              <MemberCard name={v.name} from={v.from} period={v.period} now={v.now} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {alumniHS.length > 0 && (
+        <div id="hs" class="scroll-mt-24">
+          <h2 class="font-serif text-2xl mb-6">High-school alumni</h2>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {alumniHS.map((s) => (
+              <MemberCard name={s.name} period={s.period} now={s.now} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  </section>
+
+  <section class="border-t border-rule">
+    <div class="container-page py-8 flex flex-wrap gap-4 justify-between items-center text-sm">
+      <a href="/people/" class="text-ink-soft no-underline hover:text-accent">← All people</a>
+      <span class="flex gap-4">
+        <a href="/people/pi/" class="text-accent no-underline">PI</a>
+        <a href="/people/current/" class="text-accent no-underline">Current Members</a>
+      </span>
+    </div>
+  </section>
+</BaseLayout>

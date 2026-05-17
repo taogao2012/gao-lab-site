@@ -1,0 +1,52 @@
+---
+import { site } from '../config';
+import SocialLinks from './SocialLinks.astro';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-rule mt-24 bg-paper">
+  <div class="container-page py-12 grid gap-10 md:grid-cols-3">
+    <div>
+      <p class="font-serif text-lg font-semibold text-ink">{site.name}</p>
+      <p class="text-sm text-ink-muted mt-1">{site.longName}</p>
+      <p class="text-xs text-ink-muted mt-1">{site.longNameExpansion}</p>
+      <p class="text-sm text-ink-soft mt-4">
+        {site.pi.department}<br/>
+        {site.pi.institution}
+      </p>
+    </div>
+
+    <div>
+      <p class="eyebrow mb-3">Explore</p>
+      <ul class="space-y-1.5 text-sm">
+        {site.nav.map((item) => (
+          <li><a href={item.href} class="text-ink-soft no-underline hover:text-accent">{item.label}</a></li>
+        ))}
+        <li><a href="/talks/" class="text-ink-soft no-underline hover:text-accent">Presentations</a></li>
+        <li><a href="/teaching/" class="text-ink-soft no-underline hover:text-accent">Teaching</a></li>
+        <li><a href="/join-us/" class="text-ink-soft no-underline hover:text-accent">Join Us / Contact</a></li>
+        <li><a href={site.intranet.url} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent">{site.intranet.label} ↗</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="eyebrow mb-3">Connect</p>
+      <SocialLinks size={20} />
+      <p class="text-sm text-ink-soft mt-4">
+        <a href={site.social.email} class="no-underline hover:text-accent">{site.pi.email}</a>
+      </p>
+    </div>
+  </div>
+
+  <div class="border-t border-rule">
+    <div class="container-page py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-xs text-ink-muted">
+      <p>© {year} {site.pi.name}. All rights reserved.</p>
+      <p>
+        <a href={site.social.scholar} target="_blank" rel="noopener" class="no-underline hover:text-accent">Google Scholar</a>
+        <span class="mx-2">·</span>
+        <a href={site.social.orcid} target="_blank" rel="noopener" class="no-underline hover:text-accent">ORCID</a>
+      </p>
+    </div>
+  </div>
+</footer>

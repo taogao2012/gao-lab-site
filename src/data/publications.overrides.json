@@ -1,0 +1,24 @@
+{
+  "$comment": "Overrides and additions to the OpenAlex feed. The fetcher merges these with the OpenAlex result by DOI (case-insensitive). Use 'selected' to flag papers for the highlights row on the home page.",
+  "selected": [
+    "10.1126/science.adq2541",
+    "10.1038/s41557-024-01646-2",
+    "10.1126/sciadv.aax0298",
+    "10.1038/s41467-019-11991-3",
+    "10.1126/science.aab1595"
+  ],
+  "additions": [],
+  "redactions": [
+    "10.26434/chemrxiv-2024-v6p84",
+    "10.1002/ange.201910916",
+    "10.1002/ange.201803703",
+    "10.1002/ange.201806748",
+    "10.1002/ange.201708241",
+    "10.1002/ange.201602397",
+    "10.1002/ange.201603531",
+    "10.26434/chemrxiv-2025-78gps",
+    "10.26434/chemrxiv-2024-d00cp",
+    "10.26434/chemrxiv-2024-d00cp-v2",
+    "10.26434/chemrxiv-2024-stwdn"
+  ]
+}

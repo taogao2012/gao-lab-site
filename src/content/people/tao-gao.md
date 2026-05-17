@@ -1,0 +1,18 @@
+---
+name: "Tao Gao"
+role: "Principal Investigator · Associate Professor"
+status: "pi"
+email: "tgao9@ncsu.edu"
+scholar: "https://scholar.google.com/citations?user=73w5AAcAAAAJ&hl=en"
+linkedin: "https://www.linkedin.com/in/tao-gao-a4842b22/"
+twitter: "TaoGao_Utah"
+orcid: "0000-0003-0204-3269"
+order: 1
+interests: ["electrochemistry", "energy storage", "sustainable processing", "critical materials"]
+---
+
+Tao Gao is an Associate Professor in the Department of Chemical and Biomolecular Engineering at North Carolina State University, where he leads the SuPER-AI Lab. He founded the lab in August 2020 at the University of Utah. His research uses electrochemistry as a unifying lens to attack two of the hardest problems in clean energy: storing electricity at grid scale and decarbonizing the heavy-industry processes that supply our materials.
+
+**Research.** As an assistant professor, Dr. Gao has raised ~$4.0M in external funding as PI on ten projects spanning fundamental research (including NSF CAREER) and applied research supported by DOE, DoD, and industry sponsors. He has published over 80 peer-reviewed research papers across his career, including in *Science*, *Nature Communications*, *Journal of the American Chemical Society*, and others. Honors include the NSF CAREER Award, the ACS Energy & Fuels Division Early Career Scientist award, Clarivate Highly Cited Researcher recognition, etc. He has given over 30 invited talks at ECS, ACS, MRS, and AIChE meetings, workshops, and peer universities.
+
+**Teaching and mentoring.** Training the next generation of electrochemists is central to the lab's mission. Dr. Gao has mentored 12 graduate students (8 PhD, 4 MS), 4 postdocs, 27 undergraduate researchers — many through the UROP, REU, and capstone programs — along with 6 high-school students through summer outreach and 3 visiting scholars. Alumni have gone on to PhD programs (UCLA, CU Boulder, CAS, U of Utah) and industry roles at Micron, Joby Aviation, NuNa, Onto, and Element Energy. In recognition of these efforts, he received the 2026 Outstanding Undergraduate Research Mentor Award from the University of Utah.

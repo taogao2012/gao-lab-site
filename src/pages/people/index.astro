@@ -1,0 +1,124 @@
+---
+import { existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { photoFor } from '../../data/member-photos';
+import { destinations } from '../../data/alumni-destinations';
+import { origins } from '../../data/current-origins';
+import cv from '../../data/cv.json';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const publicDir = join(__dirname, '../../../public');
+const logoExists = (p: string) => existsSync(join(publicDir, p.replace(/^\//, '')));
+
+const piPhoto = photoFor('Tao Gao');
+
+const currentGrad = cv.students.graduate.filter((s) => !s.graduated).length;
+const currentUndergrad = cv.students.undergrad.filter((s) => /present/i.test(s.period ?? '')).length;
+const currentPostdoc = cv.students.postdoc.filter((s) => !s.now).length;
+const currentVisiting = cv.students.visiting.filter((v) => !v.ended).length;
+const currentTotal = currentGrad + currentUndergrad + currentPostdoc + currentVisiting;
+
+const alumniGrad = cv.students.graduate.filter((s) => s.graduated).length;
+const alumniUndergrad = cv.students.undergrad.filter((s) => !/present/i.test(s.period ?? '')).length;
+const alumniPostdoc = cv.students.postdoc.filter((s) => s.now).length;
+const alumniVisiting = cv.students.visiting.filter((v) => v.ended).length;
+const alumniHS = cv.students.highSchool.length;
+const alumniTotal = alumniGrad + alumniUndergrad + alumniPostdoc + alumniVisiting + alumniHS;
+---
+
+<BaseLayout
+  title="People"
+  description="The SuPER-AI Lab team — principal investigator, current members, and alumni."
+>
+  <section class="container-page pt-10">
+    <figure>
+      <img
+        src="/images/gallery/group/spring-2026.jpg"
+        alt="SuPER-AI Lab group photo, Spring 2026"
+        class="w-full max-h-[480px] object-cover bg-paper border border-rule"
+      />
+      <figcaption class="mt-2 text-xs text-ink-muted text-center">Group photo, Spring 2026</figcaption>
+    </figure>
+  </section>
+
+  <section class="container-page pt-8 pb-12">
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/people/pi/" class="card no-underline group flex flex-col">
+        {piPhoto ? (
+          <img src={piPhoto} alt="Tao Gao" class="aspect-[4/5] object-cover w-full bg-paper border border-rule" />
+        ) : (
+          <div class="aspect-[4/5] bg-paper border border-rule grid place-items-center text-ink-muted font-serif text-3xl">TG</div>
+        )}
+        <div class="mt-4">
+          <p class="eyebrow">Principal Investigator</p>
+          <h2 class="font-serif text-2xl mt-2 text-ink group-hover:text-accent transition-colors">{cv.person.name}</h2>
+          <p class="mt-2 text-sm text-ink-soft">{cv.person.title}, {cv.person.department}, {cv.person.institution}.</p>
+          <p class="mt-4 text-sm text-accent inline-flex items-center gap-1">
+            Read the bio <Icon name="arrow-right" size={12} />
+          </p>
+        </div>
+      </a>
+
+      <a href="/people/current/" class="card no-underline group flex flex-col justify-between">
+        <div>
+          <p class="eyebrow">Team</p>
+          <h2 class="font-serif text-2xl mt-2 text-ink group-hover:text-accent transition-colors">Current Members</h2>
+          <p class="mt-2 text-sm text-ink-soft">Postdocs, graduate students, undergraduates, and visiting scholars actively working in the lab today.</p>
+
+          <div class="mt-5">
+            <p class="text-[10px] uppercase tracking-wider text-ink-muted mb-2">Trained at</p>
+            <div class="grid grid-cols-4 gap-2">
+              {origins.map((o) => (
+                <div class="aspect-square bg-white border border-rule grid place-items-center p-2" title={o.name}>
+                  {logoExists(o.logo) ? (
+                    <img src={o.logo} alt={o.name} class="max-w-full max-h-full object-contain" loading="lazy" />
+                  ) : (
+                    <span class="text-[9px] text-ink-muted text-center leading-tight font-medium">{o.short ?? o.name}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-accent inline-flex items-center gap-1">
+          See current members <Icon name="arrow-right" size={12} />
+        </p>
+      </a>
+
+      <a href="/people/alumni/" class="card no-underline group flex flex-col justify-between">
+        <div>
+          <p class="eyebrow">{alumniTotal} alumni</p>
+          <h2 class="font-serif text-2xl mt-2 text-ink group-hover:text-accent transition-colors">Alumni</h2>
+          <p class="mt-2 text-sm text-ink-soft">Past members in academia, industry, and elsewhere — the lab's growing network.</p>
+          <ul class="mt-4 text-xs text-ink-muted space-y-1">
+            <li>{alumniPostdoc} former postdoc{alumniPostdoc === 1 ? '' : 's'}</li>
+            <li>{alumniGrad} graduate alumni</li>
+            <li>{alumniUndergrad} undergraduate alumni</li>
+            <li>{alumniHS} high-school alumni</li>
+          </ul>
+
+          <div class="mt-5">
+            <p class="text-[10px] uppercase tracking-wider text-ink-muted mb-2">Now at</p>
+            <div class="grid grid-cols-4 gap-2">
+              {destinations.map((d) => (
+                <div class="aspect-square bg-white border border-rule grid place-items-center p-2" title={d.name}>
+                  {logoExists(d.logo) ? (
+                    <img src={d.logo} alt={d.name} class="max-w-full max-h-full object-contain" loading="lazy" />
+                  ) : (
+                    <span class="text-[9px] text-ink-muted text-center leading-tight font-medium">{d.short ?? d.name}</span>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        <p class="mt-6 text-sm text-accent inline-flex items-center gap-1">
+          See alumni <Icon name="arrow-right" size={12} />
+        </p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

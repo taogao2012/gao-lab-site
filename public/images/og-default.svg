@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <rect width="1200" height="630" fill="#ffffff"/>
+  <rect x="0" y="0" width="12" height="630" fill="#CC0000"/>
+  <text x="60" y="200" font-family="Georgia, serif" font-size="64" font-weight="600" fill="#333333">SuPER-AI Lab</text>
+  <text x="60" y="270" font-family="Inter, system-ui, sans-serif" font-size="28" fill="#555555">North Carolina State University</text>
+  <text x="60" y="430" font-family="Georgia, serif" font-size="48" font-weight="600" fill="#333333">Electrochemistry for a</text>
+  <text x="60" y="490" font-family="Georgia, serif" font-size="48" font-weight="600" fill="#333333">sustainable energy future.</text>
+  <text x="60" y="570" font-family="Inter, system-ui, sans-serif" font-size="22" fill="#777777">taogao-echem.net</text>
+</svg>

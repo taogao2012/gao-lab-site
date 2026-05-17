@@ -1,0 +1,290 @@
+{
+  "$source": "Parsed from CV_Tao_GAO_Academia_2026_0306.docx — the canonical source of truth for PI information. Re-run scripts/parse-cv.mjs after updating the .docx.",
+  "asOf": "2026-03-06",
+  "person": {
+    "name": "Tao Gao",
+    "email": "tgao9@ncsu.edu",
+    "title": "Associate Professor",
+    "department": "Department of Chemical and Biomolecular Engineering",
+    "institution": "North Carolina State University",
+    "location": "Raleigh, NC",
+    "researchInterest": "Energy storage, sustainable processing, electrochemistry, critical materials.",
+    "teachingInterest": {
+      "core": "Process engineering, thermodynamics, heat transfer, mass transfer, separation, reaction engineering, process design.",
+      "elective": "Sustainable processes, electrochemical systems, battery technology and manufacturing, AI for experimentalists."
+    },
+    "metrics": {
+      "papers": "80+",
+      "citations": ">23,000",
+      "hIndex": 60
+    }
+  },
+  "appointments": [
+    {
+      "years": "2026 — present",
+      "institution": "North Carolina State University",
+      "location": "Raleigh, NC",
+      "role": "Associate Professor, Department of Chemical and Biomolecular Engineering"
+    },
+    {
+      "years": "2020 — 2026",
+      "institution": "The University of Utah",
+      "location": "Salt Lake City, UT",
+      "role": "Assistant Professor, Department of Chemical Engineering"
+    }
+  ],
+  "education": [
+    {
+      "years": "2017 — 2020",
+      "institution": "Massachusetts Institute of Technology",
+      "degree": "Postdoctoral Associate, Chemical Engineering",
+      "advisor": "Martin Bazant"
+    },
+    {
+      "years": "2019",
+      "institution": "Stanford University",
+      "degree": "Certificate, online course on Machine Learning (Grade: 92%)"
+    },
+    {
+      "years": "2012 — 2017",
+      "institution": "University of Maryland, College Park",
+      "degree": "PhD, Chemical Engineering (GPA: 4.0/4.0)",
+      "advisor": "Chunsheng Wang"
+    },
+    {
+      "years": "2006 — 2012",
+      "institution": "Tsinghua University",
+      "degree": "BS and MS in Mechanical Engineering"
+    }
+  ],
+  "awards": [
+    { "year": 2026, "name": "Outstanding Undergraduate Research Mentor Award", "by": "University of Utah", "url": "https://our.utah.edu/awards-recognition/our-awards/" },
+    { "year": 2025, "name": "CAREER Award", "by": "National Science Foundation (NSF)" },
+    { "year": 2025, "name": "Investigator on the Rise Award", "by": "University of Utah, Technology Commercialization Office", "url": "https://www.price.utah.edu/2025/10/14/investigator-on-the-rise-tao-gao" },
+    { "year": 2023, "name": "Emerging Investigator Award", "by": "Royal Society of Chemistry, Journal of Materials Chemistry A" },
+    { "year": 2022, "name": "Early Career Rising Star Award", "by": "American Chemical Society, ENFL Division" },
+    { "year": 2022, "name": "Rising Star of Science Award", "by": "Research.com" },
+    { "year": 2022, "name": "Highly Cited Researcher Award", "by": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/ABD-1559-2021" },
+    { "year": 2016, "name": "Dean's Dissertation Fellowship", "by": "University of Maryland" },
+    { "year": 2015, "name": "Outstanding Graduate Assistant Award", "by": "University of Maryland" },
+    { "year": 2009, "name": "National Fellowship", "by": "Tsinghua University" },
+    { "year": 2008, "name": "Outstanding Scholarship", "by": "Tsinghua University" }
+  ],
+  "grants": {
+    "externalTotal": "$3,911,000",
+    "internalTotal": "$142,000",
+    "external": [
+      { "title": "Collaborative Research: Rational design of organic catholyte molecules for non-aqueous Mg-organic hybrid redox flow batteries", "sponsor": "National Science Foundation", "total": "$600,000", "share": "$339,797", "period": "07/2023 — 06/2026", "role": "PI" },
+      { "title": "Pre-pilot scale demonstration of co-production of lithium, potassium, and magnesium from Great Salt Lake brine", "sponsor": "Department of Energy", "total": "$2,000,000", "share": "$1,000,000", "period": "selected", "role": "PI" },
+      { "title": "CAREER: Understand electro-reduction of Fe ions and oxides in aqueous electrolytes", "sponsor": "National Science Foundation", "total": "$550,000", "share": "$550,000", "period": "09/2025 — 08/2030", "role": "PI" },
+      { "title": "Lithium extraction from brine using electrochemical absorption/desorption", "sponsor": "NexGen Material", "total": "$71,880", "share": "$71,880", "period": "03/2023 — 02/2024", "role": "PI" },
+      { "title": "High-efficiency continuous electrolysis of iron ore for carbon-emission-free iron production", "sponsor": "DOE STTR Phase I (subaward from Storagenergy Technology)", "total": "$200,000", "share": "$79,996", "period": "07/2023 — 04/2024", "role": "PI" },
+      { "title": "Wide-Temperature Lithium-Ion Batteries for Extreme Conditions", "sponsor": "DoD SBIR Phase I (subaward from Talos Tech LLC)", "total": "$200,000", "share": "$75,000", "period": "03/2025 — 09/2025", "role": "PI" },
+      { "title": "Scalable Production of High-Performance Metal-Organic Framework Membranes", "sponsor": "NSF SBIR Phase I (subaward from NCO Technology LLC)", "total": "$200,000", "share": "$60,000", "period": "10/2025 — 09/2026", "role": "PI" },
+      { "title": "Electrochemical behaviors of explosives in the Li-ion battery cell environment", "sponsor": "Department of the Army", "total": "$60,000", "share": "$30,000", "period": "selected", "role": "Co-PI" },
+      { "title": "Highly selective, efficient and scalable electrochemical process for selective iodine extraction", "sponsor": "NexGen Material", "total": "$20,000", "share": "$20,000", "period": "11/2025 — 10/2026", "role": "PI" }
+    ],
+    "internal": [
+      { "title": "Acid-in-clay proton membrane for novel chemical technologies", "sponsor": "UofU College of Engineering Seed Fund", "total": "$38,000", "period": "04/2023 — 03/2024", "role": "PI" },
+      { "title": "Novel electrolytes for fast-charging and low-temperature Li-ion batteries", "sponsor": "UofU Energy Accelerator Funding", "total": "$69,000", "period": "01/2024 — 03/2025", "role": "PI" },
+      { "title": "Sodium-ion batteries", "sponsor": "UofU Faculty Small Grant Program (FSGP)", "total": "$10,000", "role": "PI" },
+      { "title": "Ion-Conductive Membrane-Enabled Sustainable Industrial Electrochemical Production", "sponsor": "1U4U Future of Sustainability Seed Grant", "total": "$25,000", "share": "$12,500", "period": "10/2024 — 04/2026", "role": "Co-PI" },
+      { "title": "Highly selective, efficient and scalable electrochemical process for selective iodine extraction", "sponsor": "UURF", "total": "$30,000", "period": "04/2026", "role": "PI" }
+    ]
+  },
+  "talks": {
+    "invited": [
+      { "year": 2026, "title": "Transition metal halide complexation and the reactivity of metal deposition in aqueous electrolytes", "venue": "MRS Spring Meeting 2026", "location": "Honolulu, HI", "date": "2026-04-30" },
+      { "year": 2025, "title": "Iron redox chemistry in concentrated aqueous electrolytes: applications, mechanisms and theory", "venue": "Symposium on Advances in Electrochemistry, ACS Spring Meeting", "location": "San Diego, CA", "date": "2025-03-26", "slides": "/talks/2025-acs-spring-fe-electrochemistry.pdf" },
+      { "year": 2025, "title": "Iron electro-deposition in concentrated aqueous electrolytes: applications, mechanisms and theory", "venue": "Utah Electrochemistry Symposium", "location": "Salt Lake City, UT", "date": "2025-07-26" },
+      { "year": 2025, "title": "Iron redox chemistry in concentrated aqueous electrolytes: applications, mechanisms and theory", "venue": "Electronic Materials and Applications Meeting", "location": "Denver, CO", "date": "2025-02-28" },
+      { "year": 2024, "title": "Carboxylate ester-based electrolytes for Na-ion battery", "venue": "Technological Advances in Science, Medicine, and Engineering Meeting", "location": "online", "date": "2024-07-07", "slides": "/talks/2024-tasme-carboxylate-na-ion.pdf" },
+      { "year": 2023, "title": "Aqueous electrolytes for Fe metal batteries", "venue": "ACS Spring Meeting", "location": "Indianapolis, IN", "date": "2023-03" },
+      { "year": 2023, "title": "Li deposition mechanism: a perspective gained by combining imaging with theoretical analysis", "venue": "ACS Spring Meeting", "location": "Indianapolis, IN", "date": "2023-03", "slides": "/talks/2023-acs-spring-li-deposition.pdf" },
+      { "year": 2022, "title": "Electrolytes for fast-charging Li-ion batteries", "venue": "ECS Fall Meeting", "location": "Atlanta, GA", "date": "2022-10", "slides": "/talks/2022-ecs-fall-fast-charging.pdf" },
+      { "year": 2022, "title": "Understand and design aqueous electrolytes for iron metal batteries", "venue": "Telluride Science Workshop", "location": "Telluride, CO", "date": "2022-09" },
+      { "year": 2022, "title": "Li deposition mechanism: a perspective by combining imaging with theoretical analysis", "venue": "ACS Fall Meeting", "location": "Chicago, IL", "date": "2022-08" },
+      { "year": 2022, "title": "Understanding Li deposition mechanism on graphite, silicon and copper for Li-ion and Li metal batteries", "venue": "ACS Spring Meeting", "location": "San Diego, CA", "date": "2022-03" }
+    ],
+    "contributed": [
+      { "year": 2025, "title": "Thermodynamics of Transition Metal Deposition in Concentrated Electrolytes: Experiment and Theory", "venue": "AIChE Meeting", "location": "Boston", "date": "2025-11-03" },
+      { "year": 2025, "title": "High-Efficiency Low-Temperature Electrolytic Ironmaking in Acidic Environment Enabled by Novel Electrolyte Design", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-15" },
+      { "year": 2025, "title": "Metal-Chloride Complexation and its Effect on the Thermodynamics and Transport of Aqueous Electrolytes", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-15" },
+      { "year": 2025, "title": "Iron redox chemistry in concentrated aqueous electrolytes: applications, mechanisms and theory", "venue": "ACS Spring Meeting 2025", "location": "San Diego", "date": "2025-03-25" },
+      { "year": 2024, "title": "Iron (Fe) redox chemistry in acidic anion-rich electrolytes: fundamental discovery and ironmaking application", "venue": "MS&T Fall 2024", "location": "Pittsburgh", "date": "2024-10-09" },
+      { "year": 2023, "title": "Li deposition mechanism: a perspective by combining imaging with theoretical analysis", "venue": "MRS Spring Meeting", "location": "San Francisco", "date": "2023-04-12" }
+    ],
+    "seminars": [
+      { "year": 2026, "title": "Control Charge Transfer Reactions for Electrochemical Energy Storage and Separation", "venue": "Department of Chemical and Biomolecular Engineering, Case Western Reserve University", "location": "Cleveland, OH", "date": "2026-04-16" },
+      { "year": 2026, "title": "Control Charge Transfer Reactions and Flow for Electrochemical Separation", "venue": "Department of Chemistry, University of Utah — Separation Seminar", "location": "Salt Lake City, UT", "date": "2026-04-03" },
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Manufacturing", "venue": "Department of Chemical Engineering, Brigham Young University", "location": "Provo, UT", "date": "2026-03-18" },
+      { "year": 2026, "title": "Iron metal battery for grid-scale energy storage", "venue": "ARCS Seminar", "location": "Salt Lake City, UT", "date": "2026-03-11" },
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Manufacturing", "venue": "Departments of Mechanical and Chemical Engineering, Penn State University", "location": "State College, PA", "date": "2026-02-17" },
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Manufacturing", "venue": "School of Mechanical Engineering, Purdue University", "location": "Indianapolis, IN", "date": "2026-02-11" },
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Processing", "venue": "Department of Chemical and Biomolecular Engineering, Rutgers University", "location": "New Brunswick, NJ", "date": "2026-01-30" },
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Processing", "venue": "Department of Chemical and Biomolecular Engineering, NC State University", "location": "Raleigh, NC", "date": "2026-01-15" },
+      { "year": 2025, "title": "Understand charge transfer reactions in electrochemical energy storage and processing systems", "venue": "Department of Chemical Engineering, University of Notre Dame", "location": "South Bend, IN", "date": "2025-12-09" },
+      { "year": 2025, "title": "Understand charge transfer reactions in electrochemical energy storage and processing systems", "venue": "Department of Chemical Engineering, UC San Diego", "location": "La Jolla, CA", "date": "2025-10-22" },
+      { "year": 2025, "title": "Physical Insights into Critical Phenomena in Electrochemical Systems for Next-Generation Energy Storage and Beyond", "venue": "Department of Chemical Engineering, Tufts University", "location": "Medford, MA", "date": "2025-04-28" },
+      { "year": 2024, "title": "Iron (Fe) redox chemistry in anion-rich electrolytes: fundamental discovery and decarbonization applications", "venue": "University of Utah, Chemical Engineering Graduate Seminar", "location": "Salt Lake City, UT", "date": "2024-09-06" },
+      { "year": 2023, "title": "Electrochemical energy storage for grid and transportation: Is electrolyte a solution?", "venue": "University of Massachusetts Boston", "location": "Boston, MA", "date": "2023-11-29" },
+      { "year": 2023, "title": "Lithium deposition on graphite, Si and Cu in carbonate electrolytes", "venue": "Bazant Lab, MIT", "location": "Cambridge, MA", "date": "2023-11-27" },
+      { "year": 2023, "title": "Li-ion batteries: state-of-the-art, challenges and the future", "venue": "New Mexico State University, Graduate Seminar", "location": "online", "date": "2023-09-22" },
+      { "year": 2023, "title": "Li-ion batteries: state-of-the-art, challenges and the future", "venue": "University of Utah, Chemical Engineering Graduate Seminar", "location": "Salt Lake City, UT", "date": "2023-08-25" },
+      { "year": 2023, "title": "Li-ion batteries: current, challenges and the future", "venue": "Gentex", "location": "online", "date": "2023-03", "slides": "/talks/2023-gentex-li-ion-batteries.pdf" }
+    ]
+  },
+  "service": {
+    "internal": {
+      "committees": [
+        "Undergraduate Committee, Feb 2021 — present",
+        "Undergraduate Academic Standards sub-committee, July 2025 — present",
+        "Faculty Search Committee, 2022 — 2023",
+        "Undergraduate Office Summer Research Internship Reviewing Committee, Spring 2022"
+      ],
+      "thesisCommittees": 13,
+      "capstoneMentor": 5
+    },
+    "external": {
+      "symposiumChair": [
+        { "year": 2024, "title": "Metal anodes in rechargeable batteries: electrolyte, interface and mechanism", "venue": "MRS Spring Meeting", "location": "Seattle", "date": "2024-04-22 — 2024-04-26" },
+        { "year": 2023, "title": "Materials, Mechanisms and Methods in Battery Technology", "venue": "ACS Spring Meeting", "location": "Indianapolis", "date": "2023-03-26 — 2023-03-30" },
+        { "year": 2022, "title": "Materials and Mechanisms in Electrochemical Energy Storage", "venue": "ACS Spring Meeting", "location": "San Diego", "date": "2022-03-20 — 2022-03-24" },
+        { "year": 2022, "title": "Electrolytes and cathode materials for rechargeable metal batteries", "venue": "ACS Fall Meeting", "location": "Chicago", "date": "2022-08-21 — 2022-08-25" }
+      ],
+      "symposiumCoChair": [
+        { "year": 2026, "title": "Aqueous Batteries", "venue": "ECS Fall Meeting", "location": "Calgary, Canada", "date": "2026-10-25 — 2026-10-29" },
+        { "year": 2025, "title": "Na-ion Battery", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-12 — 2025-10-16" },
+        { "year": 2025, "title": "Electrolyte and interphase for rechargeable batteries", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-12 — 2025-10-16" },
+        { "year": 2025, "title": "Next Generation Aqueous Batteries: Electrodes, Electrolytes, and Interphases", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-12 — 2025-10-16" },
+        { "year": 2025, "title": "Utah Electrochemistry Symposium", "venue": "Utah Electrochemistry Symposium", "location": "Salt Lake City", "date": "2025-07-25 — 2025-07-26" },
+        { "year": 2024, "title": "Materials, Electrolytes, and Interphases in Sustainable Battery Technology", "venue": "ACS Spring Meeting", "location": "New Orleans, LA", "date": "2024-03-17 — 2024-03-21" },
+        { "year": 2024, "title": "Materials, Electrolytes & Interphases in Sustainable Battery Technology", "venue": "ACS Fall Meeting", "location": "Denver, CO", "date": "2024-08-17 — 2024-08-22" },
+        { "year": 2023, "title": "Solid-State Batteries: Materials, Interfaces, Characterizations and Simulations", "venue": "ACS Fall Meeting", "location": "San Francisco", "date": "2023-08-13 — 2023-08-17" }
+      ],
+      "leadership": [
+        "Director of the Board, AIChE Transport and Energy Process Division (TEP), 2023 — present"
+      ],
+      "proposalReview": [
+        "NSF MPS/Chemistry — Panelist (2026)",
+        "DOE Basic Energy Science, Material Chemistry Program (2025)",
+        "DOE Office of Electricity, Annual Merit Reviewer (2025)",
+        "NSF CMMI — ad hoc reviewer (2025)",
+        "ACS Petroleum Research Fund, New Doctoral Investigator — Reviewer (2025)",
+        "Winston Chung Global Energy Center, UC Riverside — Seed grant reviewer (2025)",
+        "DOE Vehicle Technology Office, Annual Merit Reviewer (2024)",
+        "Oak Ridge Associated Universities, Faculty-Development Competitive Research Grants — Reviewer (2023)",
+        "DOE Office of Electricity, Annual Merit Reviewer (2023)",
+        "NSF CBET Electrochemical Systems — ad hoc reviewer (2022)"
+      ],
+      "journalReview": [
+        "AAAS — Science Advances",
+        "Nature-Springer — Nature Energy, Nature Chemistry, Nature Communications",
+        "Cell Press — Joule, Matter",
+        "Wiley — Advanced Materials, Nanoscale, Energy and Environmental Materials, Small",
+        "ACS — ACS Energy Letters, ACS Applied Materials & Interfaces",
+        "ECS — ECS Advances"
+      ]
+    }
+  },
+  "affiliations": [
+    "The Electrochemical Society, Member (since 07/2019)",
+    "American Institute of Chemical Engineers, Member (since 07/2019)",
+    "American Chemical Society, Member (since 07/2019)"
+  ],
+  "courses": [
+    { "code": "EN CH 3603", "title": "Mass Transfer and Separation", "terms": "Spring 2023, 2024, 2025, 2026", "enrollment": ">240" },
+    { "code": "EN CH 5308/6308", "title": "Battery Technology and Manufacturing", "terms": "Fall 2023, 2024, 2025", "enrollment": ">60" },
+    { "code": "EN CH 5950/6960", "title": "Electrochemical Systems for Energy Storage", "terms": "Fall 2021, 2022", "enrollment": ">40" },
+    { "code": "EN CH 4903", "title": "Senior Project", "terms": "Fall 2020", "enrollment": ">60" }
+  ],
+  "students": {
+    "graduate": [
+      { "name": "Jaydipkumar Bhaliya", "level": "PhD", "period": "04/2026 — present", "expected": "2031" },
+      { "name": "Santhana Srinivasan", "level": "PhD", "period": "05/2026 — present", "expected": "2031" },
+      { "name": "Induja Selvaraju", "level": "PhD", "period": "08/2025 — present", "expected": "2030" },
+      { "name": "Mohammed A. Al-Ibrahim", "level": "MS", "graduated": "12/2025" },
+      { "name": "Andrew Butterfield", "level": "MS", "graduated": "05/2024" },
+      { "name": "Shishir Gupta", "level": "MS", "graduated": "05/2024", "now": "PhD at U of Utah" },
+      { "name": "Zongjian (Zach) Li", "level": "PhD", "graduated": "Spring 2026" },
+      { "name": "Yunan (Yana) Qin", "level": "PhD", "graduated": "06/2025", "now": "Postdoc at Delft University of Technology" },
+      { "name": "Jing Liu", "level": "PhD", "graduated": "02/2026", "now": "Battery Engineer at Joby Aviation" },
+      { "name": "Jiwei Yao", "level": "PhD (co-advised with Kody Powell)", "graduated": "05/2025", "now": "Battery Engineer at Element Energy" },
+      { "name": "Junhui Sun", "level": "MS (co-advised, BUCT)", "graduated": "06/2022" },
+      { "name": "Yue Niu", "level": "PhD (co-advised, BUCT)", "graduated": "05/2021" }
+    ],
+    "postdoc": [
+      { "name": "Jaemin Kim", "period": "05/2026 — present" },
+      { "name": "Yunan Qin", "period": "07/2025 — 06/2026" },
+      { "name": "Sreedeep Sreekumar", "period": "11/2024 — 05/2025", "now": "Professor in India" },
+      { "name": "Shitong Wang", "period": "04/2021 — 12/2021", "now": "Professor at Beihang University" }
+    ],
+    "undergrad": [
+      { "name": "Zachary Logue", "period": "01/2026 — present" },
+      { "name": "Adam Hill", "period": "01/2026 — present" },
+      { "name": "Zareena Saeed", "period": "01/2026 — present" },
+      { "name": "Tenzin Jamyang", "period": "01/2026 — present" },
+      { "name": "Xzavier Oakes", "period": "09/2025 — present" },
+      { "name": "Andrew Wolf", "period": "10/2025 — 05/2026" },
+      { "name": "Alexandra Early", "period": "10/2025 — 05/2026" },
+      { "name": "Juliana Ortiz Castillo", "period": "06/2024 — 05/2026", "now": "PhD at CU Boulder" },
+      { "name": "Richard Gonzalez", "period": "06/2024 — 05/2025, 05/2026 — present" },
+      { "name": "Seong Gyu Choi", "period": "06/2023 — 05/2025", "now": "Battery Engineer at NuNa Energy Technology" },
+      { "name": "Hannah Frost", "period": "06/2023 — 05/2025", "now": "Engineer at Corning" },
+      { "name": "Thomas Webb", "period": "06/2023 — 05/2025", "now": "PhD at U of Utah" },
+      { "name": "Lucia Mason", "period": "05/2022 — 06/2023" },
+      { "name": "Brendan Wagley", "period": "05/2022 — present (remote)" },
+      { "name": "Michael Barkdull", "period": "05/2022 — 06/2023" },
+      { "name": "Alexis Friedman", "period": "02/2022 — 09/2022" },
+      { "name": "Kevin Chandler", "period": "09/2021 — 05/2022", "now": "PhD at UCLA" },
+      { "name": "Cason Cobabe", "period": "06/2021 — 09/2021", "now": "Engineer at Pumpers" },
+      { "name": "Katie Izatt", "period": "02/2021 — 05/2021" },
+      { "name": "Monique Martineau", "period": "06/2021 — 07/2021" },
+      { "name": "Jacob Olson", "period": "02/2021 — 09/2021" },
+      { "name": "Nathan Jensen", "period": "02/2021 — 09/2021" },
+      { "name": "Sammy Partridge", "period": "02/2021 — 09/2021" },
+      { "name": "Dillon Fehlau", "period": "02/2021 — 05/2022" },
+      { "name": "Nicolai Andreas", "period": "02/2021 — 05/2022", "now": "Engineer at Onto Technology" },
+      { "name": "Alan Larrea Caro", "period": "02/2021 — 05/2023", "now": "Engineer at Micron" },
+      { "name": "Qiang Gao", "period": "02/2021 — 02/2022", "now": "PhD at CAS" }
+    ],
+    "highSchool": [
+      { "name": "Anish Diwakar", "period": "Summer 2024" },
+      { "name": "Vincent Ge", "period": "Summer 2024", "now": "Undergrad at UC San Diego" },
+      { "name": "Ivy Zhao", "period": "Summer 2024", "now": "Undergrad at UC Irvine" },
+      { "name": "Xinying Bi", "period": "05/2022 — 12/2022", "now": "Undergrad at Rice University" },
+      { "name": "Connor Meck", "period": "Summer 2022", "now": "Undergrad at Michigan Tech" },
+      { "name": "Khue Huynh", "period": "2016 — 2017", "now": "Undergrad at University of Virginia" }
+    ],
+    "visiting": [
+      { "name": "Xiayueyang Mei", "from": "University of Pennsylvania (Visiting MS)", "period": "—", "ended": "2026-05", "now": "PhD at University of Chicago" },
+      { "name": "Faezeh Mohammadibarzlaghi", "from": "Sapienza University di Roma, Rome, Italy", "period": "Spring 2025", "ended": "2025-04" },
+      { "name": "Bassam N. Saif", "from": "ICIQ, Spain", "period": "Fall 2024", "ended": "2024-12" }
+    ]
+  },
+  "patents": [
+    { "id": "US20210158986A1", "title": "Continuous Separation of Radionuclides by Shock Electrodialysis", "status": "Licensed" },
+    { "id": "US20230335771A1", "title": "Batteries with aqueous electrolytes reinforced by Mg and Ca ions" },
+    { "id": "US20240376621A1", "title": "High-efficiency electrolysis of iron ore for iron production" },
+    { "id": "PCT/US2024/029923", "title": "Electrochemical absorption/desorption for Li extraction from aqueous solution feedstock", "status": "Licensed" },
+    { "id": "PCT/US2025/028201", "title": "Ester-based electrolytes for low-temperature high-energy density rechargeable batteries" },
+    { "id": "PCT/US2025/030158", "title": "Iron production by direct electrolysis of iron ore" },
+    { "id": "18/787,550", "title": "Electrolytes for fast-charging and low-temperature Li-ion batteries" },
+    { "id": "63/741,686", "title": "Non-aqueous magnesium-organic flow batteries", "status": "Licensed" },
+    { "id": "U-7236", "title": "Zinc-iron flow battery based on hybrid acidic aqueous/organic electrolytes" },
+    { "id": "U-8036", "title": "Environmentally rechargeable biocompatible soft batteries" },
+    { "id": "U-8358", "title": "Magnesium flow battery for stationary energy storage" },
+    { "id": "U-8371", "title": "Low-temperature manufacturing of lithium metal by direct electrolysis in immiscible liquids (DEIL)" },
+    { "id": "U-8392", "title": "Electrolysis of carbon-free Ca feedstock: a sustainable route for lime production with zero carbon emission" },
+    { "id": "U-8398", "title": "Low-energy, low-cost electrolytic ironmaking process coupled with biooxidation of pyrite and byproduct sulfuric acid production" },
+    { "id": "U-8403", "title": "Low-temperature synthesis of nitrides by electrolysis" },
+    { "id": "U-8568", "title": "Transformative low-temperature low-pressure Li-mediated electrolysis route for sustainable green ammonia production" },
+    { "id": "U-8569", "title": "Mixed carbonate-carboxylate electrolytes for high-energy, long-life and safe Na-ion batteries" },
+    { "id": "U-8665", "title": "High-Entropy Low-ENergy (HELEN) molecule-based liquid electrolytes for ultra-low-temperature alkali batteries" },
+    { "id": "U-8666", "title": "Process for using low-grade iron as solid energy carriers" },
+    { "id": "U-8797", "title": "Epoxide electrolytes for ultra-low-resistance lithium, sodium and potassium batteries" },
+    { "id": "U-9140", "title": "Electrochemical extraction of copper, magnesium and iodine by redox-stimulated reversible binding" },
+    { "id": "U-9149", "title": "Porous graphitic carbon particles with modulated structure and morphology for Li-ion battery anodes" },
+    { "id": "U-9154", "title": "Porous graphitic carbon particles as anode material in sodium-ion batteries" }
+  ]
+}

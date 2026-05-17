@@ -1,0 +1,126 @@
+---
+import { existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Icon from '../components/Icon.astro';
+import cv from '../data/cv.json';
+
+// --- Course materials convention -----------------------------------------
+//
+// Each course has an optional folder under `public/teaching/<slug>/` that
+// holds its cover image and lecture PDFs. The `materials` map below points
+// at the expected paths; files that don't exist yet are silently hidden.
+//
+// To add new materials for a course:
+//   1. Drop the files in `public/teaching/<slug>/`.
+//   2. Add an entry to materials[<course title>].lectures with {title, href}.
+// ------------------------------------------------------------------------
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const publicDir = join(__dirname, '../../public');
+const fileExists = (publicPath: string) => existsSync(join(publicDir, publicPath.replace(/^\//, '')));
+
+type CourseMaterials = {
+  syllabus?: string;
+  cover?: string;
+  lectures?: Array<{ title: string; href: string }>;
+};
+
+const materials: Record<string, CourseMaterials> = {
+  'Mass Transfer and Separation': {
+    syllabus: '/teaching/chen-3603-syllabus.pdf',
+    cover: '/teaching/mass-transfer/cover.png',
+    lectures: [
+      { title: 'Lecture 1 — Introduction', href: '/teaching/mass-transfer/lecture-1-introduction.pdf' },
+    ],
+  },
+  'Battery Technology and Manufacturing': {
+    syllabus: '/teaching/chen-5308-6308-syllabus.pdf',
+    cover: '/teaching/battery/cover.png',
+    lectures: [
+      { title: 'Lecture 1 — Introduction', href: '/teaching/battery/lecture-1-introduction.pdf' },
+    ],
+  },
+};
+
+function resolved(m: CourseMaterials): CourseMaterials {
+  return {
+    syllabus: m.syllabus && fileExists(m.syllabus) ? m.syllabus : undefined,
+    cover: m.cover && fileExists(m.cover) ? m.cover : undefined,
+    lectures: (m.lectures ?? []).filter((l) => fileExists(l.href)),
+  };
+}
+
+// Featured courses (two-column layout, Battery on the left).
+const featuredTitles = ['Battery Technology and Manufacturing', 'Mass Transfer and Separation'];
+const featured = featuredTitles
+  .map((t) => cv.courses.find((c) => c.title === t))
+  .filter((c): c is (typeof cv.courses)[number] => !!c);
+const otherCourses = cv.courses.filter((c) => !featuredTitles.includes(c.title));
+---
+
+<BaseLayout
+  title="Teaching"
+  description="Courses taught by Prof. Tao Gao at North Carolina State University, Department of Chemical and Biomolecular Engineering."
+>
+  <section class="container-page py-12">
+    <div class="grid md:grid-cols-2 gap-10">
+      {featured.map((c) => {
+        const m = resolved(materials[c.title] ?? {});
+        const hasAnyDownload = m.syllabus || (m.lectures && m.lectures.length > 0);
+        return (
+          <article class="bg-highlight border border-rule p-6 transition-colors hover:border-ink/40">
+            {m.cover && (
+              <img src={m.cover} alt={`${c.title} cover`} class="w-full bg-paper border border-rule mb-6" />
+            )}
+            <p class="font-mono text-xs text-ink-muted">{c.code}</p>
+            <h2 class="font-serif text-2xl text-ink mt-1">{c.title}</h2>
+            <p class="text-sm text-ink-soft mt-2">{c.terms}</p>
+            <p class="text-xs text-ink-muted mt-1">Enrollment {c.enrollment}</p>
+
+            {hasAnyDownload && (
+              <div class="mt-4 flex flex-col gap-2 text-sm">
+                {m.syllabus && (
+                  <a
+                    href={m.syllabus}
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center gap-1.5 text-accent no-underline hover:underline"
+                  >
+                    <Icon name="arrow-right" size={14} /> Syllabus (PDF)
+                  </a>
+                )}
+                {m.lectures?.map((lec) => (
+                  <a
+                    href={lec.href}
+                    target="_blank"
+                    rel="noopener"
+                    class="inline-flex items-center gap-1.5 text-accent no-underline hover:underline"
+                  >
+                    <Icon name="arrow-right" size={14} /> {lec.title}
+                  </a>
+                ))}
+              </div>
+            )}
+          </article>
+        );
+      })}
+    </div>
+
+    {otherCourses.length > 0 && (
+      <div class="mt-16 pt-10 border-t border-rule">
+        <h2 class="font-serif text-xl mb-6">Also taught</h2>
+        <ol class="divide-y divide-rule">
+          {otherCourses.map((c) => (
+            <li class="py-5">
+              <p class="font-mono text-xs text-ink-muted">{c.code}</p>
+              <p class="font-serif text-lg text-ink mt-1">{c.title}</p>
+              <p class="text-sm text-ink-soft mt-1">{c.terms} · Enrollment {c.enrollment}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+  </section>
+</BaseLayout>

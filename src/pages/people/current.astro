@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import MemberCard from '../../components/MemberCard.astro';
+import { photoFor } from '../../data/member-photos';
+import cv from '../../data/cv.json';
+
+const currentGrad = cv.students.graduate.filter((s) => !s.graduated);
+const currentUndergrad = cv.students.undergrad.filter((s) => /present/i.test(s.period ?? ''));
+const currentPostdoc = cv.students.postdoc.filter((s) => !s.now);
+const currentVisiting = cv.students.visiting.filter((v) => !v.ended);
+
+type MemberCardProps = {
+  name: string;
+  role?: string;
+  level?: string;
+  period?: string;
+  expected?: string;
+  now?: string;
+  from?: string;
+};
+
+const members: MemberCardProps[] = [
+  ...currentPostdoc.map((p) => ({ name: p.name, role: 'Postdoctoral researcher', period: p.period, now: p.now })),
+  ...currentGrad.map((s) => ({ name: s.name, level: s.level, period: s.period, expected: s.expected })),
+  ...currentVisiting.map((v) => ({ name: v.name, from: v.from, period: v.period })),
+  ...currentUndergrad.map((s) => ({ name: s.name, period: s.period })),
+];
+
+const withPhoto = members.filter((m) => photoFor(m.name) !== null);
+const withoutPhoto = members.filter((m) => photoFor(m.name) === null);
+const sortedMembers = [...withPhoto, ...withoutPhoto];
+---
+
+<BaseLayout
+  title="Current Members"
+  description="Active researchers in the SuPER-AI Lab — postdocs, graduate students, undergraduates, and visiting scholars."
+>
+  <section class="container-page py-10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <a href="/people/pi/" class="no-underline group">
+        <MemberCard name={cv.person.name} role={cv.person.title} level="Principal Investigator" />
+      </a>
+      {sortedMembers.map((m) => (
+        <MemberCard {...m} />
+      ))}
+    </div>
+  </section>
+
+  <section class="border-t border-rule">
+    <div class="container-page py-8 flex flex-wrap gap-4 justify-between items-center text-sm">
+      <a href="/people/" class="text-ink-soft no-underline hover:text-accent">← All people</a>
+      <span class="flex gap-4">
+        <a href="/people/pi/" class="text-accent no-underline">PI</a>
+        <a href="/people/alumni/" class="text-accent no-underline">Alumni →</a>
+      </span>
+    </div>
+  </section>
+</BaseLayout>

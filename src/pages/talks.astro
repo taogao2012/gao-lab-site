@@ -1,0 +1,92 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import cv from '../data/cv.json';
+
+const groupBy = <T extends { year: number }>(arr: T[]) => {
+  const m = new Map<number, T[]>();
+  for (const t of arr) {
+    if (!m.has(t.year)) m.set(t.year, []);
+    m.get(t.year)!.push(t);
+  }
+  return [...m.entries()].sort((a, b) => b[0] - a[0]);
+};
+
+const invited = groupBy(cv.talks.invited);
+const seminars = groupBy(cv.talks.seminars);
+
+const counts = {
+  invited: cv.talks.invited.length,
+  seminars: cv.talks.seminars.length,
+};
+---
+
+<BaseLayout
+  title="Talks and Seminars"
+  description="Invited talks and university seminars by Prof. Tao Gao."
+>
+  <section class="container-page py-12">
+    <div class="grid lg:grid-cols-2 gap-x-12 gap-y-12">
+      <!-- LEFT: Invited Talks -->
+      <div>
+        <div class="flex items-baseline justify-between mb-6">
+          <h2 class="font-serif text-2xl">Invited Talks</h2>
+          <p class="text-sm text-ink-muted">{counts.invited} entries</p>
+        </div>
+        <div class="space-y-8">
+          {invited.map(([year, items]) => (
+            <div>
+              <h3 class="font-mono text-sm text-ink-muted">{year}</h3>
+              <ol class="mt-3 space-y-4">
+                {items.map((t) => (
+                  <li class="border-l-2 border-rule pl-4">
+                    <p class="font-serif text-base text-ink">{t.title}</p>
+                    <p class="text-sm text-ink-soft mt-1">{t.venue}</p>
+                    <p class="text-xs text-ink-muted">{t.location} · {t.date}</p>
+                    {(t as any).slides && (
+                      <p class="text-xs mt-1.5">
+                        <a href={(t as any).slides} target="_blank" rel="noopener" class="text-accent no-underline hover:underline">
+                          📥 Slides (PDF)
+                        </a>
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- RIGHT: Invited Seminars -->
+      <div>
+        <div class="flex items-baseline justify-between mb-6">
+          <h2 class="font-serif text-2xl">Invited Seminars</h2>
+          <p class="text-sm text-ink-muted">{counts.seminars} entries</p>
+        </div>
+        <div class="space-y-8">
+          {seminars.map(([year, items]) => (
+            <div>
+              <h3 class="font-mono text-sm text-ink-muted">{year}</h3>
+              <ol class="mt-3 space-y-4">
+                {items.map((t) => (
+                  <li class="border-l-2 border-rule pl-4">
+                    <p class="font-serif text-base text-ink">{t.title}</p>
+                    <p class="text-sm text-ink-soft mt-1">{t.venue}</p>
+                    <p class="text-xs text-ink-muted">{t.location} · {t.date}</p>
+                    {(t as any).slides && (
+                      <p class="text-xs mt-1.5">
+                        <a href={(t as any).slides} target="_blank" rel="noopener" class="text-accent no-underline hover:underline">
+                          📥 Slides (PDF)
+                        </a>
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,69 @@
+---
+interface Pub {
+  id: string;
+  doi: string | null;
+  title: string;
+  year: number | null;
+  date: string | null;
+  venue: string | null;
+  volume: string | null;
+  issue: string | null;
+  firstPage: string | null;
+  lastPage: string | null;
+  oaUrl: string | null;
+  citations: number;
+  authors: Array<{ name: string; isPI: boolean }>;
+  selected?: boolean;
+}
+
+interface Props {
+  items: Pub[];
+  numbered?: boolean;
+}
+
+const { items, numbered = true } = Astro.props;
+---
+
+<ol class="mt-6 divide-y divide-rule">
+  {items.map((p, i) => (
+    <li class="py-5 flex gap-6">
+      {numbered && (
+        <span class="font-mono text-xs text-ink-muted pt-1 w-10 shrink-0">{String(items.length - i).padStart(2, '0')}</span>
+      )}
+      <div class="flex-1 min-w-0">
+        <h3 class="font-serif text-lg leading-snug text-ink">
+          <a href={p.doi ? `https://doi.org/${p.doi}` : p.id} target="_blank" rel="noopener" class="no-underline hover:text-accent">
+            {p.title}
+          </a>
+        </h3>
+        <p class="mt-1.5 text-sm text-ink-soft">
+          {p.authors.map((a, idx) => (
+            <span class={a.isPI ? 'font-semibold text-ink' : ''}>
+              {a.name}{idx < p.authors.length - 1 ? ', ' : ''}
+            </span>
+          ))}
+        </p>
+        <p class="mt-1.5 text-sm text-ink-muted">
+          <span class="italic">{p.venue ?? '—'}</span>
+          {p.volume && <span> · {p.volume}{p.issue ? `(${p.issue})` : ''}</span>}
+          {p.firstPage && <span>, {p.firstPage}{p.lastPage ? `–${p.lastPage}` : ''}</span>}
+          <span> · {p.year}</span>
+        </p>
+        <p class="mt-2 flex flex-wrap gap-3 text-xs">
+          {p.doi && (
+            <a href={`https://doi.org/${p.doi}`} target="_blank" rel="noopener" class="text-accent no-underline hover:underline">DOI</a>
+          )}
+          <a
+            href={p.oaUrl ?? `https://scholar.google.com/scholar?q=${encodeURIComponent(p.doi ?? p.title)}`}
+            target="_blank"
+            rel="noopener"
+            class="text-accent no-underline hover:underline"
+            title={p.oaUrl ? 'Open-access PDF' : 'Search Scholar for a PDF copy'}
+          >PDF</a>
+          <span class="text-ink-muted">{p.citations} citations</span>
+          {p.selected && <span class="text-accent font-medium">★ Selected</span>}
+        </p>
+      </div>
+    </li>
+  ))}
+</ol>

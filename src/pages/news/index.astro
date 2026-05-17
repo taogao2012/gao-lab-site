@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Slideshow from '../../components/Slideshow.astro';
+import Icon from '../../components/Icon.astro';
+import { site } from '../../config';
+import newsData from '../../data/news.json';
+import { newsLinkFor, isExternalLink } from '../../utils/news-links';
+
+const items = [...newsData.items].sort(
+  (a, b) => +new Date(b.date) - +new Date(a.date)
+);
+
+// Group by year, descending.
+const byYear = new Map<number, typeof items>();
+for (const n of items) {
+  const y = new Date(n.date).getFullYear();
+  if (!byYear.has(y)) byYear.set(y, [] as any);
+  byYear.get(y)!.push(n as any);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+
+const fmt = (d: string) =>
+  new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+---
+
+<BaseLayout
+  title="News"
+  description="Recent news from the SuPER-AI Lab — papers, talks, awards, grants, and group milestones."
+>
+  <section class="container-page pt-10 pb-6">
+    <div class="max-w-2xl mx-auto text-center mb-6">
+      <p class="font-serif text-3xl md:text-4xl font-semibold text-accent">SuPER-AI Lab</p>
+      <p class="mt-2 text-sm md:text-base text-ink-soft">Sustainable Processing and Energy Resilience by Accelerated Innovation</p>
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <Slideshow />
+    </div>
+  </section>
+
+  <section class="container-page py-10">
+    <div class="max-w-2xl mx-auto">
+      <nav aria-label="Years" class="flex flex-wrap gap-2 mb-10">
+        {years.map((y) => (
+          <a href={`#year-${y}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+            {y} <span class="text-ink-muted">({byYear.get(y)!.length})</span>
+          </a>
+        ))}
+      </nav>
+
+      <div class="space-y-14">
+        {years.map((y) => (
+          <section id={`year-${y}`} class="scroll-mt-24">
+            <h2 class="font-serif text-3xl border-b border-rule pb-3 mb-2">{y}</h2>
+            <ol class="divide-y divide-rule">
+              {byYear.get(y)!.map((n: any) => {
+                const href = newsLinkFor(n);
+                const external = href ? isExternalLink(href) : false;
+                return (
+                <li class="py-5 grid grid-cols-12 gap-4">
+                  <span class="col-span-3 sm:col-span-2 font-mono text-xs text-ink-muted pt-1">{fmt(n.date)}</span>
+                  <div class="col-span-9 sm:col-span-10">
+                    <p class="font-serif text-base text-ink leading-snug">
+                      {href ? (
+                        <a href={href} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined} class="no-underline hover:text-accent">{n.title}</a>
+                      ) : (
+                        n.title
+                      )}
+                    </p>
+                    {n.summary && <p class="text-sm text-ink-soft mt-1.5">{n.summary}</p>}
+                    {n.tags && n.tags.length > 0 && (
+                      <p class="mt-2 flex flex-wrap gap-1.5">
+                        {n.tags.map((t: string) => (
+                          <span class="text-[10px] uppercase tracking-wider text-ink-muted bg-paper px-1.5 py-0.5 border border-rule">{t}</span>
+                        ))}
+                      </p>
+                    )}
+                  </div>
+                </li>
+                );
+              })}
+            </ol>
+          </section>
+        ))}
+      </div>
+
+      <aside class="mt-14 border border-rule p-5 text-sm">
+        <p class="eyebrow mb-3">Follow</p>
+        <p class="text-ink-soft mb-4">Real-time updates on social.</p>
+        <ul class="space-y-2">
+          <li><a href={site.social.twitter} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="x" size={14} /> {site.social.twitterHandle} on X</a></li>
+          <li><a href={site.social.linkedin} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="linkedin" size={14} /> Tao Gao on LinkedIn</a></li>
+          <li><a href={site.social.scholar} target="_blank" rel="noopener" class="text-ink-soft no-underline hover:text-accent inline-flex items-center gap-2"><Icon name="scholar" size={14} /> Google Scholar</a></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
