@@ -20,7 +20,6 @@ export const site = {
     scholar: 'https://scholar.google.com/citations?user=73w5AAcAAAAJ&hl=en',
     orcid: 'https://orcid.org/0000-0003-0204-3269',
     github: 'https://github.com/',
-    email: 'mailto:tgao9@ncsu.edu',
   },
   intranet: {
     label: 'Lab Members',

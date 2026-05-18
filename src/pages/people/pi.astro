@@ -3,6 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Icon from '../../components/Icon.astro';
 import SocialLinks from '../../components/SocialLinks.astro';
+import EmailLink from '../../components/EmailLink.astro';
 import { photoFor } from '../../data/member-photos';
 import { site } from '../../config';
 import cv from '../../data/cv.json';
@@ -17,7 +18,6 @@ const personJsonLd = {
   '@type': 'Person',
   name: cv.person.name,
   jobTitle: cv.person.title,
-  email: cv.person.email,
   affiliation: { '@type': 'CollegeOrUniversity', name: cv.person.institution, department: cv.person.department },
   alumniOf: cv.education.map((e) => ({ '@type': 'EducationalOrganization', name: e.institution })),
   url: new URL('/people/pi/', site.url).href,
@@ -42,7 +42,7 @@ const personJsonLd = {
       <div class="mt-6 space-y-5 text-sm">
         <div>
           <p class="eyebrow mb-1">Contact</p>
-          <a href={`mailto:${cv.person.email}`} class="text-ink-soft no-underline hover:text-accent break-all">{cv.person.email}</a>
+          <EmailLink email={cv.person.email} class="text-ink-soft no-underline hover:text-accent break-all" />
         </div>
         <div>
           <p class="eyebrow mb-2">Connect</p>

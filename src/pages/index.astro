@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
+import EmailLink from '../components/EmailLink.astro';
 import { site } from '../config';
 import { getCollection } from 'astro:content';
 import cv from '../data/cv.json';
@@ -165,9 +166,9 @@ const totalGrants = cv.grants.externalTotal;
         <a href="/join-us/" class="inline-flex items-center gap-2 bg-white text-accent px-5 py-3 no-underline hover:bg-paper transition-colors text-sm font-medium">
           Open positions <Icon name="arrow-right" size={16} />
         </a>
-        <a href={`mailto:${cv.person.email}`} class="ml-3 inline-flex items-center gap-2 border border-white/40 text-white px-5 py-3 no-underline hover:bg-white/10 transition-colors text-sm font-medium">
+        <EmailLink email={cv.person.email} showText={false} class="ml-3 inline-flex items-center gap-2 border border-white/40 text-white px-5 py-3 no-underline hover:bg-white/10 transition-colors text-sm font-medium">
           Email the PI
-        </a>
+        </EmailLink>
       </div>
     </div>
   </section>

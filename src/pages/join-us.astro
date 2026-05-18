@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import SocialLinks from '../components/SocialLinks.astro';
+import EmailLink from '../components/EmailLink.astro';
 import Icon from '../components/Icon.astro';
 import { site } from '../config';
 import cv from '../data/cv.json';
@@ -23,7 +24,7 @@ import cv from '../data/cv.json';
 
       <h2>Postdoctoral researchers</h2>
       <p>
-        Email Prof. Gao directly (<a href={site.social.email}>{cv.person.email}</a>) with:
+        Email Prof. Gao directly (<EmailLink email={cv.person.email} />) with:
       </p>
       <ul>
         <li>A one-paragraph research statement</li>
@@ -65,9 +66,9 @@ import cv from '../data/cv.json';
         <p class="font-serif text-lg text-ink">{cv.person.name}</p>
         <p class="text-sm text-ink-muted mt-1">{cv.person.title}</p>
         <p class="text-sm text-ink-soft mt-4">
-          <a href={`mailto:${cv.person.email}`} class="no-underline hover:text-accent inline-flex items-center gap-2">
-            <Icon name="email" size={16} /> {cv.person.email}
-          </a>
+          <EmailLink email={cv.person.email} showText={false} class="no-underline hover:text-accent inline-flex items-center gap-2">
+            <Icon name="email" size={16} /> <span class="email-text">[email&nbsp;protected]</span>
+          </EmailLink>
         </p>
         <p class="text-sm text-ink-soft mt-4 leading-relaxed">
           {cv.person.department}<br/>

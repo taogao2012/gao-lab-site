@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Icon from '../../components/Icon.astro';
+import EmailLink from '../../components/EmailLink.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../config';
 
@@ -19,7 +20,6 @@ const personJsonLd = isPI ? {
   '@type': 'Person',
   name: entry.data.name,
   jobTitle: entry.data.role,
-  email: entry.data.email,
   affiliation: { '@type': 'CollegeOrUniversity', name: site.pi.institution, department: site.pi.department },
   sameAs: [
     entry.data.scholar,
@@ -42,7 +42,7 @@ const personJsonLd = isPI ? {
         {entry.data.email && (
           <div>
             <p class="eyebrow mb-1">Email</p>
-            <a href={`mailto:${entry.data.email}`} class="text-ink-soft no-underline hover:text-accent break-all">{entry.data.email}</a>
+            <EmailLink email={entry.data.email} class="text-ink-soft no-underline hover:text-accent break-all" />
           </div>
         )}
         {entry.data.interests.length > 0 && (

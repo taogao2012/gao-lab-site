@@ -1,5 +1,6 @@
 ---
 import Icon from './Icon.astro';
+import EmailLink from './EmailLink.astro';
 import { site } from '../config';
 
 interface Props {
@@ -9,22 +10,21 @@ interface Props {
 
 const { size = 18, class: cls = '' } = Astro.props;
 
-const links = [
+const externalLinks = [
   { href: site.social.scholar, name: 'scholar' as const, label: 'Google Scholar' },
   { href: site.social.orcid, name: 'orcid' as const, label: 'ORCID' },
   { href: site.social.linkedin, name: 'linkedin' as const, label: 'LinkedIn' },
   { href: site.social.twitter, name: 'x' as const, label: 'X (Twitter)' },
-  { href: site.social.email, name: 'email' as const, label: 'Email' },
 ];
 ---
 
 <ul class={`flex items-center gap-3 ${cls}`}>
-  {links.map((link) => (
+  {externalLinks.map((link) => (
     <li>
       <a
         href={link.href}
         rel="me noopener"
-        target={link.href.startsWith('mailto:') ? undefined : '_blank'}
+        target="_blank"
         aria-label={link.label}
         title={link.label}
         class="text-ink-muted hover:text-accent transition-colors no-underline inline-flex"
@@ -33,4 +33,14 @@ const links = [
       </a>
     </li>
   ))}
+  <li>
+    <EmailLink
+      email={site.pi.email}
+      showText={false}
+      class="text-ink-muted hover:text-accent transition-colors no-underline inline-flex"
+    >
+      <span class="sr-only">Email</span>
+      <Icon name="email" size={size} />
+    </EmailLink>
+  </li>
 </ul>

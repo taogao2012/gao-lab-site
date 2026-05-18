@@ -1,0 +1,72 @@
+---
+// Obfuscated email link. The email never appears in the rendered HTML as a
+// plain `mailto:` or text — it's ROT13-encoded in a `data-e` attribute and
+// decoded client-side on page load. Defeats the vast majority of naive
+// scrapers that grep for `mailto:` or email regexes in HTML source.
+//
+// Usage:
+//   <EmailLink email="user@example.com" />                — icon-less link, shows decoded email as visible text
+//   <EmailLink email="user@example.com" showText={false}> — pass icon/text via slot
+//     <Icon name="email" /> Email me
+//   </EmailLink>
+
+interface Props {
+  email: string;
+  class?: string;
+  showText?: boolean;
+}
+
+const { email, class: className, showText = true } = Astro.props;
+
+function rot13(s: string): string {
+  return s.replace(/[A-Za-z]/g, (c) => {
+    const code = c.charCodeAt(0);
+    const base = code >= 97 ? 97 : 65;
+    return String.fromCharCode(((code - base + 13) % 26) + base);
+  });
+}
+
+const encoded = rot13(email);
+const hasSlot = Astro.slots.has('default');
+---
+
+<a
+  href="#"
+  data-e={encoded}
+  rel="nofollow"
+  class:list={['email-obf', className]}
+>
+  {hasSlot ? (
+    <slot />
+  ) : showText ? (
+    <span class="email-text" aria-hidden="true">[email&nbsp;protected]</span>
+  ) : null}
+</a>
+
+<script>
+  function rot13(s: string): string {
+    return s.replace(/[A-Za-z]/g, (c) => {
+      const code = c.charCodeAt(0);
+      const base = code >= 97 ? 97 : 65;
+      return String.fromCharCode(((code - base + 13) % 26) + base);
+    });
+  }
+
+  function decodeEmails() {
+    document.querySelectorAll<HTMLAnchorElement>('a.email-obf[data-e]').forEach((a) => {
+      const enc = a.getAttribute('data-e');
+      if (!enc) return;
+      const dec = rot13(enc);
+      a.setAttribute('href', 'mailto:' + dec);
+      const placeholder = a.querySelector<HTMLElement>('.email-text');
+      if (placeholder) placeholder.textContent = dec;
+      a.removeAttribute('data-e');
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', decodeEmails);
+  } else {
+    decodeEmails();
+  }
+</script>
