@@ -1,16 +1,15 @@
 export const site = {
-  name: 'SuPER-AI Lab',
-  longName: 'SuPER-AI Lab',
-  longNameExpansion: 'Sustainable Processing and Energy Resilience by Accelerated Innovation',
+  name: 'SuPER Lab',
+  longName: 'SuPER Lab',
+  longNameExpansion: 'Sustainable Processing and Energy Resilience Lab',
   url: 'https://www.taogao-echem.net',
   description:
-    'The SuPER-AI Lab at North Carolina State University develops electrochemical materials and processes for sustainable energy storage, separation, and manufacturing.',
+    'The SuPER Lab at North Carolina State University develops electrochemical materials and processes for sustainable energy storage, separation, and manufacturing.',
   pi: {
     name: 'Tao Gao',
     title: 'Associate Professor',
     department: 'Department of Chemical and Biomolecular Engineering',
     institution: 'North Carolina State University',
-    email: 'tgao9@ncsu.edu',
     orcid: '0000-0003-0204-3269',
   },
   social: {
@@ -27,7 +26,7 @@ export const site = {
     note: 'Notion workspace — invite required',
   },
   nav: [
-    { label: 'News', href: '/news/' },
+    { label: 'Highlights', href: '/highlights/' },
     {
       label: 'Research',
       href: '/research/',
@@ -53,9 +52,11 @@ export const site = {
         { label: 'Research Papers', href: '/publications/' },
         { label: 'Preprints', href: '/publications/preprints/' },
         { label: 'Conference Presentations', href: '/publications/conferences/' },
+        { label: 'Patents', href: '/publications/patents/' },
       ],
     },
     { label: 'Gallery', href: '/gallery/' },
+    { label: 'News', href: '/news/' },
   ],
 } as const;
 

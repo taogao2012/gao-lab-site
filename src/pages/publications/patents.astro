@@ -1,12 +1,11 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHeader from '../../components/PageHeader.astro';
 import PublicationList from '../../components/PublicationList.astro';
 import publications from '../../data/publications.json';
 
 const all = publications.items;
 const items = all
-  .filter((p: any) => p.kind === 'conference')
+  .filter((p: any) => p.kind === 'patent')
   .sort((a: any, b: any) => (b.date ?? '').localeCompare(a.date ?? ''));
 
 const counts = {
@@ -18,21 +17,23 @@ const counts = {
 ---
 
 <BaseLayout
-  title="Conference Presentations"
-  description="Conference Presentations and meeting abstracts from the SuPER Lab."
+  title="Patents"
+  description="Patents and patent applications from the SuPER Lab."
 >
   <section class="container-page py-10">
     <nav class="flex flex-wrap gap-2 text-xs">
       <a href="/publications/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Research Papers ({counts.papers})</a>
       <a href="/publications/preprints/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Preprints ({counts.preprints})</a>
-      <a href="/publications/conferences/" class="px-3 py-1.5 border border-ink text-ink no-underline">Conferences ({counts.conferences})</a>
-      <a href="/publications/patents/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Patents ({counts.patents})</a>
+      <a href="/publications/conferences/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Conferences ({counts.conferences})</a>
+      <a href="/publications/patents/" class="px-3 py-1.5 border border-ink text-ink no-underline">Patents ({counts.patents})</a>
     </nav>
 
-    <p class="mt-6 text-sm">
-      <a href="/talks/" class="text-accent no-underline">See Talks and Seminars →</a> for invited talks and university seminars.
-    </p>
-
-    <PublicationList items={items} />
+    {items.length > 0 ? (
+      <PublicationList items={items} />
+    ) : (
+      <p class="mt-10 text-sm text-ink-soft">
+        No patents listed yet. Add entries via <code class="font-mono text-xs">src/data/publications.overrides.json</code> → <code class="font-mono text-xs">additions[]</code> with <code class="font-mono text-xs">kind: "patent"</code>.
+      </p>
+    )}
   </section>
 </BaseLayout>

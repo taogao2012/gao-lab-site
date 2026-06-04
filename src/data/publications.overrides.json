@@ -1,5 +1,6 @@
 {
   "$comment": "Overrides and additions to the OpenAlex feed. The fetcher merges these with the OpenAlex result by DOI (case-insensitive). Use 'selected' to flag papers for the highlights row on the home page.",
+  "$comment_roles": "'corresponding' and 'coFirst' are DOI lists (case-insensitive) flagging the PI's authorship role; they become item.isCorresponding / item.isCoFirst and render as superscript */† on the PI's name in PublicationList. Source of truth is the PI's CV (legend there: '# equal contribution; * corresponding author'). Keep in sync when reconciling the CV.",
   "selected": [
     "10.1126/science.adq2541",
     "10.1038/s41557-024-01646-2",
@@ -7,7 +8,171 @@
     "10.1038/s41467-019-11991-3",
     "10.1126/science.aab1595"
   ],
-  "additions": [],
+  "corresponding": [
+    "10.1038/s41557-025-02023-3",
+    "10.1021/acs.jpcc.5c06609",
+    "10.1039/d5sc04532k",
+    "10.1016/j.electacta.2025.147367",
+    "10.1039/d4sc02266a",
+    "10.1039/d3ta01956j",
+    "10.1002/adma.202202063",
+    "10.26434/chemrxiv-2022-jlqbb",
+    "10.1039/d2ee01833k",
+    "10.1016/j.ensm.2022.03.004",
+    "10.1021/acscentsci.2c00293",
+    "10.1021/acsami.2c04319",
+    "10.1021/acsaem.2c00363",
+    "10.1016/j.est.2023.106943",
+    "10.3389/fenrg.2022.1059126",
+    "10.1002/smll.202201094",
+    "10.1002/asia.202200587",
+    "10.1039/c8cs00319j"
+  ],
+  "coFirst": [
+    "10.1126/science.adq2541",
+    "10.1149/ma2024-022221mtgabs",
+    "10.1149/ma2022-023216mtgabs",
+    "10.1016/j.joule.2020.12.020",
+    "10.1039/d0ee00653j",
+    "10.1021/acs.nanolett.9b02963",
+    "10.1016/j.desal.2019.114219",
+    "10.1038/s41467-019-11939-7",
+    "10.1038/ncomms14083",
+    "10.1021/acs.accounts.7b00031",
+    "10.1002/aenm.201701728",
+    "10.1021/jacs.7b04471"
+  ],
+  "additions": [
+    {
+      "id": "patent:US-12237091",
+      "doi": null,
+      "title": "Continuous separation of radionuclides by shock electrodialysis",
+      "year": 2025,
+      "date": "2025-02-25",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent 12,237,091 (granted)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US12237091",
+      "abstract": null,
+      "authors": [
+        { "name": "Kameron M. Conforti", "isPI": false },
+        { "name": "Mohammad A. Alkhadra", "isPI": false },
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Huanhuan Tian", "isPI": false },
+        { "name": "Martin Z. Bazant", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:US-20230335771",
+      "doi": null,
+      "title": "Batteries with aqueous electrolytes reinforced by Mg and Ca ions",
+      "year": 2023,
+      "date": "2023-10-19",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2023/0335771 A1 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20230335771A1",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Jing Liu", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:US-20240376621",
+      "doi": null,
+      "title": "High-efficiency electrolysis of iron ore for iron production",
+      "year": 2024,
+      "date": "2024-11-14",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2024/0376621 A1 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20240376621A1",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Jing Liu", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:WO-2024243029",
+      "doi": null,
+      "title": "Systems and methods for lithium extraction from aqueous feedstocks",
+      "year": 2024,
+      "date": "2024-11-28",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2024/243029 A2 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2024243029A2",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Yunan Qin", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:US-20250046878",
+      "doi": null,
+      "title": "Electrolytes for fast-charging and low-temperature lithium-ion batteries",
+      "year": 2025,
+      "date": "2025-02-06",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2025/0046878 A1 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20250046878A1",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Zongjian Li", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:WO-2025235655",
+      "doi": null,
+      "title": "Carboxylate ester-based electrolytes for sodium batteries",
+      "year": 2025,
+      "date": "2025-11-13",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/235655 A1 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025235655A1",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Yunan Qin", "isPI": false }
+      ]
+    },
+    {
+      "id": "patent:WO-2025245086",
+      "doi": null,
+      "title": "Iron production by direct electrolysis of iron ore",
+      "year": 2025,
+      "date": "2025-11-27",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/245086 A1 (pending)",
+      "volume": null, "issue": null, "firstPage": null, "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025245086A1",
+      "abstract": null,
+      "authors": [
+        { "name": "Tao Gao", "isPI": true },
+        { "name": "Jing Liu", "isPI": false }
+      ]
+    }
+  ],
   "redactions": [
     "10.26434/chemrxiv-2024-v6p84",
     "10.1002/ange.201910916",

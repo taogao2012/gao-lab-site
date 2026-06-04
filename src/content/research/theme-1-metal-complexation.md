@@ -26,7 +26,3 @@ Supported by NSF CAREER, we revealed that **TM–Cl complexation regulates both 
 ## Current and future research
 
 We are studying chloride electrolytes as a model system to examine how complexation regulates thermodynamics, kinetics, and transport in concentrated and hybrid chloride electrolytes. We are building a database on metal-ligand complexation and integrating AI/ML methods with automatic data collection to enable accelerated electrolyte design for energy and processing applications.
-
-## Funding
-
-Planned proposals targeting DOE BES Synthesis and Processing Science programs and NSF PFI.

@@ -1,6 +1,6 @@
 import type { AlumniDestination } from './alumni-destinations';
 
-// Curated showcase of where current SuPER-AI Lab members did their previous training.
+// Curated showcase of where current SuPER Lab members did their previous training.
 // Same shape as AlumniDestination — reusable type.
 // Logo files live at public/images/logos/<slug>.{svg,png,jpg}.
 // When a logo file is missing, the institution renders as its short label as a fallback.

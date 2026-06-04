@@ -1,7 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHeader from '../../components/PageHeader.astro';
-import Slideshow from '../../components/Slideshow.astro';
 import Icon from '../../components/Icon.astro';
 import { site } from '../../config';
 import newsData from '../../data/news.json';
@@ -26,18 +24,8 @@ const fmt = (d: string) =>
 
 <BaseLayout
   title="News"
-  description="Recent news from the SuPER-AI Lab — papers, talks, awards, grants, and group milestones."
+  description="Recent news from the SuPER Lab — papers, talks, awards, grants, and group milestones."
 >
-  <section class="container-page pt-10 pb-6">
-    <div class="max-w-2xl mx-auto text-center mb-6">
-      <p class="font-serif text-3xl md:text-4xl font-semibold text-accent">SuPER-AI Lab</p>
-      <p class="mt-2 text-sm md:text-base text-ink-soft">Sustainable Processing and Energy Resilience by Accelerated Innovation</p>
-    </div>
-    <div class="max-w-2xl mx-auto">
-      <Slideshow />
-    </div>
-  </section>
-
   <section class="container-page py-10">
     <div class="max-w-2xl mx-auto">
       <nav aria-label="Years" class="flex flex-wrap gap-2 mb-10">

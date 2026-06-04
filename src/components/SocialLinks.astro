@@ -1,6 +1,5 @@
 ---
 import Icon from './Icon.astro';
-import EmailLink from './EmailLink.astro';
 import { site } from '../config';
 
 interface Props {
@@ -33,14 +32,4 @@ const externalLinks = [
       </a>
     </li>
   ))}
-  <li>
-    <EmailLink
-      email={site.pi.email}
-      showText={false}
-      class="text-ink-muted hover:text-accent transition-colors no-underline inline-flex"
-    >
-      <span class="sr-only">Email</span>
-      <Icon name="email" size={size} />
-    </EmailLink>
-  </li>
 </ul>

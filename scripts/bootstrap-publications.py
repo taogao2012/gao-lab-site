@@ -6,6 +6,7 @@ After Node is installed, prefer `npm run fetch:publications` (the .mjs version),
 which is what the GitHub Action also runs.
 """
 import json
+import os
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -13,7 +14,9 @@ from pathlib import Path
 ORCID = "0000-0003-0204-3269"
 PI_LAST_NAME = "Gao"
 PI_FIRST_INITIAL = "T"
-POLITE_EMAIL = "tgao9@ncsu.edu"
+# OpenAlex polite-pool contact. Optional — set OPENALEX_MAILTO in the environment
+# if desired; left unset so no personal email is committed to the repo.
+POLITE_EMAIL = os.environ.get("OPENALEX_MAILTO", "")
 
 ROOT = Path(__file__).resolve().parent.parent
 OVERRIDES = ROOT / "src/data/publications.overrides.json"
@@ -123,13 +126,13 @@ def fetch_all():
             "filter": f"author.orcid:{ORCID}",
             "per-page": "200",
             "cursor": cursor,
-            "mailto": POLITE_EMAIL,
             "select": SELECT,
         }
+        if POLITE_EMAIL:
+            params["mailto"] = POLITE_EMAIL
         url = "https://api.openalex.org/works?" + urllib.parse.urlencode(params)
-        req = urllib.request.Request(
-            url, headers={"User-Agent": f"gao-lab-site (mailto:{POLITE_EMAIL})"}
-        )
+        ua = f"gao-lab-site (mailto:{POLITE_EMAIL})" if POLITE_EMAIL else "gao-lab-site"
+        req = urllib.request.Request(url, headers={"User-Agent": ua})
         with urllib.request.urlopen(req, timeout=30) as resp:
             data = json.loads(resp.read())
         results = data.get("results", [])

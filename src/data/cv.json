@@ -3,7 +3,6 @@
   "asOf": "2026-03-06",
   "person": {
     "name": "Tao Gao",
-    "email": "tgao9@ncsu.edu",
     "title": "Associate Professor",
     "department": "Department of Chemical and Biomolecular Engineering",
     "institution": "North Carolina State University",
@@ -38,7 +37,8 @@
       "years": "2017 — 2020",
       "institution": "Massachusetts Institute of Technology",
       "degree": "Postdoctoral Associate, Chemical Engineering",
-      "advisor": "Martin Bazant"
+      "advisor": "Martin Bazant (NAE)",
+      "advisorUrl": "https://web.mit.edu/bazant/www/info/"
     },
     {
       "years": "2019",
@@ -49,19 +49,21 @@
       "years": "2012 — 2017",
       "institution": "University of Maryland, College Park",
       "degree": "PhD, Chemical Engineering (GPA: 4.0/4.0)",
-      "advisor": "Chunsheng Wang"
+      "advisor": "Chunsheng Wang (ECS Fellow)",
+      "advisorUrl": "https://chbe.umd.edu/clark/faculty/340/Chunsheng-Wang"
     },
     {
       "years": "2006 — 2012",
       "institution": "Tsinghua University",
-      "degree": "BS and MS in Mechanical Engineering"
+      "degree": "BS and MS in Mechanical Engineering",
+      "minor": "BS minor in Economics"
     }
   ],
   "awards": [
     { "year": 2026, "name": "Outstanding Undergraduate Research Mentor Award", "by": "University of Utah", "url": "https://our.utah.edu/awards-recognition/our-awards/" },
-    { "year": 2025, "name": "CAREER Award", "by": "National Science Foundation (NSF)" },
+    { "year": 2025, "name": "CAREER Award", "by": "National Science Foundation (NSF)", "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2441674&HistoricalAwards=false" },
     { "year": 2025, "name": "Investigator on the Rise Award", "by": "University of Utah, Technology Commercialization Office", "url": "https://www.price.utah.edu/2025/10/14/investigator-on-the-rise-tao-gao" },
-    { "year": 2023, "name": "Emerging Investigator Award", "by": "Royal Society of Chemistry, Journal of Materials Chemistry A" },
+    { "year": 2023, "name": "Emerging Investigator Award", "by": "Royal Society of Chemistry, Journal of Materials Chemistry A", "url": "https://pubs.rsc.org/en/content/articlelanding/2023/ta/d3ta01956j" },
     { "year": 2022, "name": "Early Career Rising Star Award", "by": "American Chemical Society, ENFL Division" },
     { "year": 2022, "name": "Rising Star of Science Award", "by": "Research.com" },
     { "year": 2022, "name": "Highly Cited Researcher Award", "by": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/ABD-1559-2021" },

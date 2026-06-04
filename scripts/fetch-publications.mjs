@@ -21,7 +21,9 @@ const projectRoot = resolve(__dirname, '..');
 const ORCID = '0000-0003-0204-3269';
 const PI_LAST_NAME = 'Gao'; // for "is PI an author" detection
 const PI_FIRST_INITIAL = 'T';
-const POLITE_EMAIL = 'tgao9@ncsu.edu'; // for OpenAlex polite pool
+// OpenAlex polite-pool contact. Optional — set OPENALEX_MAILTO in the environment
+// if desired; left unset so no personal email is committed to the repo.
+const POLITE_EMAIL = process.env.OPENALEX_MAILTO || '';
 
 // OpenAlex's author.orcid filter still returns works where the ORCID isn't
 // attached to any authorship record (name-only matches). Tao Gao is common,
@@ -67,7 +69,7 @@ async function fetchAll() {
     ].join(','));
 
     const res = await fetch(url, {
-      headers: { 'User-Agent': `gao-lab-site (mailto:${POLITE_EMAIL})` },
+      headers: { 'User-Agent': POLITE_EMAIL ? `gao-lab-site (mailto:${POLITE_EMAIL})` : 'gao-lab-site' },
     });
     if (!res.ok) throw new Error(`OpenAlex HTTP ${res.status}: ${await res.text()}`);
     const data = await res.json();
@@ -124,6 +126,8 @@ function normalize(work) {
 function applyOverrides(works) {
   const redactSet = new Set((overrides.redactions ?? []).map((d) => d.toLowerCase()));
   const selectedSet = new Set((overrides.selected ?? []).map((d) => d.toLowerCase()));
+  const correspondingSet = new Set((overrides.corresponding ?? []).map((d) => d.toLowerCase()));
+  const coFirstSet = new Set((overrides.coFirst ?? []).map((d) => d.toLowerCase()));
   const byDoi = new Map();
   for (const w of works) {
     if (w.doi && redactSet.has(w.doi)) continue;
@@ -133,10 +137,15 @@ function applyOverrides(works) {
     const key = add.doi ? add.doi.toLowerCase() : `manual:${add.title}`;
     if (!byDoi.has(key)) byDoi.set(key, add);
   }
-  const merged = [...byDoi.values()].map((w) => ({
-    ...w,
-    selected: w.doi ? selectedSet.has(w.doi.toLowerCase()) : false,
-  }));
+  const merged = [...byDoi.values()].map((w) => {
+    const doi = w.doi ? w.doi.toLowerCase() : null;
+    return {
+      ...w,
+      selected: doi ? selectedSet.has(doi) : false,
+      isCorresponding: doi ? correspondingSet.has(doi) : false,
+      isCoFirst: doi ? coFirstSet.has(doi) : false,
+    };
+  });
   merged.sort((a, b) => {
     if (b.year !== a.year) return (b.year ?? 0) - (a.year ?? 0);
     return (b.citations ?? 0) - (a.citations ?? 0);

@@ -3,13 +3,21 @@ interface Props {
   eyebrow?: string;
   title: string;
   description?: string;
+  centered?: boolean;
 }
 
-const { eyebrow, title, description } = Astro.props;
+const { eyebrow, title, description, centered = false } = Astro.props;
 ---
 
-<header class="container-page pt-12 md:pt-16 pb-8 md:pb-12 border-b border-rule">
+<header
+  class:list={[
+    'container-page pt-12 md:pt-16 pb-8 md:pb-12 border-b border-rule',
+    centered && 'text-center',
+  ]}
+>
   {eyebrow && <p class="eyebrow mb-3">{eyebrow}</p>}
-  <h1 class="max-w-4xl">{title}</h1>
-  {description && <p class="mt-4 max-w-3xl text-lg text-ink-soft">{description}</p>}
+  <h1 class:list={['max-w-4xl', centered && 'mx-auto']}>{title}</h1>
+  {description && (
+    <p class:list={['mt-4 max-w-3xl text-lg text-ink-soft', centered && 'mx-auto']}>{description}</p>
+  )}
 </header>

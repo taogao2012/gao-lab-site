@@ -1,24 +1,246 @@
 {
   "$generatedAt": "2026-05-11T00:11:53.409234Z",
   "$source": "OpenAlex (ORCID 0000-0003-0204-3269) merged with publications.overrides.json (Python bootstrap)",
-  "count": 105,
+  "count": 112,
   "byYear": {
-    "2026": 2,
-    "2025": 9,
-    "2024": 3,
-    "2023": 3,
-    "2022": 13,
-    "2021": 5,
-    "2020": 5,
-    "2019": 9,
-    "2018": 12,
-    "2017": 16,
-    "2016": 12,
-    "2015": 13,
+    "2013": 1,
     "2014": 2,
-    "2013": 1
+    "2015": 13,
+    "2016": 12,
+    "2017": 16,
+    "2018": 12,
+    "2019": 9,
+    "2020": 5,
+    "2021": 5,
+    "2022": 13,
+    "2023": 3,
+    "2024": 3,
+    "2025": 9,
+    "2026": 2
   },
   "items": [
+    {
+      "id": "patent:US-12237091",
+      "doi": null,
+      "title": "Continuous separation of radionuclides by shock electrodialysis",
+      "year": 2025,
+      "date": "2025-02-25",
+      "type": "patent",
+      "citations": 0,
+      "venue": "US Patent 12,237,091 (granted)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US12237091",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Kameron M. Conforti",
+          "isPI": false
+        },
+        {
+          "name": "Mohammad A. Alkhadra",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Huanhuan Tian",
+          "isPI": false
+        },
+        {
+          "name": "Martin Z. Bazant",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2025245086",
+      "doi": null,
+      "title": "Iron production by direct electrolysis of iron ore",
+      "year": 2025,
+      "date": "2025-11-27",
+      "type": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/245086 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025245086A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2025235655",
+      "doi": null,
+      "title": "Carboxylate ester-based electrolytes for sodium batteries",
+      "year": 2025,
+      "date": "2025-11-13",
+      "type": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/235655 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025235655A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yunan Qin",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:US-20250046878",
+      "doi": null,
+      "title": "Electrolytes for fast-charging and low-temperature lithium-ion batteries",
+      "year": 2025,
+      "date": "2025-02-06",
+      "type": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2025/0046878 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20250046878A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Zongjian Li",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2024243029",
+      "doi": null,
+      "title": "Systems and methods for lithium extraction from aqueous feedstocks",
+      "year": 2024,
+      "date": "2024-11-28",
+      "type": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2024/243029 A2 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2024243029A2",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yunan Qin",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:US-20240376621",
+      "doi": null,
+      "title": "High-efficiency electrolysis of iron ore for iron production",
+      "year": 2024,
+      "date": "2024-11-14",
+      "type": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2024/0376621 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20240376621A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:US-20230335771",
+      "doi": null,
+      "title": "Batteries with aqueous electrolytes reinforced by Mg and Ca ions",
+      "year": 2023,
+      "date": "2023-10-19",
+      "type": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2023/0335771 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20230335771A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
+        }
+      ],
+      "kind": "patent",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
     {
       "id": "https://openalex.org/W7119047473",
       "doi": "10.1038/s41557-025-02023-3",
@@ -46,7 +268,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W7127071066",
@@ -87,7 +311,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4414761660",
@@ -176,7 +402,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": true
+      "selected": true,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W4412791971",
@@ -229,7 +457,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4414108044",
@@ -278,7 +508,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4407873281",
@@ -315,7 +547,9 @@
       ],
       "isJournal": false,
       "kind": "preprint",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4412399599",
@@ -356,7 +590,9 @@
       ],
       "isJournal": false,
       "kind": "preprint",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4416568005",
@@ -381,7 +617,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4416568187",
@@ -418,7 +656,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4416595289",
@@ -443,7 +683,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4417499107",
@@ -484,7 +726,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4396950169",
@@ -529,7 +773,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4401413787",
@@ -570,7 +816,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4405593291",
@@ -619,7 +867,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W4323363587",
@@ -656,7 +906,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4386462985",
@@ -697,7 +949,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4385339643",
@@ -738,7 +992,9 @@
       ],
       "isJournal": false,
       "kind": "preprint",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4312537450",
@@ -795,7 +1051,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4221008900",
@@ -852,7 +1110,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4225299164",
@@ -965,7 +1225,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4280648234",
@@ -1018,7 +1280,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4282941294",
@@ -1079,7 +1343,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4285083963",
@@ -1116,7 +1382,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4221098617",
@@ -1157,7 +1425,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4309604558",
@@ -1190,7 +1460,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4282569843",
@@ -1239,7 +1511,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4205366420",
@@ -1352,7 +1626,9 @@
       ],
       "isJournal": false,
       "kind": "preprint",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4292657291",
@@ -1393,7 +1669,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4309818572",
@@ -1442,7 +1720,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W4309838304",
@@ -1467,7 +1747,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3122798550",
@@ -1528,7 +1810,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W3195462895",
@@ -1605,7 +1889,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3128753104",
@@ -1702,7 +1988,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3168977011",
@@ -1747,7 +2035,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3212021581",
@@ -1788,7 +2078,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3041492731",
@@ -1877,7 +2169,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3035891468",
@@ -1934,7 +2228,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3027829650",
@@ -1991,7 +2287,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W3015578378",
@@ -2048,7 +2346,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3025689104",
@@ -2085,7 +2385,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2978606705",
@@ -2170,7 +2472,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2938854228",
@@ -2231,7 +2535,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2944421497",
@@ -2276,7 +2582,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2969967587",
@@ -2337,7 +2645,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2991520976",
@@ -2378,7 +2688,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2971961778",
@@ -2419,7 +2731,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2969052995",
@@ -2460,7 +2774,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2993326138",
@@ -2501,7 +2817,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2983350567",
@@ -2538,7 +2856,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2798233601",
@@ -2599,7 +2919,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2897979857",
@@ -2636,7 +2958,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2788890201",
@@ -2697,7 +3021,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2795577707",
@@ -2758,7 +3084,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2789332115",
@@ -2831,7 +3159,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2895703752",
@@ -2892,7 +3222,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2781638761",
@@ -2953,7 +3285,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2793883299",
@@ -3018,7 +3352,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2799559963",
@@ -3091,7 +3427,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2806501878",
@@ -3180,7 +3518,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2886544348",
@@ -3237,7 +3577,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2795488720",
@@ -3302,7 +3644,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2735790789",
@@ -3367,7 +3711,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2768887781",
@@ -3452,7 +3798,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2761357519",
@@ -3509,7 +3857,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2569855939",
@@ -3574,7 +3924,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2766145823",
@@ -3651,7 +4003,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2618881599",
@@ -3720,7 +4074,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2750288193",
@@ -3769,7 +4125,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2595755924",
@@ -3810,7 +4168,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2766566822",
@@ -3867,7 +4227,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": true
     },
     {
       "id": "https://openalex.org/W2772969497",
@@ -3932,7 +4294,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2624324080",
@@ -3977,7 +4341,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2766699711",
@@ -4018,7 +4384,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2737435299",
@@ -4079,7 +4447,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2752411679",
@@ -4140,7 +4510,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2735502459",
@@ -4181,7 +4553,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2735802551",
@@ -4210,7 +4584,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2342932581",
@@ -4291,7 +4667,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2464235999",
@@ -4344,7 +4722,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2462927069",
@@ -4417,7 +4797,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2538839692",
@@ -4478,7 +4860,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2561002150",
@@ -4531,7 +4915,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2484552744",
@@ -4584,7 +4970,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2394205565",
@@ -4637,7 +5025,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2537941119",
@@ -4686,7 +5076,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2239061556",
@@ -4739,7 +5131,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2309920419",
@@ -4788,7 +5182,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2952836251",
@@ -4845,7 +5241,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2341468224",
@@ -4882,7 +5280,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2229124923",
@@ -4939,7 +5339,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": true
+      "selected": true,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W1971627270",
@@ -4992,7 +5394,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2064873014",
@@ -5033,7 +5437,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W1955453862",
@@ -5090,7 +5496,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2247393878",
@@ -5135,7 +5543,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W223523971",
@@ -5188,7 +5598,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2079368824",
@@ -5233,7 +5645,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2000283821",
@@ -5274,7 +5688,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2194224782",
@@ -5327,7 +5743,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2097963847",
@@ -5380,7 +5798,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2029909164",
@@ -5425,7 +5845,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2291717004",
@@ -5478,7 +5900,9 @@
       ],
       "isJournal": false,
       "kind": "conference",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2950816292",
@@ -5519,7 +5943,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2170052611",
@@ -5564,7 +5990,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W1971919494",
@@ -5613,7 +6041,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2054935063",
@@ -5662,7 +6092,9 @@
       ],
       "isJournal": true,
       "kind": "journal",
-      "selected": false
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     }
   ]
 }

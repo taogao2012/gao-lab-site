@@ -1,7 +1,6 @@
 ---
 import { site } from '../config';
 import SocialLinks from './SocialLinks.astro';
-import EmailLink from './EmailLink.astro';
 
 const year = new Date().getFullYear();
 ---
@@ -34,9 +33,6 @@ const year = new Date().getFullYear();
     <div>
       <p class="eyebrow mb-3">Connect</p>
       <SocialLinks size={20} />
-      <p class="text-sm text-ink-soft mt-4">
-        <EmailLink email={site.pi.email} class="no-underline hover:text-accent" />
-      </p>
     </div>
   </div>
 

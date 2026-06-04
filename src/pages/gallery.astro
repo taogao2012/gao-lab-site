@@ -4,7 +4,9 @@ import PageHeader from '../components/PageHeader.astro';
 import { galleryItems, categoryLabels } from '../data/gallery';
 import type { GalleryItem } from '../data/gallery';
 
-const order: GalleryItem['category'][] = ['highlights', 'group', 'event', 'equipment', 'campus', 'utah'];
+// Highlights now live on /news/ as "News and Highlights". The gallery shows
+// only the photographic categories below.
+const order: GalleryItem['category'][] = ['group', 'event', 'equipment', 'campus', 'utah'];
 
 // Sort each category's items in reverse chronological order. Items without
 // a `date` field fall to the bottom of their section.
@@ -24,7 +26,7 @@ const grouped = order
 
 <BaseLayout
   title="Gallery"
-  description="Photos from the SuPER-AI Lab — group events, lab tours, members, and campus life."
+  description="Photos from the SuPER Lab — group events, lab tours, members, and campus life."
 >
   <section class="container-page py-10">
     <nav aria-label="Categories" class="flex flex-wrap gap-2 mb-12">
@@ -41,15 +43,29 @@ const grouped = order
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {items.map((item) => (
             <figure class="group">
-              <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  loading="lazy"
-                  decoding="async"
-                  class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                />
-              </a>
+              {item.youtubeId ? (
+                <div class="relative aspect-[4/3] bg-paper border border-rule overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
+                    title={item.alt}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    class="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              ) : (
+                <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </a>
+              )}
               {(item.caption || item.date) && (
                 <figcaption class="mt-2 flex items-baseline gap-3 text-xs text-ink-muted">
                   {item.caption && <span class="text-ink-soft">{item.caption}</span>}

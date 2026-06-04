@@ -7,37 +7,57 @@ export interface GalleryItem {
   caption?: string;
   date?: string;
   category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment';
+  // YouTube video ID. If set, the item renders as an embedded video using
+  // `src` as the poster/thumbnail (fall back to YouTube's hqdefault).
+  youtubeId?: string;
+  // External link target. When set, clicking the figure opens this URL
+  // instead of the raw image.
+  href?: string;
+  // How the image fits its frame. Defaults to 'cover' (fills the figure and
+  // may crop). Use 'contain' for logos or graphics that shouldn't be cropped.
+  fit?: 'cover' | 'contain';
 }
 
 export const galleryItems: GalleryItem[] = [
-  // Highlights — awards, grants, paper publications, research milestones.
-  // Images copied from G:\My Drive\6-website\home-gallery into public/images/slideshow/.
-  { src: '/images/slideshow/nsf-career.png', alt: 'NSF CAREER Award 2025', caption: 'NSF CAREER Award', date: '2025-07', category: 'highlights' },
-  { src: '/images/slideshow/doe-grant.jpg', alt: 'DOE grant on Li/K/Mg co-production from Great Salt Lake brine', caption: 'DOE grant on Li/K/Mg from Great Salt Lake brine', date: '2025-01', category: 'highlights' },
-  { src: '/images/slideshow/fe-battery-coe.jpg', alt: 'Iron metal battery research', caption: 'Iron metal battery research', date: '2024-08', category: 'highlights' },
-  { src: '/images/slideshow/fe-battery.png', alt: 'Aqueous Fe battery concept', caption: 'Aqueous Fe battery concept', category: 'highlights' },
-  { src: '/images/slideshow/mg-flow.png', alt: 'Mg-organic redox flow battery concept', caption: 'Mg-organic redox flow battery', category: 'highlights' },
-  { src: '/images/slideshow/yunan-mg-flow.jpg', alt: 'Yana Qin and Mg flow battery work', caption: 'Yana Qin · Mg flow battery (NSF)', date: '2023-06', category: 'highlights' },
-  { src: '/images/slideshow/jing-liu.jpg', alt: "Jing Liu's electrolytic ironmaking paper", caption: "Jing Liu's electrolytic ironmaking paper", date: '2025-09', category: 'highlights' },
-  { src: '/images/slideshow/rising-star-2022.jpg', alt: 'Rising Star of Science 2022 recognition', caption: 'Rising Star of Science 2022', date: '2022-11', category: 'highlights' },
-  { src: '/images/slideshow/picture1.png', alt: 'Research highlight', caption: 'Research highlight', category: 'highlights' },
-  { src: '/images/slideshow/capture-jpg.jpg', alt: 'Research highlight', caption: 'Research highlight', category: 'highlights' },
-  { src: '/images/slideshow/capture-png.png', alt: 'Research highlight', caption: 'Research highlight', category: 'highlights' },
+  // Highlights — older awards, grants, and research milestones.
+  // Source files live in G:\My Drive\6-website\home-gallery\highlights\ (the
+  // top level of home-gallery feeds the /news/ slideshow instead).
+  { src: '/images/slideshow/wos-highly-cited.png', alt: 'Dr. Gao is recognized as a Web of Science Highly Cited Researcher', caption: 'Dr. Gao is recognized as a Web of Science Highly Cited Researcher', date: '2022', category: 'highlights', href: 'https://www.webofscience.com/wos/author/record/ABD-1559-2021', fit: 'contain' },
+  { src: '/images/slideshow/rising-star-2022.jpg', alt: 'Dr. Gao is named a Rising Star of Science in 2022', caption: 'Dr. Gao is named a Rising Star of Science in 2022', date: '2022', category: 'highlights', fit: 'contain' },
+  { src: '/images/slideshow/jing-liu.jpg', alt: 'Jing develops a new battery for the environment', caption: 'Jing develops a new battery for the environment', date: '2023-03', category: 'highlights', href: 'https://lassonde.utah.edu/a-new-battery-for-the-environment/' },
+  { src: '/images/slideshow/mg-flow.png', alt: 'The Gao Lab develops magnesium flow batteries for grid-scale energy storage', caption: 'The Gao Lab develops magnesium flow batteries for grid-scale energy storage', date: '2022-03', category: 'highlights', href: 'https://doi.org/10.1021/acsaem.2c00363' },
+  { src: '/images/slideshow/capture-jpg.jpg', alt: 'Dr. Gao demonstrates how to assemble a coin cell battery in a glove box', caption: 'Dr. Gao demonstrates how to assemble a coin cell battery in a glove box', date: '2021', category: 'highlights' },
+  { src: '/images/slideshow/workshop-gift-goodenough.jpg', alt: "Dr. Gao attends Prof. John B. Goodenough's 98th birthday symposium in 2020", caption: "Dr. Gao attends Prof. John B. Goodenough's 98th birthday symposium in 2020", date: '2020', category: 'highlights' },
+  { src: '/images/slideshow/yanaquin-lassonde.jpg', alt: 'Yana develops a magnesium-organic flow battery for low-cost energy storage', caption: 'Yana develops a magnesium-organic flow battery for low-cost energy storage', date: '2025-03', category: 'highlights', href: 'https://lassonde.utah.edu/low-cost-energy-storage/' },
+  { src: '/images/slideshow/innovation-awards-2025.png', alt: 'Dr. Gao receives the Investigator on the Rise award at the 2025 U of U Innovation Awards', caption: 'Dr. Gao receives the Investigator on the Rise award at the 2025 U of U Innovation Awards', date: '2025-10', category: 'highlights', href: 'https://attheu.utah.edu/facultystaff/2025-innovation-awards-recipients/' },
+  { src: '/images/slideshow/nsf-logo.svg', alt: 'Dr. Gao receives the NSF CAREER award to explore iron chemistry for green applications', caption: 'Dr. Gao receives the NSF CAREER award to explore iron chemistry for green applications', date: '2025-06', category: 'highlights', href: 'https://www.price.utah.edu/2025/06/26/career-tao-gao-is-exploring-iron-chemistry-for-green-applications', fit: 'contain' },
+  { src: '/images/slideshow/our-awards-2026.png', alt: 'Dr. Gao receives the Outstanding Undergraduate Research Mentor Award from the University of Utah in 2026', caption: 'Dr. Gao receives the Outstanding Undergraduate Research Mentor Award from the University of Utah in 2026', date: '2026-04', category: 'highlights', href: 'https://our.utah.edu/awards-recognition/our-awards/' },
+  { src: '/images/slideshow/our-awards-2026-plaque.jpg', alt: 'Dr. Gao with the Outstanding Undergraduate Research Mentor Award plaque from the University of Utah, 2026', caption: 'The Outstanding Undergraduate Research Mentor Award (University of Utah, 2026)', date: '2026-04', category: 'highlights', href: 'https://our.utah.edu/awards-recognition/our-awards/' },
+  { src: '/images/slideshow/jpcc-transition-metal.png', alt: "Jing's work on transition metal thermodynamics is published in Journal of Physical Chemistry C", caption: "Jing's work on transition metal thermodynamics is published in Journal of Physical Chemistry C", date: '2026-02', category: 'highlights', href: 'https://doi.org/10.1021/acs.jpcc.5c06609' },
+  { src: '/images/slideshow/ea-2025.png', alt: "Jing's work on iron electrowinning is published in Electrochimica Acta", caption: "Jing's work on iron electrowinning is published in Electrochimica Acta", date: '2025-09', category: 'highlights', href: 'https://doi.org/10.1016/j.electacta.2025.147367' },
+  { src: '/images/slideshow/qin-2025-chemical-science.png', alt: "Yana's work on conjugated amine electrolytes is published in Chemical Science", caption: "Yana's work on conjugated amine electrolytes is published in Chemical Science", date: '2025-01', category: 'highlights', href: 'https://doi.org/10.1039/d5sc04532k', fit: 'contain' },
+  { src: '/images/slideshow/yao-2024.png', alt: "Jiwei's work on physics-guided machine learning is published in Batteries", caption: "Jiwei's work on physics-guided machine learning is published in Batteries", date: '2024-08', category: 'highlights', href: 'https://doi.org/10.3390/batteries10080283' },
+  { src: '/images/slideshow/qin-2024.png', alt: "Yana's work on carboxylate ester electrolytes is published in Chemical Science", caption: "Yana's work on carboxylate ester electrolytes is published in Chemical Science", date: '2024-01', category: 'highlights', href: 'https://doi.org/10.1039/d4sc02266a', fit: 'contain' },
+  { src: '/images/slideshow/li-2023.png', alt: "Zongjian's work on single-oxygen ether electrolytes is published in Journal of Materials Chemistry A", caption: "Zongjian's work on single-oxygen ether electrolytes is published in Journal of Materials Chemistry A", date: '2023-01', category: 'highlights', href: 'https://doi.org/10.1039/d3ta01956j' },
+  { src: '/images/slideshow/liu-2022.png', alt: "Jing's work on aqueous Fe metal batteries is published in ACS Central Science", caption: "Jing's work on aqueous Fe metal batteries is published in ACS Central Science", date: '2022-05', category: 'highlights', href: 'https://doi.org/10.1021/acscentsci.2c00293' },
+  { src: '/images/slideshow/sun-2022.png', alt: "Junhui's work on lithium deposition mechanisms is published in Energy & Environmental Science", caption: "Junhui's work on lithium deposition mechanisms is published in Energy & Environmental Science", date: '2022-01', category: 'highlights', href: 'https://doi.org/10.1039/d2ee01833k', fit: 'contain' },
 
   // Group photos (from "group pictures/<season year>.jpg")
   { src: '/images/gallery/group/spring-2026.jpg', alt: 'Group photo, Spring 2026', caption: 'Spring 2026', date: '2026-04', category: 'group' },
   { src: '/images/gallery/group/summer-2025.png', alt: 'Group photo, Summer 2025', caption: 'Summer 2025', date: '2025-07', category: 'group' },
-  { src: '/images/slideshow/group-2021-11.jpg', alt: 'Group photo, Fall 2021', caption: 'Fall 2021', date: '2021-11', category: 'group' },
   { src: '/images/gallery/group/winter-2021.jpg', alt: 'Group photo, Winter 2021', caption: 'Winter 2021', date: '2021-12', category: 'group' },
 
   // Events (filenames carry the description)
   { src: '/images/gallery/events/goodenough-97th.jpg', alt: "Celebrating Prof. John B. Goodenough's 97th birthday, Spring 2017", caption: "Celebrating Goodenough's 97th birthday", date: '2017-05', category: 'event' },
-  { src: '/images/gallery/events/2022-graduation.jpg', alt: 'Graduation, May 2022', caption: 'Graduation', date: '2022-05', category: 'event' },
-  { src: '/images/gallery/events/2022-camping.jpg', alt: 'Camping, June 2022', caption: 'Camping', date: '2022-06', category: 'event' },
-  { src: '/images/gallery/events/2022-camping-strawberry.jpg', alt: 'Camping at Strawberry, June 2022', caption: 'Camping at Strawberry', date: '2022-06', category: 'event' },
+  { src: '/images/gallery/events/2022-graduation.jpg', alt: 'Graduation of Dillon and Nico, May 2022', caption: 'Graduation of Dillon and Nico', date: '2022-05', category: 'event' },
+  { src: '/images/gallery/events/2022-camping.jpg', alt: "Making S'mores during camping, June 2022", caption: "Making S'mores during camping", date: '2022-06', category: 'event' },
+  { src: '/images/gallery/events/2022-camping-strawberry.jpg', alt: 'Catching crawfish at Strawberry Lake, June 2022', caption: 'Catching crawfish at Strawberry Lake', date: '2022-06', category: 'event' },
   { src: '/images/gallery/events/group-dinner-2023.jpg', alt: 'Group dinner, Fall 2023', caption: 'Group dinner', date: '2023-11', category: 'event' },
-  { src: '/images/gallery/events/first-phd-defense.png', alt: "First PhD defense, Summer 2025", caption: "First PhD defense", date: '2025-06', category: 'event' },
+  { src: '/images/gallery/events/acs-meeting-2023.webp', alt: 'Lab students attending the ACS Meeting, Fall 2023', caption: 'Lab students at the ACS Meeting', date: '2023-09', category: 'event' },
+  { src: '/images/gallery/events/first-phd-defense.png', alt: "Yana's PhD defense, Summer 2025", caption: "Yana's PhD defense", date: '2025-06', category: 'event' },
   { src: '/images/gallery/events/snack-before-seminar.jpg', alt: 'Snack before group seminar, Summer 2025', caption: 'Snack before group seminar', date: '2025-07', category: 'event' },
+  { src: '/images/gallery/events/yana-glovebox-farewell-2026.jpg', alt: "Yana and Dr. Gao at the glovebox where she worked for five years; the 3-electrode schematic on the glass marks the start of her PhD, May 2026", caption: 'Yana at the glovebox where her PhD began', date: '2026-05', category: 'event' },
+  { src: '/images/gallery/events/yana-farewell-bbq-2026.jpg', alt: "BBQ party in Dr. Gao's backyard before Yana's departure, May 2026", caption: "BBQ before Yana's departure", date: '2026-05', category: 'event' },
 
   // U of Utah campus (source files are IMG-XXXX without descriptions)
   { src: '/images/gallery/campus/u-of-utah.jpg', alt: 'University of Utah', caption: 'University of Utah', category: 'campus' },
@@ -48,6 +68,7 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/campus/campus-4.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-5.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-6.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
+  { src: '/images/gallery/campus/deer-2020.jpg', alt: 'A deer on the University of Utah campus, Winter 2020', caption: 'A deer on campus', date: '2020-12', category: 'campus' },
 
   // Utah & Salt Lake City (filenames are the descriptions)
   { src: '/images/gallery/utah/slc.jpg', alt: 'Salt Lake City', caption: 'Salt Lake City', category: 'utah' },
@@ -58,6 +79,7 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/utah/liberty-park.jpg', alt: 'Liberty Park', caption: 'Liberty Park', category: 'utah' },
   { src: '/images/gallery/utah/little-dell.jpg', alt: 'Little Dell Reservoir', caption: 'Little Dell Reservoir', category: 'utah' },
   { src: '/images/gallery/utah/briton.jpg', alt: 'Briton', caption: 'Briton', category: 'utah' },
+  { src: '/images/gallery/utah/snowbird.jpg', alt: 'Dr. Gao at Snowbird ski resort', caption: 'Dr. Gao at Snowbird', category: 'utah', youtubeId: 'wT-0NldJEjY' },
 
   // Lab & equipment (filenames are the descriptions)
   { src: '/images/gallery/equipment/glovebox.jpg', alt: 'Glovebox', caption: 'Glovebox', category: 'equipment' },

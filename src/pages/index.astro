@@ -1,7 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Icon from '../components/Icon.astro';
-import EmailLink from '../components/EmailLink.astro';
 import { site } from '../config';
 import { getCollection } from 'astro:content';
 import cv from '../data/cv.json';
@@ -21,34 +20,27 @@ const latestPubs = publications.items.slice(0, 3);
 const headlinePubs = selectedPubs.length >= 3 ? selectedPubs : latestPubs;
 
 const latestAward = cv.awards[0];
-const totalGrants = cv.grants.externalTotal;
+const pubCount = publications.items.length;
 ---
 
 <BaseLayout title={undefined} description={site.description}>
-  <!-- ANNOUNCEMENT BANNER -->
-  <div class="bg-accent text-white">
-    <div class="container-page py-3 text-sm font-medium text-center">
-      📣 The SuPER-AI Lab is moving to North Carolina State University, Department of Chemical and Biomolecular Engineering, in Fall 2026.
-    </div>
-  </div>
-
   <!-- HERO -->
   <section class="container-page pt-16 md:pt-24 pb-16 md:pb-24">
     <div class="grid md:grid-cols-12 gap-10 items-end">
       <div class="md:col-span-8">
         <p class="eyebrow mb-5">{site.longName} · {site.pi.institution}</p>
         <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight">
-          Electrochemistry for a sustainable energy future.
+          Electrochemical Engineering for a sustainable energy future.
         </h1>
         <p class="mt-6 text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed">
-          We design materials, electrolytes, and processes that enable the next generation of batteries, redox flow systems, and electrochemical separations — for grid-scale storage and clean manufacturing.
+          We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and electrochemical separations — for grid-scale storage and clean manufacturing.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/research/" class="inline-flex items-center gap-2 bg-ink text-white px-5 py-3 no-underline hover:bg-accent transition-colors text-sm font-medium">
             Research thrusts <Icon name="arrow-right" size={16} />
           </a>
           <a href="/publications/" class="inline-flex items-center gap-2 border border-ink/30 text-ink px-5 py-3 no-underline hover:border-accent hover:text-accent transition-colors text-sm font-medium">
-            Publications ({publications.count})
+            Publications ({pubCount})
           </a>
         </div>
       </div>
@@ -66,12 +58,28 @@ const totalGrants = cv.grants.externalTotal;
             <span class="text-ink-muted">{latestAward.by}</span>
           </p>
         </div>
-        <div>
-          <p class="eyebrow mb-2">External research funding</p>
-          <p class="font-serif text-2xl text-ink">{totalGrants}</p>
-          <p class="text-xs text-ink-muted mt-1">across {cv.grants.external.length} active and selected awards</p>
-        </div>
       </aside>
+    </div>
+  </section>
+
+  <!-- MOTIVATION: paradigm shift -->
+  <section class="border-t border-rule">
+    <div class="container-page py-14 md:py-20">
+      <div class="text-center mb-10 md:mb-12 max-w-3xl mx-auto">
+        <p class="eyebrow text-ink-soft mb-3">Motivation</p>
+        <h2 class="font-serif text-2xl md:text-3xl text-ink">A paradigm shift in the energy system</h2>
+        <p class="mt-3 font-serif text-xl md:text-2xl text-accent">Metals and materials as energy carriers and building blocks</p>
+        <p class="mt-5 text-base md:text-lg text-ink-soft leading-relaxed">
+          Our world is transitioning from a hydrocarbon-based energy system toward one built on metals and materials. Our research aims to accelerate this transition by conducting cutting-edge applied and fundamental research.
+        </p>
+      </div>
+      <img
+        src="/images/research/paradigm-shift-02.png"
+        alt="Side-by-side comparison of the 19th–20th century fuel-based energy system (hydrocarbons, pipelines, combustion; well-to-combustion oil schematic; quote 'Fundamentally, the energy transition is a material transition') and the 21st century metal- and material-based energy system (sun and wind, electricity as primary currency, metals and materials for storage and conversion; solar→battery→EV schematic; a table mapping solar cells, batteries, wires, inverters, motors, reactors, and heaters to the metals they require)."
+        loading="lazy"
+        decoding="async"
+        class="block max-w-5xl w-full mx-auto"
+      />
     </div>
   </section>
 
@@ -80,7 +88,7 @@ const totalGrants = cv.grants.externalTotal;
     <div class="container-page py-14">
       <div class="flex items-end justify-between gap-6 mb-8">
         <div>
-          <p class="eyebrow text-accent mb-2">SuPER-AI</p>
+          <p class="eyebrow text-accent mb-2">SuPER</p>
           <h2 class="font-serif">Three applied thrusts, two fundamental themes.</h2>
         </div>
         <a href="/research/" class="hidden md:inline-flex items-center gap-2 text-sm text-ink-soft no-underline hover:text-accent">
@@ -124,7 +132,7 @@ const totalGrants = cv.grants.externalTotal;
           ))}
         </ul>
         <a href="/publications/" class="mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
-          See all {publications.count} publications <Icon name="arrow-right" size={12} />
+          See all {pubCount} publications <Icon name="arrow-right" size={12} />
         </a>
       </div>
 
@@ -166,9 +174,6 @@ const totalGrants = cv.grants.externalTotal;
         <a href="/join-us/" class="inline-flex items-center gap-2 bg-white text-accent px-5 py-3 no-underline hover:bg-paper transition-colors text-sm font-medium">
           Open positions <Icon name="arrow-right" size={16} />
         </a>
-        <EmailLink email={cv.person.email} showText={false} class="ml-3 inline-flex items-center gap-2 border border-white/40 text-white px-5 py-3 no-underline hover:bg-white/10 transition-colors text-sm font-medium">
-          Email the PI
-        </EmailLink>
       </div>
     </div>
   </section>

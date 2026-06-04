@@ -2,7 +2,6 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Icon from '../../components/Icon.astro';
-import EmailLink from '../../components/EmailLink.astro';
 import { getCollection } from 'astro:content';
 import { site } from '../../config';
 
@@ -39,12 +38,6 @@ const personJsonLd = isPI ? {
         <Content />
       </article>
       <aside class="border-l border-rule pl-6 space-y-6 text-sm">
-        {entry.data.email && (
-          <div>
-            <p class="eyebrow mb-1">Email</p>
-            <EmailLink email={entry.data.email} class="text-ink-soft no-underline hover:text-accent break-all" />
-          </div>
-        )}
         {entry.data.interests.length > 0 && (
           <div>
             <p class="eyebrow mb-2">Interests</p>

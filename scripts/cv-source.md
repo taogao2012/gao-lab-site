@@ -1,7 +1,5 @@
 **­Tao GAO**
 
-Email: [tgao9@ncsu.edu]{.underline}
-
 [Website:]{.underline} [<https://www.taogao-echem.net/>]{.underline}
 
 **[PROFESSIONAL APPOINTMENT]{.underline}**

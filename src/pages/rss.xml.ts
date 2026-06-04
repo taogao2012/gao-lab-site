@@ -9,7 +9,7 @@ export async function GET(context: { site: URL }) {
 
   return rss({
     title: `${site.name} — News`,
-    description: 'Latest news from the SuPER-AI Lab at North Carolina State University',
+    description: 'Latest news from the SuPER Lab at North Carolina State University',
     site: context.site ?? site.url,
     items: items.map((n: any) => ({
       title: n.title,

@@ -29,12 +29,13 @@ const counts = {
   papers: all.filter((p: any) => p.kind === 'journal').length,
   preprints: all.filter((p: any) => p.kind === 'preprint').length,
   conferences: all.filter((p: any) => p.kind === 'conference').length,
+  patents: all.filter((p: any) => p.kind === 'patent').length,
 };
 ---
 
 <BaseLayout
   title="Research Papers"
-  description={`Peer-reviewed research papers from the SuPER-AI Lab at North Carolina State University — ${counts.papers} works since ${MIN_YEAR}.`}
+  description={`Peer-reviewed research papers from the SuPER Lab at North Carolina State University — ${counts.papers} works since ${MIN_YEAR}.`}
   jsonLd={articleJsonLd}
 >
   <section class="container-page py-10">
@@ -43,6 +44,7 @@ const counts = {
         <a href="/publications/" class="px-3 py-1.5 border border-ink text-ink no-underline">Research Papers ({counts.papers})</a>
         <a href="/publications/preprints/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Preprints ({counts.preprints})</a>
         <a href="/publications/conferences/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Conferences ({counts.conferences})</a>
+        <a href="/publications/patents/" class="px-3 py-1.5 border border-rule text-ink-soft no-underline hover:border-accent hover:text-accent transition-colors">Patents ({counts.patents})</a>
       </nav>
       <span class="text-xs text-ink-muted ml-auto">Last refresh: {new Date(publications.$generatedAt).toLocaleDateString()}</span>
     </div>

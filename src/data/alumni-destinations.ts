@@ -5,7 +5,7 @@ export type AlumniDestination = {
   url?: string;
 };
 
-// Curated showcase of where SuPER-AI Lab alumni go next.
+// Curated showcase of where SuPER Lab alumni go next.
 // Logo files live at public/images/logos/<slug>.{svg,png}.
 // When a logo file is missing, the destination renders as its short label as a fallback.
 export const destinations: AlumniDestination[] = [

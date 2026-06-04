@@ -1,10 +1,10 @@
 {
   "$source": "Conference / meeting / seminar presentations sourced from G:\\My Drive\\4-Conferences,Meetings and Seminars\\ — folder names give the venue and date, file names inside often give the presentation title. Other entries (papers, grants, recognitions, people, milestones) scraped from the live site. Zoom interviews and private industry meetings excluded; on-site interviews labeled as seminars. Future-dated entries are intentionally omitted.",
   "items": [
-    { "date": "2026-05-01", "title": "Santhana joins the SuPER-AI Lab from Wayne State University. Welcome, Santhana!", "tags": ["people"] },
+    { "date": "2026-05-01", "title": "Santhana joins the SuPER Lab from Wayne State University. Welcome, Santhana!", "tags": ["people"] },
     { "date": "2026-04-26", "title": "Professor Gao gave an invited talk at the MRS Spring Meeting, Honolulu, HI, on \"Transition metal halide complexation and the reactivity of metal deposition in aqueous electrolytes\"", "tags": ["talk", "conference"] },
     { "date": "2026-04-16", "title": "Professor Gao gave a research seminar at Case Western Reserve University, Cleveland, OH, on \"Control charge transfer reactions for electrochemical energy storage and separation\"", "tags": ["talk", "seminar"] },
-    { "date": "2026-04-15", "title": "Jaydip joins the SuPER-AI Lab from the Chemistry department. Welcome, Jaydip!", "tags": ["people"] },
+    { "date": "2026-04-15", "title": "Jaydip joins the SuPER Lab from the Chemistry department. Welcome, Jaydip!", "tags": ["people"] },
     { "date": "2026-04-03", "title": "Professor Gao gave the Separation Seminar at the U of Utah Chemistry department, Salt Lake City, UT, on \"Control charge transfer reactions and flow for electrochemical separation\"", "tags": ["talk", "seminar"] },
     { "date": "2026-04-02", "title": "Professor Gao gave a guest lecture in the U of Utah Sustainability course, Salt Lake City, UT", "tags": ["talk"] },
     { "date": "2026-03-19", "title": "Professor Gao gave a research seminar at Brigham Young University, Provo, UT, on \"Understand and control charge transfer reactions for electrochemical energy and manufacturing\"", "tags": ["talk", "seminar"] },
@@ -82,7 +82,7 @@
     { "date": "2021-07-01", "title": "Jing joins the lab as a PhD student", "tags": ["people"] },
     { "date": "2021-05-21", "title": "Professor Gao gave a talk at the ECS Spring Meeting (virtual) on \"Lithium plating on graphite\"", "tags": ["talk", "conference"] },
     { "date": "2021-05-11", "title": "Professor Gao gave a group seminar at the Xiaofeng Qian group, Texas A&M University, College Station, TX", "tags": ["talk", "seminar"] },
-    { "date": "2021-01-01", "title": "SuPER-AI Lab is founded", "tags": ["milestone"] },
+    { "date": "2021-01-01", "title": "SuPER Lab is founded", "tags": ["milestone"] },
     { "date": "2020-09-25", "title": "Professor Gao gave a group seminar at the Minteer group, University of Utah, Salt Lake City, UT", "tags": ["talk", "seminar"] },
     { "date": "2020-09-21", "title": "Professor Gao gave a graduate seminar at the University of Utah Chemical Engineering department, Salt Lake City, UT", "tags": ["talk", "seminar"] },
     { "date": "2020-09-17", "title": "Professor Gao gave a graduate seminar at Brigham Young University, Provo, UT", "tags": ["talk", "seminar"] },

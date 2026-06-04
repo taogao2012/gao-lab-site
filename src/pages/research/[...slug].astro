@@ -46,11 +46,11 @@ const challenge = !isTheme ? challengesByThrust[entry.data.order] : undefined;
 ---
 
 <BaseLayout title={entry.data.title} description={entry.data.summary}>
-  <PageHeader eyebrow={eyebrow} title={entry.data.title} description={entry.data.summary} />
+  <PageHeader eyebrow={eyebrow} title={entry.data.title} description={entry.data.summary} centered />
 
   {challenge && (
     <section class="container-page pt-8">
-      <div class="bg-paper border-l-4 border-accent p-5 max-w-prose">
+      <div class="bg-[#f5f5f5] border-l-4 border-accent p-5 max-w-prose mx-auto">
         <p class="eyebrow text-accent mb-2">{challenge.id}</p>
         <h3 class="font-serif text-xl text-ink">{challenge.title}</h3>
         <p class="mt-3 text-sm text-ink-soft leading-relaxed">{challenge.description}</p>
@@ -59,7 +59,7 @@ const challenge = !isTheme ? challengesByThrust[entry.data.order] : undefined;
   )}
 
   <section class="container-page py-12">
-    <article class="prose prose-lg max-w-prose">
+    <article class="prose prose-lg max-w-prose mx-auto">
       <Content />
     </article>
   </section>

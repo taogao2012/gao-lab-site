@@ -29,7 +29,3 @@ Such a model enables **high-throughput screening** of the electrolyte design spa
 ## Industry collaboration
 
 Supported by an industry partner, we are currently quantifying and modeling how species distribution regulates charge-transfer kinetics and transport in **iron-air batteries**.
-
-## Funding
-
-Planned proposal targeting ARPA-E IGNITE for combining physical understanding and machine learning to accelerate development of aqueous battery electrolytes.

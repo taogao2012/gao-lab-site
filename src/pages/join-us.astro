@@ -2,8 +2,6 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import SocialLinks from '../components/SocialLinks.astro';
-import EmailLink from '../components/EmailLink.astro';
-import Icon from '../components/Icon.astro';
 import { site } from '../config';
 import cv from '../data/cv.json';
 ---
@@ -24,7 +22,7 @@ import cv from '../data/cv.json';
 
       <h2>Postdoctoral researchers</h2>
       <p>
-        Email Prof. Gao directly (<EmailLink email={cv.person.email} />) with:
+        Reach out to Prof. Gao on <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a> with:
       </p>
       <ul>
         <li>A one-paragraph research statement</li>
@@ -35,24 +33,24 @@ import cv from '../data/cv.json';
 
       <h2>Undergraduate researchers</h2>
       <p>
-        We welcome undergraduate researchers — NSF REU scholars, capstone teams, and students through NC State's Office of Undergraduate Research. Email the PI with your transcript, a one-paragraph statement of what draws you to the lab, and which project on the <a href="/research/">research page</a> looks most interesting.
+        We welcome undergraduate researchers — NSF REU scholars, capstone teams, and students through NC State's Office of Undergraduate Research. Reach out via <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a> with your transcript, a one-paragraph statement of what draws you to the lab, and which project on the <a href="/research/">research page</a> looks most interesting.
       </p>
 
       <h2>Visiting scholars and high-school students</h2>
       <p>
-        Visiting scholars and motivated high-school students (typically through summer programs) are welcome. Email with timing and a project interest.
+        Visiting scholars and motivated high-school students (typically through summer programs) are welcome. Get in touch via <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a> with timing and a project interest.
       </p>
 
       <hr />
 
       <h2>Collaboration & industry</h2>
       <p>
-        We work with academic and industry partners on batteries, electrochemical separation, and decarbonization. Email Prof. Gao directly with a one-paragraph summary.
+        We work with academic and industry partners on batteries, electrochemical separation, and decarbonization. Reach out to Prof. Gao on <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a> with a one-paragraph summary.
       </p>
 
       <h2>Press & speaking</h2>
       <p>
-        For media inquiries and speaking invitations, please reach out by email with your timeline and audience.
+        For media inquiries and speaking invitations, please reach out via <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a> with your timeline and audience.
       </p>
 
       <p class="text-sm text-ink-muted">
@@ -65,11 +63,6 @@ import cv from '../data/cv.json';
         <p class="eyebrow mb-3">Contact</p>
         <p class="font-serif text-lg text-ink">{cv.person.name}</p>
         <p class="text-sm text-ink-muted mt-1">{cv.person.title}</p>
-        <p class="text-sm text-ink-soft mt-4">
-          <EmailLink email={cv.person.email} showText={false} class="no-underline hover:text-accent inline-flex items-center gap-2">
-            <Icon name="email" size={16} /> <span class="email-text">[email&nbsp;protected]</span>
-          </EmailLink>
-        </p>
         <p class="text-sm text-ink-soft mt-4 leading-relaxed">
           {cv.person.department}<br/>
           {cv.person.institution}<br/>

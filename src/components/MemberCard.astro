@@ -27,11 +27,13 @@ const {
 
 const photo = photoFor(name);
 
-// Deterministic cartoon avatar from DiceBear when no real photo exists.
-// `lorelei` is a friendly, academic-looking hand-drawn style.
-const seed = encodeURIComponent(name);
-const avatarUrl = `https://api.dicebear.com/9.x/notionists/svg?seed=${seed}&backgroundColor=fafafa&radius=0`;
-const imgSrc = photo ?? avatarUrl;
+// No cartoon avatar: members without a real photo get a plain framed
+// monogram (initials) instead — never a generated face.
+const cleaned = name.replace(/\([^)]*\)/g, ' ').trim();
+const parts = cleaned.split(/\s+/).filter(Boolean);
+const initials = parts.length
+  ? (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase()
+  : '';
 
 const photoClasses = size === 'sm'
   ? 'aspect-square w-20 rounded-full'
@@ -39,13 +41,22 @@ const photoClasses = size === 'sm'
 ---
 
 <article class={`flex ${size === 'sm' ? 'gap-4 items-start' : 'flex-col gap-3'}`}>
-  <img
-    src={imgSrc}
-    alt={name}
-    loading="lazy"
-    decoding="async"
-    class={`${photoClasses} object-cover bg-paper border border-rule`}
-  />
+  {photo ? (
+    <img
+      src={photo}
+      alt={name}
+      loading="lazy"
+      decoding="async"
+      class={`${photoClasses} object-cover bg-paper border border-rule`}
+    />
+  ) : (
+    <div
+      class={`${photoClasses} flex items-center justify-center bg-paper border border-rule text-ink-muted font-serif select-none ${size === 'sm' ? 'text-lg' : 'text-4xl'}`}
+      aria-label={name}
+    >
+      {initials}
+    </div>
+  )}
   <div class="min-w-0 flex-1">
     <p class="font-serif text-base text-ink leading-tight">{name}</p>
     {role && <p class="text-xs text-ink-muted mt-1">{role}</p>}

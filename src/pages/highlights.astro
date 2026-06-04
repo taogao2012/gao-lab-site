@@ -1,0 +1,86 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Slideshow from '../components/Slideshow.astro';
+import { galleryItems } from '../data/gallery';
+
+const highlights = galleryItems
+  .filter((i) => i.category === 'highlights')
+  .sort((a, b) => (+new Date(b.date ?? 0)) - (+new Date(a.date ?? 0)));
+
+const yearOf = (d?: string) => (d ? new Date(d).getFullYear() : null);
+const byYear = new Map<number | 'undated', typeof highlights>();
+for (const h of highlights) {
+  const y = yearOf(h.date) ?? 'undated';
+  if (!byYear.has(y)) byYear.set(y, [] as any);
+  byYear.get(y)!.push(h as any);
+}
+const years = [...byYear.keys()].sort((a, b) => {
+  if (a === 'undated') return 1;
+  if (b === 'undated') return -1;
+  return (b as number) - (a as number);
+});
+---
+
+<BaseLayout
+  title="Highlights"
+  description="Research milestones, awards, and grants from the SuPER Lab."
+>
+  <section class="container-page pt-10 pb-6">
+    <div class="max-w-2xl mx-auto text-center mb-6">
+      <p class="font-serif text-3xl md:text-4xl font-semibold text-accent">SuPER Lab</p>
+      <p class="mt-2 text-sm md:text-base text-ink-soft">
+        <span class="font-bold text-accent">Su</span>stainable
+        <span class="font-bold text-accent">P</span>rocessing and
+        <span class="font-bold text-accent">E</span>nergy
+        <span class="font-bold text-accent">R</span>esilience Lab
+      </p>
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <Slideshow />
+    </div>
+  </section>
+
+  <section class="container-page py-10 border-t border-rule">
+    <h2 class="font-serif text-2xl mb-6 text-center">Highlights</h2>
+
+    <nav aria-label="Years" class="flex flex-wrap justify-center gap-2 mb-10">
+      {years.map((y) => (
+        <a href={`#year-${y}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+          {y === 'undated' ? 'Undated' : y} <span class="text-ink-muted">({byYear.get(y)!.length})</span>
+        </a>
+      ))}
+    </nav>
+
+    <div class="space-y-12">
+      {years.map((y) => (
+        <section id={`year-${y}`} class="scroll-mt-24">
+          <h3 class="font-serif text-3xl border-b border-rule pb-3 mb-6 text-center">{y === 'undated' ? 'Undated' : y}</h3>
+          <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+            {byYear.get(y)!.map((item: any) => (
+              <figure class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] max-w-sm">
+                <a href={item.href ?? item.src} target="_blank" rel="noopener" class:list={['block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class:list={[
+                      'w-full aspect-[4/3] transition-transform duration-300 group-hover:scale-[1.02]',
+                      item.fit === 'contain' ? 'object-contain p-4' : 'object-cover',
+                    ]}
+                  />
+                </a>
+                {(item.caption || item.date) && (
+                  <figcaption class="mt-2 flex flex-col items-center gap-1 text-xs text-ink-muted text-center">
+                    {item.caption && <span class="text-ink-soft">{item.caption}</span>}
+                    {item.date && <span class="font-mono">{item.date}</span>}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

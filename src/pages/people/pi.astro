@@ -3,7 +3,6 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import PageHeader from '../../components/PageHeader.astro';
 import Icon from '../../components/Icon.astro';
 import SocialLinks from '../../components/SocialLinks.astro';
-import EmailLink from '../../components/EmailLink.astro';
 import { photoFor } from '../../data/member-photos';
 import { site } from '../../config';
 import cv from '../../data/cv.json';
@@ -41,10 +40,6 @@ const personJsonLd = {
       )}
       <div class="mt-6 space-y-5 text-sm">
         <div>
-          <p class="eyebrow mb-1">Contact</p>
-          <EmailLink email={cv.person.email} class="text-ink-soft no-underline hover:text-accent break-all" />
-        </div>
-        <div>
           <p class="eyebrow mb-2">Connect</p>
           <SocialLinks size={20} />
         </div>
@@ -73,11 +68,24 @@ const personJsonLd = {
         <div class="prose prose-lg max-w-none">
           <h2 class="font-serif mt-0">Education and Training</h2>
           <ul class="not-prose space-y-3">
-            {cv.education.map((e) => (
+            {cv.education.map((e: any) => (
               <li class="border-l-2 border-rule pl-4">
                 <p class="font-mono text-xs text-ink-muted">{e.years}</p>
                 <p class="font-serif text-base text-ink mt-0.5">{e.institution}</p>
-                <p class="text-sm text-ink-soft">{e.degree}{e.advisor ? ` — Advisor: ${e.advisor}` : ''}</p>
+                <p class="text-sm text-ink-soft">
+                  {e.degree}
+                  {e.advisor && (
+                    <>
+                      {' — Advisor: '}
+                      {e.advisorUrl ? (
+                        <a href={e.advisorUrl} target="_blank" rel="noopener" class="no-underline hover:text-accent">{e.advisor}</a>
+                      ) : (
+                        e.advisor
+                      )}
+                    </>
+                  )}
+                </p>
+                {e.minor && <p class="text-sm text-ink-soft">{e.minor}</p>}
               </li>
             ))}
           </ul>
@@ -112,6 +120,24 @@ const personJsonLd = {
             ))}
           </ol>
         </div>
+      </div>
+
+      <div class="mt-12">
+        <h2 class="font-serif text-2xl">Outside the lab</h2>
+        <figure class="mt-4">
+          <div class="relative aspect-video bg-paper border border-rule overflow-hidden">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/wT-0NldJEjY?rel=0"
+              title="Skiing at Snowbird, SLC, 2021"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+              class="absolute inset-0 w-full h-full"
+            />
+          </div>
+          <figcaption class="mt-2 text-xs text-ink-muted">Skiing at Snowbird, SLC — 2021</figcaption>
+        </figure>
       </div>
     </article>
   </section>
