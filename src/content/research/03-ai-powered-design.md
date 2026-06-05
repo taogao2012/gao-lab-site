@@ -1,5 +1,5 @@
 ---
-title: "AI-powered data-driven design"
+title: "AI-Powered Data-Driven Design"
 summary: "Integrating AI/ML tools into our experimental workflow to accelerate discovery, design, and optimization of electrolyte materials for processing and energy storage."
 image: "/images/research/metrics.jpg"
 kind: "thrust"

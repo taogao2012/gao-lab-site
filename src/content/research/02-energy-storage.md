@@ -1,5 +1,5 @@
 ---
-title: "Energy storage and batteries"
+title: "Energy Storage and Batteries"
 summary: "Novel electrolytes for cheaper, safer, longer-lasting, more powerful batteries — for grid storage, transportation decarbonization, space exploration, and defense."
 image: "/images/research/li-ion-batteries.png"
 kind: "thrust"
