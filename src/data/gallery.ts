@@ -80,10 +80,8 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/campus/campus-4.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-5.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-6.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
-  { src: '/images/gallery/campus/deer-2020.jpg', alt: 'A deer on the University of Utah campus, Winter 2020', caption: 'A deer on campus', date: '2020-12', category: 'campus' },
 
   // Utah & Salt Lake City (filenames are the descriptions)
-  { src: '/images/gallery/utah/slc.jpg', alt: 'Salt Lake City', caption: 'Salt Lake City', category: 'utah' },
   { src: '/images/gallery/utah/slc-sunset.jpg', alt: 'Sunset of Salt Lake City', caption: 'Sunset of Salt Lake City', category: 'utah' },
   { src: '/images/gallery/utah/snowbird.jpg', alt: 'Snowbird', caption: 'Snowbird', category: 'utah' },
   { src: '/images/gallery/utah/bear-lake.jpg', alt: 'Bear Lake', caption: 'Bear Lake', category: 'utah' },
