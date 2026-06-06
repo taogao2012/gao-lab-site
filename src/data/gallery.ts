@@ -77,7 +77,6 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/camping/son-paddle-board.jpg', alt: 'My son ready to paddle board at the lake (face hidden for privacy)', caption: "My son can't wait to paddle board", category: 'camping' },
   { src: '/images/gallery/camping/hiking-alta.jpg', alt: 'Hiking at the peak in Alta', caption: 'Hiking at the peak in Alta', category: 'camping' },
   { src: '/images/gallery/camping/cooking-camp-food.jpg', alt: 'Cooking my favorite camp food', caption: 'Cooking my favorite camp food', category: 'camping' },
-  { src: '/images/gallery/camping/camp-food.jpg', alt: 'Camp food', caption: 'Camp food', category: 'camping' },
   { src: '/images/gallery/camping/tent-strawberry-lake.jpg', alt: 'Inside my tent at Strawberry Lake', caption: 'Inside my tent at Strawberry Lake', category: 'camping' },
 
   // U of Utah campus (source files are IMG-XXXX without descriptions)
