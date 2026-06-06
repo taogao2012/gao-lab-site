@@ -6,7 +6,7 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   date?: string;
-  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment';
+  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers';
   // YouTube video ID. If set, the item renders as an embedded video using
   // `src` as the poster/thumbnail (fall back to YouTube's hqdefault).
   youtubeId?: string;
@@ -47,8 +47,10 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/group/summer-2025.png', alt: 'Group photo, Summer 2025', caption: 'Summer 2025', date: '2025-07', category: 'group' },
   { src: '/images/gallery/group/winter-2021.jpg', alt: 'Group photo, Winter 2021', caption: 'Winter 2021', date: '2021-12', category: 'group' },
 
+  // Scientific pioneers in my field
+  { src: '/images/gallery/events/goodenough-97th.jpg', alt: "Celebrating Prof. John B. Goodenough's 97th birthday, Spring 2017", caption: "Celebrating Goodenough's 97th birthday", date: '2017-05', category: 'pioneers' },
+
   // Events (filenames carry the description)
-  { src: '/images/gallery/events/goodenough-97th.jpg', alt: "Celebrating Prof. John B. Goodenough's 97th birthday, Spring 2017", caption: "Celebrating Goodenough's 97th birthday", date: '2017-05', category: 'event' },
   { src: '/images/gallery/events/2022-graduation.jpg', alt: 'Graduation of Dillon and Nico, May 2022', caption: 'Graduation of Dillon and Nico', date: '2022-05', category: 'event' },
   { src: '/images/gallery/events/2022-camping.jpg', alt: "Making S'mores during camping, June 2022", caption: "Making S'mores during camping", date: '2022-06', category: 'event' },
   { src: '/images/gallery/events/2022-camping-strawberry.jpg', alt: 'Catching crawfish at Strawberry Lake, June 2022', caption: 'Catching crawfish at Strawberry Lake', date: '2022-06', category: 'event' },
@@ -112,6 +114,7 @@ export const categoryLabels: Record<GalleryItem['category'], string> = {
   highlights: 'Highlights',
   group: 'Group',
   event: 'Events',
+  pioneers: 'Scientific pioneers in my field',
   campus: 'U of Utah campus',
   utah: 'Utah & Salt Lake City',
   equipment: 'Lab & equipment',
