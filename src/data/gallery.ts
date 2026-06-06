@@ -67,7 +67,7 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/events/acs-meeting-2023.webp', alt: 'Lab students attending the ACS Meeting, Fall 2023', caption: 'Lab students at the ACS Meeting', date: '2023-09', category: 'event' },
   { src: '/images/gallery/events/first-phd-defense.png', alt: "Yana's PhD defense, Summer 2025", caption: "Yana's PhD defense", date: '2025-06', category: 'event' },
   { src: '/images/gallery/events/snack-before-seminar.jpg', alt: 'Snack before group seminar, Summer 2025', caption: 'Snack before group seminar', date: '2025-07', category: 'event' },
-  { src: '/images/gallery/events/yana-glovebox-farewell-2026.jpg', alt: "Yana and Dr. Gao at the glovebox where she worked for five years; the 3-electrode schematic on the glass marks the start of her PhD, May 2026", caption: 'Yana at the glovebox where her PhD began', date: '2026-05', category: 'event' },
+  { src: '/images/gallery/events/yana-glovebox-farewell-2026.jpg', alt: "Yana and Dr. Gao at the glovebox where she worked for five years; the 3-electrode schematic on the glass marks the start of her PhD, May 2026", caption: 'Yana at the glovebox where her PhD began', date: '2026-05', category: 'group' },
   { src: '/images/gallery/events/yana-farewell-bbq-2026.jpg', alt: "BBQ party in Dr. Gao's backyard before Yana's departure, May 2026", caption: "BBQ before Yana's departure", date: '2026-05', category: 'event' },
 
   // U of Utah campus (source files are IMG-XXXX without descriptions)
