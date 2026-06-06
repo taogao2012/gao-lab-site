@@ -48,6 +48,8 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/group/winter-2021.jpg', alt: 'Group photo, Winter 2021', caption: 'Winter 2021', date: '2021-12', category: 'group' },
 
   // With the pioneers in my field
+  { src: '/images/gallery/pioneers/henry-white-utah-2025.jpg', alt: 'With Prof. Henry White at the Utah Electrochemistry Symposium, 2025', caption: 'With Henry White at the Utah Electrochemistry Symposium', date: '2025-07', category: 'pioneers' },
+  { src: '/images/gallery/pioneers/john-newman-nc-state.jpg', alt: 'With Prof. John Newman at the NC State Battery Symposium', caption: 'With John Newman at the NC State Battery Symposium', category: 'pioneers' },
   { src: '/images/gallery/events/goodenough-97th.jpg', alt: "Celebrating Prof. John B. Goodenough's 97th birthday, Spring 2017", caption: "Celebrating Goodenough's 97th birthday", date: '2017-05', category: 'pioneers' },
 
   // Events (filenames carry the description)
