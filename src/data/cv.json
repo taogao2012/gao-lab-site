@@ -64,13 +64,11 @@
     { "year": 2025, "name": "CAREER Award", "by": "National Science Foundation (NSF)", "url": "https://www.nsf.gov/awardsearch/show-award/?AWD_ID=2441674&HistoricalAwards=false" },
     { "year": 2025, "name": "Investigator on the Rise Award", "by": "University of Utah, Technology Commercialization Office", "url": "https://www.price.utah.edu/2025/10/14/investigator-on-the-rise-tao-gao" },
     { "year": 2023, "name": "Emerging Investigator Award", "by": "Royal Society of Chemistry, Journal of Materials Chemistry A", "url": "https://pubs.rsc.org/en/content/articlelanding/2023/ta/d3ta01956j" },
-    { "year": 2022, "name": "Early Career Rising Star Award", "by": "American Chemical Society, ENFL Division" },
+    { "year": 2022, "name": "Early Career Rising Star Award", "by": "American Chemical Society, Energy and Fuel Division" },
     { "year": 2022, "name": "Rising Star of Science Award", "by": "Research.com" },
     { "year": 2022, "name": "Highly Cited Researcher Award", "by": "Web of Science", "url": "https://www.webofscience.com/wos/author/record/ABD-1559-2021" },
     { "year": 2016, "name": "Dean's Dissertation Fellowship", "by": "University of Maryland" },
-    { "year": 2015, "name": "Outstanding Graduate Assistant Award", "by": "University of Maryland" },
-    { "year": 2009, "name": "National Fellowship", "by": "Tsinghua University" },
-    { "year": 2008, "name": "Outstanding Scholarship", "by": "Tsinghua University" }
+    { "year": 2015, "name": "Outstanding Graduate Assistant Award", "by": "University of Maryland" }
   ],
   "grants": {
     "externalTotal": "$3,911,000",
