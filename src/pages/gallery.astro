@@ -62,7 +62,8 @@ const grouped = order
                     alt={item.alt}
                     loading="lazy"
                     decoding="async"
-                    class={`w-full aspect-[4/3] transition-transform duration-300 group-hover:scale-[1.02] ${item.fit === 'contain' ? 'object-contain' : 'object-cover'} ${item.position === 'top' ? 'object-top' : item.position === 'bottom' ? 'object-bottom' : 'object-center'}`}
+                    style={item.zoom ? `--gallery-zoom: ${item.zoom}` : undefined}
+                    class={`w-full aspect-[4/3] transition-transform duration-300 gallery-zoom ${item.fit === 'contain' ? 'object-contain' : 'object-cover'} ${item.position === 'top' ? 'object-top' : item.position === 'bottom' ? 'object-bottom' : 'object-center'}`}
                   />
                 </a>
               )}
@@ -79,3 +80,9 @@ const grouped = order
     ))}
   </section>
 </BaseLayout>
+
+<style>
+  /* Base zoom (per-photo via --gallery-zoom) plus the subtle hover lift. */
+  .gallery-zoom { transform: scale(var(--gallery-zoom, 1)); transform-origin: center; }
+  .group:hover .gallery-zoom { transform: scale(calc(var(--gallery-zoom, 1) * 1.02)); }
+</style>

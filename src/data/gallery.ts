@@ -19,6 +19,9 @@ export interface GalleryItem {
   // Which part of the image to keep when cropped (object-position). Defaults to
   // 'center'. Use 'top' for portrait people photos so heads aren't cut off.
   position?: 'top' | 'center' | 'bottom';
+  // Extra zoom for the cropped thumbnail (e.g. 1.3 = zoom in 30%). Enlarges the
+  // image within its frame; the surrounding overflow is clipped.
+  zoom?: number;
 }
 
 export const galleryItems: GalleryItem[] = [
@@ -52,7 +55,7 @@ export const galleryItems: GalleryItem[] = [
 
   // With the pioneers in my field
   { src: '/images/gallery/pioneers/henry-white-utah-2025.jpg', alt: 'With Prof. Henry White at the Utah Electrochemistry Symposium, 2025', caption: 'With Henry White at the Utah Electrochemistry Symposium', date: '2025-07', category: 'pioneers', position: 'top' },
-  { src: '/images/gallery/pioneers/john-newman-nc-state.jpg', alt: 'With Prof. John Newman at the NC State Battery Symposium, January 2025', caption: 'With John Newman at the NC State Battery Symposium', date: '2025-01', category: 'pioneers' },
+  { src: '/images/gallery/pioneers/john-newman-nc-state.jpg', alt: 'With Prof. John Newman at the NC State Battery Symposium, January 2025', caption: 'With John Newman at the NC State Battery Symposium', date: '2025-01', category: 'pioneers', zoom: 1.3 },
   { src: '/images/gallery/events/goodenough-97th.jpg', alt: "Celebrating Prof. John B. Goodenough's 97th birthday, Spring 2017", caption: "Celebrating Goodenough's 97th birthday", date: '2017-05', category: 'pioneers' },
 
   // Events (filenames carry the description)
