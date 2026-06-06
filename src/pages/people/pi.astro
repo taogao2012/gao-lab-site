@@ -6,11 +6,21 @@ import SocialLinks from '../../components/SocialLinks.astro';
 import { photoFor } from '../../data/member-photos';
 import { site } from '../../config';
 import cv from '../../data/cv.json';
+import { galleryItems, categoryLabels } from '../../data/gallery';
 import { getEntry } from 'astro:content';
 
 const piEntry = await getEntry('people', 'tao-gao');
 const PiContent = piEntry ? (await piEntry.render()).Content : null;
 const photo = photoFor(cv.person.name);
+
+// "U of Utah campus" and "Utah & Salt Lake City" galleries now live here under
+// "Outside the lab" (moved off /gallery/). Video items are skipped — the ski
+// clip already leads the section.
+const outsideCats = ['campus', 'utah'] as const;
+const outsideGroups = outsideCats.map((cat) => ({
+  label: categoryLabels[cat],
+  items: galleryItems.filter((i) => i.category === cat && !i.youtubeId),
+}));
 
 const personJsonLd = {
   '@context': 'https://schema.org',
@@ -138,6 +148,22 @@ const personJsonLd = {
           </div>
           <figcaption class="mt-2 text-xs text-ink-muted">Skiing at Snowbird, SLC — 2021</figcaption>
         </figure>
+
+        {outsideGroups.map((g) => (
+          <div class="mt-8">
+            <h3 class="font-serif text-lg mb-3">{g.label}</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              {g.items.map((item) => (
+                <figure>
+                  <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
+                    <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover" />
+                  </a>
+                  {item.caption && <figcaption class="mt-1.5 text-xs text-ink-muted">{item.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </article>
   </section>
