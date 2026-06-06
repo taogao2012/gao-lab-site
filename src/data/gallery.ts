@@ -52,6 +52,8 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/group/spring-2026.jpg', alt: 'Group photo, Spring 2026', caption: 'Spring 2026', date: '2026-04', category: 'group' },
   { src: '/images/gallery/group/summer-2025.png', alt: 'Group photo, Summer 2025', caption: 'Summer 2025', date: '2025-07', category: 'group' },
   { src: '/images/gallery/group/winter-2021.jpg', alt: 'Group photo, Winter 2021', caption: 'Winter 2021', date: '2021-12', category: 'group' },
+  { src: '/images/gallery/group/yunan-1.jpg', alt: "Page 1 of Yunan's handwritten farewell letter to the lab, 2026", caption: "Yunan's farewell letter (1/2)", date: '2026-05', category: 'group', fit: 'contain' },
+  { src: '/images/gallery/group/yunan-2.jpg', alt: "Page 2 of Yunan's handwritten farewell letter to the lab, 2026", caption: "Yunan's farewell letter (2/2)", date: '2026-05', category: 'group', fit: 'contain' },
 
   // With the pioneers in my field
   { src: '/images/gallery/pioneers/henry-white-utah-2025.jpg', alt: 'With Prof. Henry White at the Utah Electrochemistry Symposium, 2025', caption: 'With Professor Henry White at the Utah Electrochemistry Symposium', date: '2025-07', category: 'pioneers', position: 'top' },
@@ -71,7 +73,6 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/events/yana-farewell-bbq-2026.jpg', alt: "BBQ party in Dr. Gao's backyard before Yana's departure, May 2026", caption: "BBQ before Yana's departure", date: '2026-05', category: 'event' },
 
   // U of Utah campus (source files are IMG-XXXX without descriptions)
-  { src: '/images/gallery/campus/u-of-utah.jpg', alt: 'University of Utah', caption: 'University of Utah', category: 'campus' },
   { src: '/images/gallery/campus/web.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-1.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-2.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
