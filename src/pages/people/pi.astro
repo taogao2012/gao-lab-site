@@ -13,13 +13,12 @@ const piEntry = await getEntry('people', 'tao-gao');
 const PiContent = piEntry ? (await piEntry.render()).Content : null;
 const photo = photoFor(cv.person.name);
 
-// "U of Utah campus" and "Utah & Salt Lake City" galleries now live here under
-// "Outside the lab" (moved off /gallery/). Video items are skipped — the ski
-// clip already leads the section.
-const outsideCats = ['campus', 'utah'] as const;
+// "Outside the lab" galleries (moved off /gallery/): camping/outdoor — including
+// the ski clip — plus the U of Utah campus and Utah & SLC photo sets.
+const outsideCats = ['camping', 'campus', 'utah'] as const;
 const outsideGroups = outsideCats.map((cat) => ({
   label: categoryLabels[cat],
-  items: galleryItems.filter((i) => i.category === cat && !i.youtubeId),
+  items: galleryItems.filter((i) => i.category === cat),
 }));
 
 const personJsonLd = {
@@ -144,9 +143,23 @@ const personJsonLd = {
         <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
           {g.items.map((item) => (
             <figure>
-              <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
-                <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover" />
-              </a>
+              {item.youtubeId ? (
+                <div class="relative aspect-[4/3] bg-paper border border-rule overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
+                    title={item.alt}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    class="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              ) : (
+                <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
+                  <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover" />
+                </a>
+              )}
               {item.caption && <figcaption class="mt-1.5 text-xs text-ink-muted">{item.caption}</figcaption>}
             </figure>
           ))}

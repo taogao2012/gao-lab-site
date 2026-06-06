@@ -6,7 +6,7 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   date?: string;
-  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers';
+  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers' | 'camping';
   // YouTube video ID. If set, the item renders as an embedded video using
   // `src` as the poster/thumbnail (fall back to YouTube's hqdefault).
   youtubeId?: string;
@@ -72,6 +72,14 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/events/yana-glovebox-farewell-2026.jpg', alt: "Yana and Dr. Gao at the glovebox where she worked for five years; the 3-electrode schematic on the glass marks the start of her PhD, May 2026", caption: 'Yana at the glovebox where her PhD began', date: '2026-05', category: 'group' },
   { src: '/images/gallery/events/yana-farewell-bbq-2026.jpg', alt: "BBQ party in Dr. Gao's backyard before Yana's departure, May 2026", caption: "BBQ before Yana's departure", date: '2026-05', category: 'event' },
 
+  // Camping and outdoor (the ski clip + camping/outdoor photos)
+  { src: '/images/gallery/utah/snowbird.jpg', alt: 'Dr. Gao skiing at Snowbird, SLC', caption: 'Skiing at Snowbird, SLC', category: 'camping', youtubeId: 'wT-0NldJEjY' },
+  { src: '/images/gallery/camping/son-paddle-board.jpg', alt: 'My son ready to paddle board at the lake (face hidden for privacy)', caption: "My son can't wait to paddle board", category: 'camping' },
+  { src: '/images/gallery/camping/hiking-alta.jpg', alt: 'Hiking at the peak in Alta', caption: 'Hiking at the peak in Alta', category: 'camping' },
+  { src: '/images/gallery/camping/cooking-camp-food.jpg', alt: 'Cooking my favorite camp food', caption: 'Cooking my favorite camp food', category: 'camping' },
+  { src: '/images/gallery/camping/camp-food.jpg', alt: 'Camp food', caption: 'Camp food', category: 'camping' },
+  { src: '/images/gallery/camping/tent-strawberry-lake.jpg', alt: 'Inside my tent at Strawberry Lake', caption: 'Inside my tent at Strawberry Lake', category: 'camping' },
+
   // U of Utah campus (source files are IMG-XXXX without descriptions)
   { src: '/images/gallery/campus/web.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-1.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
@@ -89,7 +97,6 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/utah/liberty-park.jpg', alt: 'Liberty Park', caption: 'Liberty Park', category: 'utah' },
   { src: '/images/gallery/utah/little-dell.jpg', alt: 'Little Dell Reservoir', caption: 'Little Dell Reservoir', category: 'utah' },
   { src: '/images/gallery/utah/briton.jpg', alt: 'Briton', caption: 'Briton', category: 'utah' },
-  { src: '/images/gallery/utah/snowbird.jpg', alt: 'Dr. Gao at Snowbird ski resort', caption: 'Dr. Gao at Snowbird', category: 'utah', youtubeId: 'wT-0NldJEjY' },
 
   // Lab & equipment (filenames are the descriptions)
   { src: '/images/gallery/equipment/glovebox.jpg', alt: 'Glovebox', caption: 'Glovebox', category: 'equipment' },
@@ -126,4 +133,5 @@ export const categoryLabels: Record<GalleryItem['category'], string> = {
   campus: 'U of Utah campus',
   utah: 'Utah & Salt Lake City',
   equipment: 'Lab & equipment',
+  camping: 'Camping and Outdoor',
 };
