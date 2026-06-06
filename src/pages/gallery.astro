@@ -62,7 +62,7 @@ const grouped = order
                     alt={item.alt}
                     loading="lazy"
                     decoding="async"
-                    class="w-full aspect-[4/3] object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    class={`w-full aspect-[4/3] transition-transform duration-300 group-hover:scale-[1.02] ${item.fit === 'contain' ? 'object-contain' : 'object-cover'} ${item.position === 'top' ? 'object-top' : item.position === 'bottom' ? 'object-bottom' : 'object-center'}`}
                   />
                 </a>
               )}
