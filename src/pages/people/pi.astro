@@ -15,7 +15,7 @@ const photo = photoFor(cv.person.name);
 
 // "Outside the lab" galleries (moved off /gallery/): camping/outdoor — including
 // the ski clip — plus the U of Utah campus and Utah & SLC photo sets.
-const outsideCats = ['camping', 'plants', 'hometown', 'campus', 'utah'] as const;
+const outsideCats = ['camping', 'plants', 'hometown', 'rockies', 'campus', 'utah'] as const;
 const outsideGroups = outsideCats.map((cat) => ({
   label: categoryLabels[cat],
   // All Outside-the-lab photos show full and uncropped (masonry, natural shape).

@@ -6,7 +6,7 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   date?: string;
-  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers' | 'camping' | 'plants' | 'hometown';
+  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers' | 'camping' | 'plants' | 'hometown' | 'rockies';
   // YouTube video ID. If set, the item renders as an embedded video using
   // `src` as the poster/thumbnail (fall back to YouTube's hqdefault).
   youtubeId?: string;
@@ -97,6 +97,20 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/hometown/hometown-ersi.jpg', alt: 'Ersi, a flat chewy rice noodle from my hometown', caption: 'Ersi (饵丝) — a flat, chewy rice noodle from my hometown', category: 'hometown' },
   { src: '/images/gallery/hometown/hometown-fries.jpg', alt: 'Hometown fries with special chili sauce', caption: 'Hometown fries with chili sauce (狼牙洋芋)', category: 'hometown' },
 
+  // Rocky Mountains (and Western national parks)
+  { src: '/images/gallery/rockies/rockies-01.jpg', alt: 'A Native American horseback monument on the plains', caption: 'A Native American horseback monument', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-02.jpg', alt: 'Fall colors in the mountains', caption: 'Fall colors in the mountains', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-03.jpg', alt: 'A canyon overlook', caption: 'Canyon overlook', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-04.jpg', alt: 'Red rock hoodoos against a blue sky', caption: 'Red rock hoodoos', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-05.jpg', alt: 'Grand Teton National Park', caption: 'Grand Teton National Park', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-06.jpg', alt: 'The Teton range', caption: 'The Teton range', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-07.jpg', alt: 'Jackson Lake and the Tetons', caption: 'Jackson Lake and the Tetons', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-08.jpg', alt: 'The Tetons across the lake', caption: 'The Tetons across the lake', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-09.jpg', alt: 'A mountain lake in autumn', caption: 'A mountain lake in autumn', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-10.jpg', alt: 'The open road through the mountains', caption: 'The open road', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-11.jpg', alt: 'Delicate Arch, Arches National Park', caption: 'Delicate Arch, Arches National Park', category: 'rockies' },
+  { src: '/images/gallery/rockies/rockies-12.jpg', alt: 'A trail sign in the high country', caption: 'High country trail', category: 'rockies' },
+
   // U of Utah campus (source files are IMG-XXXX without descriptions)
   { src: '/images/gallery/campus/web.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
   { src: '/images/gallery/campus/campus-1.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
@@ -153,4 +167,5 @@ export const categoryLabels: Record<GalleryItem['category'], string> = {
   camping: 'Camping and Outdoor',
   plants: 'Plants and Animals',
   hometown: 'My Hometown',
+  rockies: 'Rocky Mountains',
 };
