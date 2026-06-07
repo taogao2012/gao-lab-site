@@ -6,7 +6,7 @@ export interface GalleryItem {
   alt: string;
   caption?: string;
   date?: string;
-  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers' | 'camping';
+  category: 'highlights' | 'group' | 'event' | 'campus' | 'utah' | 'equipment' | 'pioneers' | 'camping' | 'plants' | 'hometown';
   // YouTube video ID. If set, the item renders as an embedded video using
   // `src` as the poster/thumbnail (fall back to YouTube's hqdefault).
   youtubeId?: string;
@@ -66,7 +66,7 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/events/2022-camping.jpg', alt: "Making S'mores during camping, June 2022", caption: "Making S'mores during camping", date: '2022-06', category: 'event' },
   { src: '/images/gallery/events/2022-camping-strawberry.jpg', alt: 'Catching crawfish at Strawberry Lake, June 2022', caption: 'Catching crawfish at Strawberry Lake', date: '2022-06', category: 'event' },
   { src: '/images/gallery/events/group-dinner-2023.jpg', alt: 'Group dinner, Fall 2023', caption: 'Group dinner', date: '2023-11', category: 'event' },
-  { src: '/images/gallery/events/acs-meeting-2023.webp', alt: 'Lab students attending the ACS Meeting, Fall 2023', caption: 'Lab students at the ACS Meeting', date: '2023-09', category: 'event' },
+  { src: '/images/gallery/events/acs-meeting-2023.jpg', alt: 'Lab students attending the ACS Meeting, Fall 2023', caption: 'Lab students at the ACS Meeting', date: '2023-09', category: 'event' },
   { src: '/images/gallery/events/first-phd-defense.png', alt: "Yana's PhD defense, Summer 2025", caption: "Yana's PhD defense", date: '2025-06', category: 'event' },
   { src: '/images/gallery/events/snack-before-seminar.jpg', alt: 'Snack before group seminar, Summer 2025', caption: 'Snack before group seminar', date: '2025-07', category: 'event' },
   { src: '/images/gallery/events/yana-glovebox-farewell-2026.jpg', alt: "Yana and Dr. Gao at the glovebox where she worked for five years; the 3-electrode schematic on the glass marks the start of her PhD, May 2026", caption: 'Yana at the glovebox where her PhD began', date: '2026-05', category: 'group' },
@@ -78,6 +78,24 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/camping/hiking-alta.jpg', alt: 'Hiking at the peak in Alta', caption: 'Hiking at the peak in Alta', category: 'camping' },
   { src: '/images/gallery/camping/cooking-camp-food.jpg', alt: 'Cooking my favorite camp food', caption: 'Cooking my favorite camp food', category: 'camping' },
   { src: '/images/gallery/camping/tent-strawberry-lake.jpg', alt: 'Inside my tent at Strawberry Lake', caption: 'Inside my tent at Strawberry Lake', category: 'camping' },
+
+  // Plants and animals (desert flora and fauna)
+  { src: '/images/gallery/plants/plants-01.jpg', alt: 'Saguaro cactus against a blue sky', caption: 'Saguaro cactus', category: 'plants' },
+  { src: '/images/gallery/plants/plants-02.jpg', alt: 'Saguaro cactus in the desert', caption: 'Saguaro in the desert', category: 'plants' },
+  { src: '/images/gallery/plants/plants-03.jpg', alt: 'Wildflowers blooming along a path', caption: 'Wildflowers along the path', category: 'plants' },
+  { src: '/images/gallery/plants/plants-04.jpg', alt: 'Wild phlox in bloom', caption: 'Wild phlox', category: 'plants' },
+  { src: '/images/gallery/plants/plants-05.jpg', alt: 'A fox resting near a saguaro', caption: 'A fox by the saguaro', category: 'plants' },
+  { src: '/images/gallery/plants/plants-06.jpg', alt: 'Pink thistle blossoms', caption: 'Pink thistle', category: 'plants' },
+  { src: '/images/gallery/plants/plants-07.jpg', alt: 'A field of daisies', caption: 'A field of daisies', category: 'plants' },
+  { src: '/images/gallery/plants/plants-08.jpg', alt: 'A lizard sunning on the rocks', caption: 'A lizard on the rocks', category: 'plants' },
+  { src: '/images/gallery/plants/plants-09.jpg', alt: 'Saguaro cactus lit up at dusk', caption: 'Saguaro at dusk', category: 'plants' },
+  { src: '/images/gallery/plants/plants-10.jpg', alt: 'Sweet william flowers in bloom', caption: 'Sweet william in bloom', category: 'plants' },
+  { src: '/images/gallery/plants/plants-11.jpg', alt: 'A yellow flower in bloom', caption: 'A yellow bloom', category: 'plants' },
+
+  // My hometown (Yunnan — scenery and local cuisine)
+  { src: '/images/gallery/hometown/hometown-river-nizhu.jpg', alt: 'River Nizhu, which separates my hometown from Guizhou Province', caption: 'River Nizhu, which separates my hometown from Guizhou Province', category: 'hometown' },
+  { src: '/images/gallery/hometown/hometown-ersi.jpg', alt: 'Ersi, a flat chewy rice noodle from my hometown', caption: 'Ersi (饵丝) — a flat, chewy rice noodle from my hometown', category: 'hometown' },
+  { src: '/images/gallery/hometown/hometown-fries.jpg', alt: 'Hometown fries with special chili sauce', caption: 'Hometown fries with chili sauce (狼牙洋芋)', category: 'hometown' },
 
   // U of Utah campus (source files are IMG-XXXX without descriptions)
   { src: '/images/gallery/campus/web.jpg', alt: 'University of Utah campus', caption: 'Campus', category: 'campus' },
@@ -133,4 +151,6 @@ export const categoryLabels: Record<GalleryItem['category'], string> = {
   utah: 'Utah & Salt Lake City',
   equipment: 'Lab & equipment',
   camping: 'Camping and Outdoor',
+  plants: 'Plants and Animals',
+  hometown: 'My Hometown',
 };

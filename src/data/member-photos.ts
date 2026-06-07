@@ -38,9 +38,9 @@ const nameToPhoto: Record<string, string> = {
   'Faezeh Mohammadibarzlaghi': '/images/people/faezeh-mohammadibarzlaghi.jpg',
 
   // Current undergrads
-  'Andrew Wolf': '/images/people/andrew-wolf.webp',
+  'Andrew Wolf': '/images/people/andrew-wolf.jpg',
   'Juliana Ortiz Castillo': '/images/people/juliana-ortiz-castillo.jpg',
-  'Xzavier Oakes': '/images/people/xzavier-oakes.webp',
+  'Xzavier Oakes': '/images/people/xzavier-oakes.jpg',
 
   // Undergrad alumni
   'Richard Gonzalez': '/images/people/richard-gonzalez.jpg',
