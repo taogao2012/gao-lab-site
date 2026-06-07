@@ -18,8 +18,7 @@ const photo = photoFor(cv.person.name);
 const outsideCats = ['camping', 'plants', 'hometown', 'campus', 'utah'] as const;
 const outsideGroups = outsideCats.map((cat) => ({
   label: categoryLabels[cat],
-  // Plants & Animals are mostly portrait — show full, uncropped (masonry).
-  masonry: cat === 'plants',
+  // All Outside-the-lab photos show full and uncropped (masonry, natural shape).
   items: galleryItems.filter((i) => i.category === cat),
 }));
 
@@ -142,43 +141,30 @@ const personJsonLd = {
     {outsideGroups.map((g) => (
       <div class="mt-8">
         <h3 class="font-serif text-lg mb-3">{g.label}</h3>
-        {g.masonry ? (
-          <div class="columns-2 sm:columns-3 lg:columns-4 gap-3">
-            {g.items.map((item) => (
-              <figure class="mb-3 break-inside-avoid">
+        <div class="columns-2 sm:columns-3 lg:columns-4 gap-3">
+          {g.items.map((item) => (
+            <figure class="mb-3 break-inside-avoid">
+              {item.youtubeId ? (
+                <div class="relative aspect-video bg-paper border border-rule overflow-hidden">
+                  <iframe
+                    src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
+                    title={item.alt}
+                    loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                    class="absolute inset-0 w-full h-full"
+                  />
+                </div>
+              ) : (
                 <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
                   <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="w-full h-auto" />
                 </a>
-                {item.caption && <figcaption class="mt-1.5 text-xs text-ink-muted">{item.caption}</figcaption>}
-              </figure>
-            ))}
-          </div>
-        ) : (
-          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
-            {g.items.map((item) => (
-              <figure>
-                {item.youtubeId ? (
-                  <div class="relative aspect-[4/3] bg-paper border border-rule overflow-hidden">
-                    <iframe
-                      src={`https://www.youtube-nocookie.com/embed/${item.youtubeId}?rel=0`}
-                      title={item.alt}
-                      loading="lazy"
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      referrerpolicy="strict-origin-when-cross-origin"
-                      allowfullscreen
-                      class="absolute inset-0 w-full h-full"
-                    />
-                  </div>
-                ) : (
-                  <a href={item.src} target="_blank" rel="noopener" class="block overflow-hidden bg-paper border border-rule no-underline">
-                    <img src={item.src} alt={item.alt} loading="lazy" decoding="async" class="w-full aspect-[4/3] object-cover" />
-                  </a>
-                )}
-                {item.caption && <figcaption class="mt-1.5 text-xs text-ink-muted">{item.caption}</figcaption>}
-              </figure>
-            ))}
-          </div>
-        )}
+              )}
+              {item.caption && <figcaption class="mt-1.5 text-xs text-ink-muted">{item.caption}</figcaption>}
+            </figure>
+          ))}
+        </div>
       </div>
     ))}
   </section>
