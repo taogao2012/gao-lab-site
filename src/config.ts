@@ -5,6 +5,8 @@ export const site = {
   url: 'https://www.taogao-echem.net',
   description:
     'The SuPER Lab at North Carolina State University develops electrochemical materials and processes for sustainable energy storage, separation, and manufacturing.',
+  // Google Analytics 4 Measurement ID, e.g. 'G-XXXXXXXXXX'. Empty string = analytics off.
+  analytics: { ga4: '' },
   pi: {
     name: 'Tao Gao',
     title: 'Associate Professor',
