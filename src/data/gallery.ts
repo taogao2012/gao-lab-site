@@ -74,6 +74,7 @@ export const galleryItems: GalleryItem[] = [
 
   // Camping and outdoor (the ski clip + camping/outdoor photos)
   { src: '/images/gallery/utah/snowbird.jpg', alt: 'Dr. Gao skiing at Snowbird, SLC', caption: 'Skiing at Snowbird, SLC', category: 'camping', youtubeId: 'wT-0NldJEjY' },
+  { src: 'https://i.ytimg.com/vi/2pVKMcfZ9As/hqdefault.jpg', alt: 'Camp fire video', caption: 'Camp fire', category: 'camping', youtubeId: '2pVKMcfZ9As' },
   { src: '/images/gallery/camping/son-paddle-board.jpg', alt: 'My son ready to paddle board at the lake (face hidden for privacy)', caption: "My son can't wait to paddle board", category: 'camping' },
   { src: '/images/gallery/camping/hiking-alta.jpg', alt: 'Hiking at the peak in Alta', caption: 'Hiking at the peak in Alta', category: 'camping' },
   { src: '/images/gallery/camping/cooking-camp-food.jpg', alt: 'Cooking my favorite camp food', caption: 'Cooking my favorite camp food', category: 'camping' },
@@ -98,6 +99,11 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/hometown/hometown-fries.jpg', alt: 'Hometown fries with special chili sauce', caption: 'Hometown fries with chili sauce (狼牙洋芋)', category: 'hometown' },
 
   // Rocky Mountains (and Western national parks)
+  { src: 'https://i.ytimg.com/vi/FQTBCkHSFHc/hqdefault.jpg', alt: 'Utah video', caption: 'Utah', category: 'rockies', youtubeId: 'FQTBCkHSFHc' },
+  { src: 'https://i.ytimg.com/vi/FAZc9FpiEvY/hqdefault.jpg', alt: 'Yuba State Park video', caption: 'Yuba State Park', category: 'rockies', youtubeId: 'FAZc9FpiEvY' },
+  { src: 'https://i.ytimg.com/vi/EqCaX0z-liE/hqdefault.jpg', alt: 'Vernal, Utah video', caption: 'Vernal, Utah', category: 'rockies', youtubeId: 'EqCaX0z-liE' },
+  { src: 'https://i.ytimg.com/vi/KTLXsSTNvHc/hqdefault.jpg', alt: 'Mountain scenery video', category: 'rockies', youtubeId: 'KTLXsSTNvHc' },
+  { src: 'https://i.ytimg.com/vi/MJabOHVKQqw/hqdefault.jpg', alt: 'Las Vegas, the Sphere video', caption: 'Vegas — the Sphere', category: 'rockies', youtubeId: 'MJabOHVKQqw' },
   { src: '/images/gallery/rockies/rockies-01.jpg', alt: 'A Native American horseback monument on the plains', caption: 'A Native American horseback monument', category: 'rockies' },
   { src: '/images/gallery/rockies/rockies-02.jpg', alt: 'Fall colors in the mountains', caption: 'Fall colors in the mountains', category: 'rockies' },
   { src: '/images/gallery/rockies/rockies-03.jpg', alt: 'A canyon overlook', caption: 'Canyon overlook', category: 'rockies' },
