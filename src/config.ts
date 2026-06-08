@@ -6,7 +6,7 @@ export const site = {
   description:
     'The SuPER Lab at North Carolina State University develops electrochemical materials and processes for sustainable energy storage, separation, and manufacturing.',
   // Google Analytics 4 Measurement ID, e.g. 'G-XXXXXXXXXX'. Empty string = analytics off.
-  analytics: { ga4: '' },
+  analytics: { ga4: 'G-JNJY1CM2QM' },
   pi: {
     name: 'Tao Gao',
     title: 'Associate Professor',
