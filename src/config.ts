@@ -15,7 +15,7 @@ export const site = {
     orcid: '0000-0003-0204-3269',
   },
   social: {
-    linkedin: 'https://www.linkedin.com/in/tao-gao-a4842b22/',
+    linkedin: 'https://www.linkedin.com/in/taogao/',
     twitter: 'https://twitter.com/TaoGao_Utah',
     twitterHandle: '@TaoGao_Utah',
     scholar: 'https://scholar.google.com/citations?user=73w5AAcAAAAJ&hl=en',
