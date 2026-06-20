@@ -57,7 +57,7 @@ export const galleryItems: GalleryItem[] = [
   { src: '/images/gallery/group/farewell-letter-1.jpg', alt: 'Page 1 of an anonymous handwritten farewell letter to the lab, 2026', caption: 'A farewell letter (1/2)', date: '2026-05', category: 'group', fit: 'contain' },
   { src: '/images/gallery/group/farewell-letter-2.jpg', alt: 'Page 2 of an anonymous handwritten farewell letter to the lab, 2026', caption: 'A farewell letter (2/2)', date: '2026-05', category: 'group', fit: 'contain' },
   { src: '/images/gallery/group/undergrad-thank-you-note-2026.jpg', alt: 'Handwritten thank-you note from a graduating undergraduate student to Dr. Gao, 2026', caption: 'A thank-you note from a graduating undergraduate', date: '2026-05', category: 'group', fit: 'contain' },
-  { src: '/images/gallery/group/nico-visit-2026.jpg', alt: 'Dr. Gao with alumnus Nico, who returned to visit the lab after graduation, 2026', caption: 'Nico returns to visit after graduation', date: '2026-06', category: 'group', fit: 'contain' },
+  { src: '/images/gallery/group/nico-visit-2026.jpg', alt: 'Dr. Gao with alumnus Nico, who returned to visit the lab after graduation, Spring 2025', caption: 'Nico returns to visit after graduation', date: '2025-04', category: 'group', fit: 'contain' },
 
   // With the pioneers in my field
   { src: '/images/gallery/pioneers/henry-white-utah-2025.jpg', alt: 'With Prof. Henry White at the Utah Electrochemistry Symposium, 2025', caption: 'With Professor Henry White at the Utah Electrochemistry Symposium', date: '2025-07', category: 'pioneers', position: 'top' },
