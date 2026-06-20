@@ -28,6 +28,8 @@ export const galleryItems: GalleryItem[] = [
   // Highlights — older awards, grants, and research milestones.
   // Source files live in G:\My Drive\6-website\home-gallery\highlights\ (the
   // top level of home-gallery feeds the /news/ slideshow instead).
+  { src: '/images/slideshow/acs-early-career-investigator-award.jpg', alt: 'Dr. Gao receives the Early Career Investigator Award from the ACS Energy & Fuels Division', caption: 'Dr. Gao receives the Early Career Investigator Award from the ACS Energy & Fuels Division', date: '2022', category: 'highlights', fit: 'contain' },
+  { src: '/images/slideshow/goodenough-98th-workshop-souvenir.jpg', alt: "Souvenir from Prof. John B. Goodenough's 98th birthday workshop, commemorating his 2019 Nobel Prize in Chemistry", caption: "Souvenir from Prof. John B. Goodenough's 98th birthday workshop", date: '2020', category: 'highlights' },
   { src: '/images/slideshow/wos-highly-cited.png', alt: 'Dr. Gao is recognized as a Web of Science Highly Cited Researcher', caption: 'Dr. Gao is recognized as a Web of Science Highly Cited Researcher', date: '2022', category: 'highlights', href: 'https://www.webofscience.com/wos/author/record/ABD-1559-2021', fit: 'contain' },
   { src: '/images/slideshow/rising-star-2022.jpg', alt: 'Dr. Gao is named a Rising Star of Science in 2022', caption: 'Dr. Gao is named a Rising Star of Science in 2022', date: '2022', category: 'highlights', fit: 'contain' },
   { src: '/images/slideshow/jing-liu.jpg', alt: 'Jing develops a new battery for the environment', caption: 'Jing develops a new battery for the environment', date: '2023-03', category: 'highlights', href: 'https://lassonde.utah.edu/a-new-battery-for-the-environment/' },
