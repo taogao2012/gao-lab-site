@@ -28,15 +28,15 @@ const pubCount = publications.items.length;
   <section class="container-page pt-16 md:pt-24 pb-16 md:pb-24">
     <div class="grid md:grid-cols-12 gap-10 items-end">
       <div class="md:col-span-8">
-        <p class="eyebrow mb-5">{site.longName} · {site.pi.institution}</p>
-        <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight">
-          Electrochemical Engineering for a sustainable energy future.
+        <p class="eyebrow text-accent mb-5">{site.longName} · {site.pi.institution}</p>
+        <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight text-ink">
+          Electrochemical Engineering <span class="text-accent">for a sustainable energy future.</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed">
           We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and electrochemical separations — for grid-scale storage and clean manufacturing.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <a href="/research/" class="inline-flex items-center gap-2 bg-ink text-white px-5 py-3 no-underline hover:bg-accent transition-colors text-sm font-medium">
+          <a href="/research/" class="inline-flex items-center gap-2 bg-accent text-white px-5 py-3 no-underline hover:bg-accent-deep transition-colors text-sm font-medium">
             Research thrusts <Icon name="arrow-right" size={16} />
           </a>
           <a href="/publications/" class="inline-flex items-center gap-2 border border-ink/30 text-ink px-5 py-3 no-underline hover:border-accent hover:text-accent transition-colors text-sm font-medium">
@@ -47,16 +47,16 @@ const pubCount = publications.items.length;
 
       <aside class="md:col-span-4 md:border-l md:border-rule md:pl-8 space-y-6">
         <div>
-          <p class="eyebrow mb-2">PI</p>
-          <p class="font-serif text-xl text-ink">{cv.person.name}</p>
+          <p class="eyebrow text-accent mb-2">PI</p>
+          <a href="/people/pi/" class="font-serif text-xl text-ink no-underline hover:text-accent transition-colors">{cv.person.name}</a>
           <p class="text-sm text-ink-muted mt-1">{cv.person.title}, {cv.person.department}</p>
         </div>
         <div>
-          <p class="eyebrow mb-2">Latest recognition</p>
-          <p class="text-sm text-ink-soft">
-            <span class="text-ink font-medium">{latestAward.year}</span> · {latestAward.name}<br/>
+          <p class="eyebrow text-accent mb-2">Latest recognition</p>
+          <a href="/highlights/" class="group block text-sm text-ink-soft no-underline">
+            <span class="text-accent font-semibold">{latestAward.year}</span> · <span class="group-hover:text-accent transition-colors">{latestAward.name}</span><br/>
             <span class="text-ink-muted">{latestAward.by}</span>
-          </p>
+          </a>
         </div>
       </aside>
     </div>

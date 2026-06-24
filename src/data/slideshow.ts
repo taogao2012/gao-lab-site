@@ -30,4 +30,9 @@ export const slides: Slide[] = [
     caption: 'Our views on Li deposition is published in Nature Chemistry',
     href: 'https://www.nature.com/articles/s41557-025-02023-3/figures/1',
   },
+  {
+    image: '/images/slideshow/scholargps.png',
+    caption: 'Prof. Gao is among the top 1% ranked scholar in chemical engineering and energy by ScholarGPS',
+    href: '/images/slideshow/scholargps.png',
+  },
 ];
