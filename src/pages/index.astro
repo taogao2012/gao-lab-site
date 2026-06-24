@@ -19,21 +19,21 @@ const selectedPubs = publications.items.filter((p: any) => p.selected).slice(0, 
 const latestPubs = publications.items.slice(0, 3);
 const headlinePubs = selectedPubs.length >= 3 ? selectedPubs : latestPubs;
 
-const latestAward = cv.awards[0];
+const honors = cv.awards.slice(0, 6);
 const pubCount = publications.items.length;
 ---
 
 <BaseLayout title={undefined} description={site.description}>
   <!-- HERO -->
   <section class="container-page pt-16 md:pt-24 pb-16 md:pb-24">
-    <div class="grid md:grid-cols-12 gap-10 items-end">
+    <div class="grid md:grid-cols-12 gap-10 items-stretch">
       <div class="md:col-span-8">
         <p class="eyebrow text-accent mb-5">{site.longName} · {site.pi.institution}</p>
         <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight text-ink">
           Electrochemical Engineering <span class="text-accent">for a sustainable energy future.</span>
         </h1>
         <p class="mt-6 text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed">
-          We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and electrochemical separations — for grid-scale storage and clean manufacturing.
+          We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and separations — for grid-scale energy storage and clean manufacturing.
         </p>
         <div class="mt-8 flex flex-wrap gap-3">
           <a href="/research/" class="inline-flex items-center gap-2 bg-accent text-white px-5 py-3 no-underline hover:bg-accent-deep transition-colors text-sm font-medium">
@@ -52,10 +52,16 @@ const pubCount = publications.items.length;
           <p class="text-sm text-ink-muted mt-1">{cv.person.title}, {cv.person.department}</p>
         </div>
         <div>
-          <p class="eyebrow text-accent mb-2">Latest recognition</p>
-          <a href="/highlights/" class="group block text-sm text-ink-soft no-underline">
-            <span class="text-accent font-semibold">{latestAward.year}</span> · <span class="group-hover:text-accent transition-colors">{latestAward.name}</span><br/>
-            <span class="text-ink-muted">{latestAward.by}</span>
+          <p class="eyebrow text-accent mb-2">Awards &amp; honors</p>
+          <ul class="space-y-2.5">
+            {honors.map((a) => (
+              <li class="text-sm text-ink-soft leading-snug">
+                <span class="text-accent font-semibold">{a.year}</span> · {a.name}
+              </li>
+            ))}
+          </ul>
+          <a href="/awards/" class="mt-3 inline-flex items-center gap-1 text-xs text-accent no-underline">
+            All awards <Icon name="arrow-right" size={12} />
           </a>
         </div>
       </aside>
