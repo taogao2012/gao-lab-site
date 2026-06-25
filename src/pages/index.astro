@@ -5,21 +5,12 @@ import { site } from '../config';
 import { getCollection } from 'astro:content';
 import cv from '../data/cv.json';
 import publications from '../data/publications.json';
-import newsData from '../data/news.json';
 import Slideshow from '../components/Slideshow.astro';
 import { galleryItems } from '../data/gallery';
-
-const news = [...newsData.items]
-  .sort((a, b) => +new Date(b.date) - +new Date(a.date))
-  .slice(0, 3);
 
 const research = (await getCollection('research'))
   .filter((r) => r.data.kind === 'thrust')
   .sort((a, b) => a.data.order - b.data.order);
-
-const selectedPubs = publications.items.filter((p: any) => p.selected).slice(0, 4);
-const latestPubs = publications.items.slice(0, 3);
-const headlinePubs = selectedPubs.length >= 3 ? selectedPubs : latestPubs;
 
 const honors = cv.awards.slice(0, 6);
 const recentHighlights = galleryItems
@@ -79,50 +70,10 @@ const pubCount = publications.items.length;
     </div>
   </section>
 
-  <!-- HIGHLIGHTS: moving slideshow + recent reel (merged from /highlights/) -->
-  <section class="border-t border-rule bg-paper/10">
-    <div class="container-page py-10 md:py-12">
-      <div class="flex items-end justify-between gap-6 mb-6">
-        <div>
-          <p class="eyebrow text-accent mb-2">Highlights</p>
-          <h2 class="font-serif">Recent milestones</h2>
-        </div>
-        <a href="/highlights/" class="hidden md:inline-flex items-center gap-2 text-sm text-ink-soft no-underline hover:text-accent">
-          All highlights <Icon name="arrow-right" size={14} />
-        </a>
-      </div>
-      <div class="max-w-3xl mx-auto">
-        <Slideshow />
-      </div>
-      <div class="mt-8 grid grid-cols-3 lg:grid-cols-6 gap-3">
-        {recentHighlights.map((item) => (
-          <a
-            href={item.href ?? item.src}
-            target="_blank"
-            rel="noopener"
-            title={item.caption ?? item.alt}
-            class:list={['group block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}
-          >
-            <img
-              src={item.src}
-              alt={item.alt}
-              loading="lazy"
-              decoding="async"
-              class:list={['w-full aspect-square transition-transform duration-300 group-hover:scale-[1.03]', item.fit === 'contain' ? 'object-contain p-2' : 'object-cover']}
-            />
-          </a>
-        ))}
-      </div>
-      <a href="/highlights/" class="md:hidden mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
-        All highlights <Icon name="arrow-right" size={12} />
-      </a>
-    </div>
-  </section>
-
-  <!-- MOTIVATION: paradigm shift -->
+  <!-- MOTIVATION + HIGHLIGHTS: paradigm-shift intro, moving slideshow, recent reel -->
   <section class="border-t border-rule">
-    <div class="container-page py-8 md:py-10">
-      <div class="text-center mb-5 md:mb-6 max-w-3xl mx-auto">
+    <div class="container-page py-10 md:py-12">
+      <div class="text-center mb-8 max-w-3xl mx-auto">
         <p class="eyebrow text-accent mb-2">Motivation</p>
         <h2 class="font-serif text-2xl md:text-3xl text-ink">A paradigm shift in the energy system</h2>
         <p class="mt-2 font-serif text-xl md:text-2xl text-accent">Metals and materials as energy carriers and building blocks</p>
@@ -130,13 +81,9 @@ const pubCount = publications.items.length;
           Our world is transitioning from a hydrocarbon-based energy system toward one built on metals and materials. Our research aims to accelerate this transition by conducting cutting-edge applied and fundamental research.
         </p>
       </div>
-      <img
-        src="/images/research/paradigm-shift-02.png"
-        alt="Side-by-side comparison of the 19th–20th century fuel-based energy system (hydrocarbons, pipelines, combustion; well-to-combustion oil schematic; quote 'Fundamentally, the energy transition is a material transition') and the 21st century metal- and material-based energy system (sun and wind, electricity as primary currency, metals and materials for storage and conversion; solar→battery→EV schematic; a table mapping solar cells, batteries, wires, inverters, motors, reactors, and heaters to the metals they require)."
-        loading="lazy"
-        decoding="async"
-        class="block max-w-5xl w-full max-h-[55vh] object-contain mx-auto"
-      />
+      <div class="max-w-3xl mx-auto">
+        <Slideshow />
+      </div>
     </div>
   </section>
 
@@ -168,53 +115,40 @@ const pubCount = publications.items.length;
     </div>
   </section>
 
-  <!-- LATEST WORK + NEWS on white -->
-  <section class="container-page py-14">
-    <div class="grid lg:grid-cols-3 gap-12">
-      <div class="lg:col-span-2">
-        <p class="eyebrow text-accent mb-3">Recent publications</p>
-        <h2 class="font-serif mb-8">Selected work</h2>
-        <ul class="divide-y divide-rule">
-          {headlinePubs.map((p: any) => (
-            <li class="py-5">
-              <a href={p.doi ? `https://doi.org/${p.doi}` : p.id} target="_blank" rel="noopener" class="no-underline group">
-                <p class="text-xs text-ink-muted">{p.year} · {p.venue ?? '—'}</p>
-                <h3 class="font-serif text-lg text-ink group-hover:text-accent mt-1 transition-colors">{p.title}</h3>
-                <p class="text-sm text-ink-soft mt-1 line-clamp-2">
-                  {p.authors.slice(0, 6).map((a: any) => a.isPI ? `**${a.name}**` : a.name).join(', ')}
-                  {p.authors.length > 6 ? ', et al.' : ''}
-                </p>
-              </a>
-            </li>
-          ))}
-        </ul>
-        <a href="/publications/" class="mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
-          See all {pubCount} publications <Icon name="arrow-right" size={12} />
+  <!-- RECENT HIGHLIGHTS reel (merged from /highlights/) -->
+  <section class="border-t border-rule">
+    <div class="container-page py-10 md:py-12">
+      <div class="flex items-end justify-between gap-6 mb-4">
+        <div>
+          <p class="eyebrow text-accent mb-2">Highlights</p>
+          <h3 class="font-serif text-xl">Recent milestones</h3>
+        </div>
+        <a href="/highlights/" class="hidden md:inline-flex items-center gap-2 text-sm text-ink-soft no-underline hover:text-accent">
+          All highlights <Icon name="arrow-right" size={14} />
         </a>
       </div>
-
-      <aside>
-        <p class="eyebrow text-accent mb-3">News</p>
-        <h2 class="font-serif mb-8">From the lab</h2>
-        {news.length === 0 ? (
-          <p class="text-sm text-ink-muted">First news entries coming soon. Follow on <a href={site.social.twitter} target="_blank" rel="noopener">X</a> and <a href={site.social.linkedin} target="_blank" rel="noopener">LinkedIn</a>.</p>
-        ) : (
-          <ul class="space-y-6">
-            {news.map((n) => (
-              <li>
-                <a href={n.link ?? '/news/'} target={n.link ? '_blank' : undefined} rel={n.link ? 'noopener' : undefined} class="no-underline group">
-                  <p class="text-xs text-ink-muted">{new Date(n.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</p>
-                  <p class="font-serif text-lg text-ink group-hover:text-accent mt-1 transition-colors">{n.title}</p>
-                  {n.summary && <p class="text-sm text-ink-soft mt-1 line-clamp-2">{n.summary}</p>}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
-        <a href="/news/" class="mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
-          All news <Icon name="arrow-right" size={12} />
-        </a>
-      </aside>
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-3">
+        {recentHighlights.map((item) => (
+          <a
+            href={item.href ?? item.src}
+            target="_blank"
+            rel="noopener"
+            title={item.caption ?? item.alt}
+            class:list={['group block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}
+          >
+            <img
+              src={item.src}
+              alt={item.alt}
+              loading="lazy"
+              decoding="async"
+              class:list={['w-full aspect-square transition-transform duration-300 group-hover:scale-[1.03]', item.fit === 'contain' ? 'object-contain p-2' : 'object-cover']}
+            />
+          </a>
+        ))}
+      </div>
+      <a href="/highlights/" class="md:hidden mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
+        All highlights <Icon name="arrow-right" size={12} />
+      </a>
     </div>
   </section>
 
