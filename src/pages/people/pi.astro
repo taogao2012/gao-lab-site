@@ -125,7 +125,7 @@ const personJsonLd = {
                     a.name
                   )}
                 </p>
-                <p class="text-sm text-ink-soft">{a.by}</p>
+                {a.by && <p class="text-sm text-ink-soft">{a.by}</p>}
               </li>
             ))}
           </ol>

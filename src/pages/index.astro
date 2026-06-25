@@ -61,7 +61,7 @@ const pubCount = publications.items.length;
                 ) : (
                   <span class="text-ink-soft">{a.name}</span>
                 )}
-                <span class="block text-xs text-ink-muted mt-0.5">{a.by}</span>
+                {a.by && <span class="block text-xs text-ink-muted mt-0.5">{a.by}</span>}
               </li>
             ))}
           </ul>
