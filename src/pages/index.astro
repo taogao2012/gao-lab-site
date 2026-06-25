@@ -56,7 +56,11 @@ const pubCount = publications.items.length;
           <ul class="space-y-2.5">
             {honors.map((a) => (
               <li class="text-sm leading-snug">
-                <span class="text-accent font-semibold">{a.year}</span> · <span class="text-ink-soft">{a.name}</span>
+                <span class="text-accent font-semibold">{a.year}</span> · {a.url ? (
+                  <a href={a.url} target={a.url.startsWith('http') ? '_blank' : undefined} rel={a.url.startsWith('http') ? 'noopener' : undefined} class="text-ink-soft no-underline hover:text-accent">{a.name}</a>
+                ) : (
+                  <span class="text-ink-soft">{a.name}</span>
+                )}
                 <span class="block text-xs text-ink-muted mt-0.5">{a.by}</span>
               </li>
             ))}
