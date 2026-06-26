@@ -28,7 +28,7 @@ export const site = {
     note: 'Notion workspace — invite required',
   },
   nav: [
-    { label: 'Highlights', href: '/highlights/' },
+    { label: 'Home', href: '/' },
     {
       label: 'Research',
       href: '/research/',

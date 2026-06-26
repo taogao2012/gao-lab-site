@@ -1,100 +1,142 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Icon from '../components/Icon.astro';
-import { site } from '../config';
-import publications from '../data/publications.json';
 import Slideshow from '../components/Slideshow.astro';
+import Icon from '../components/Icon.astro';
+import { getCollection } from 'astro:content';
 import { galleryItems } from '../data/gallery';
+import { site } from '../config';
 
-const recentHighlights = galleryItems
+const research = (await getCollection('research'))
+  .filter((r) => r.data.kind === 'thrust')
+  .sort((a, b) => a.data.order - b.data.order);
+
+const highlights = galleryItems
   .filter((i) => i.category === 'highlights')
-  .sort((a, b) => (+new Date(b.date ?? 0)) - (+new Date(a.date ?? 0)))
-  .slice(0, 6);
-const pubCount = publications.items.length;
+  .sort((a, b) => (+new Date(b.date ?? 0)) - (+new Date(a.date ?? 0)));
+
+const yearOf = (d?: string) => (d ? new Date(d).getFullYear() : null);
+const byYear = new Map<number, typeof highlights>();
+const undated: typeof highlights = [] as any;
+for (const h of highlights) {
+  const y = yearOf(h.date);
+  if (y == null) { undated.push(h as any); continue; }
+  if (!byYear.has(y)) byYear.set(y, [] as any);
+  byYear.get(y)!.push(h as any);
+}
+
+// Years newest -> oldest. A year with only one or two items is folded into the
+// next (older) year; a year that already has three or more stands on its own.
+const sortedYears = [...byYear.keys()].sort((a, b) => b - a);
+const groups: { id: string; label: string; items: typeof highlights }[] = [];
+let span: number[] = [];
+let spanItems: typeof highlights = [] as any;
+for (const y of sortedYears) {
+  span.push(y);
+  spanItems.push(...byYear.get(y)!);
+  if (spanItems.length >= 3) {
+    const hi = span[0], lo = span[span.length - 1];
+    groups.push({ id: `year-${hi}`, label: hi === lo ? `${hi}` : `${lo}–${hi}`, items: spanItems });
+    span = []; spanItems = [] as any;
+  }
+}
+if (span.length) {
+  const hi = span[0], lo = span[span.length - 1];
+  groups.push({ id: `year-${hi}`, label: hi === lo ? `${hi}` : `${lo}–${hi}`, items: spanItems });
+}
+if (undated.length) groups.push({ id: 'year-undated', label: 'Undated', items: undated });
 ---
 
 <BaseLayout title={undefined} description={site.description}>
-  <!-- HERO -->
-  <section class="container-page pt-16 md:pt-24 pb-16 md:pb-24">
-    <div class="max-w-3xl">
-      <p class="eyebrow text-accent mb-5">{site.longName} · {site.pi.institution}</p>
-      <h1 class="font-serif text-4xl md:text-6xl leading-[1.05] tracking-tight text-ink">
+  <section class="container-page pt-5 pb-4">
+    <div class="max-w-3xl mx-auto text-center mb-4">
+      <p class="font-serif text-2xl md:text-3xl font-semibold text-accent leading-tight">SuPER Lab</p>
+      <p class="mt-1 text-sm md:text-base text-ink-soft">
+        <span class="font-bold text-accent">Su</span>stainable
+        <span class="font-bold text-accent">P</span>rocessing and
+        <span class="font-bold text-accent">E</span>nergy
+        <span class="font-bold text-accent">R</span>esilience Lab
+      </p>
+      <p class="mt-2 font-serif text-lg md:text-xl leading-snug tracking-tight text-ink">
         Electrochemical Engineering <span class="text-accent">for a sustainable energy future.</span>
-      </h1>
-      <p class="mt-6 text-lg md:text-xl text-ink-soft max-w-2xl leading-relaxed">
+      </p>
+      <p class="mt-1.5 text-sm text-ink-soft leading-snug" style="text-wrap: balance">
         We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and separations — for grid-scale energy storage and clean manufacturing.
       </p>
-      <div class="mt-8 flex flex-wrap gap-3">
-        <a href="/research/" class="inline-flex items-center gap-2 bg-accent text-white px-5 py-3 no-underline hover:bg-accent-deep transition-colors text-sm font-medium">
-          Research thrusts <Icon name="arrow-right" size={16} />
-        </a>
-        <a href="/publications/" class="inline-flex items-center gap-2 border border-ink/30 text-ink px-5 py-3 no-underline hover:border-accent hover:text-accent transition-colors text-sm font-medium">
-          Publications ({pubCount})
-        </a>
-      </div>
+    </div>
+    <div class="max-w-2xl mx-auto">
+      <Slideshow />
     </div>
   </section>
 
-  <!-- HIGHLIGHTS: moving slideshow -->
-  <section class="border-t border-rule">
-    <div class="container-page py-10 md:py-12">
-      <div class="max-w-3xl mx-auto">
-        <Slideshow />
-      </div>
-    </div>
-  </section>
-
-  <!-- RECENT HIGHLIGHTS reel (merged from /highlights/) -->
-  <section class="border-t border-rule">
-    <div class="container-page py-10 md:py-12">
-      <div class="flex items-end justify-between gap-6 mb-4">
+  <!-- RESEARCH THRUSTS on paper -->
+  <section class="bg-paper">
+    <div class="container-page py-14">
+      <div class="flex items-end justify-between gap-6 mb-8">
         <div>
-          <p class="eyebrow text-accent mb-2">Highlights</p>
-          <h3 class="font-serif text-xl">Recent milestones</h3>
+          <p class="eyebrow text-accent mb-2">SuPER</p>
+          <h2 class="font-serif">Three applied thrusts, two fundamental themes.</h2>
         </div>
-        <a href="/highlights/" class="hidden md:inline-flex items-center gap-2 text-sm text-ink-soft no-underline hover:text-accent">
-          All highlights <Icon name="arrow-right" size={14} />
+        <a href="/research/" class="hidden md:inline-flex items-center gap-2 text-sm text-ink-soft no-underline hover:text-accent">
+          Full research program <Icon name="arrow-right" size={14} />
         </a>
       </div>
-      <div class="grid grid-cols-3 lg:grid-cols-6 gap-3">
-        {recentHighlights.map((item) => (
-          <a
-            href={item.href ?? item.src}
-            target="_blank"
-            rel="noopener"
-            title={item.caption ?? item.alt}
-            class:list={['group block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}
-          >
-            <img
-              src={item.src}
-              alt={item.alt}
-              loading="lazy"
-              decoding="async"
-              class:list={['w-full aspect-square transition-transform duration-300 group-hover:scale-[1.03]', item.fit === 'contain' ? 'object-contain p-2' : 'object-cover']}
-            />
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {research.map((r, i) => (
+          <a href={`/research/${r.slug}/`} class="bg-white hover:bg-highlight border-t-4 border-accent p-5 no-underline block group transition-colors">
+            <p class="eyebrow text-accent">Thrust {i + 1}</p>
+            <h3 class="mt-2 font-serif text-xl text-ink group-hover:text-accent transition-colors">{r.data.title}</h3>
+            <p class="mt-3 text-sm text-ink-soft leading-relaxed">{r.data.summary}</p>
+            <p class="mt-4 text-sm text-accent inline-flex items-center gap-1 no-underline font-medium">
+              Read more <Icon name="arrow-right" size={12} />
+            </p>
           </a>
         ))}
       </div>
-      <a href="/highlights/" class="md:hidden mt-6 inline-flex items-center gap-2 text-sm text-accent no-underline">
-        All highlights <Icon name="arrow-right" size={12} />
-      </a>
     </div>
   </section>
 
-  <!-- CTA on accent block -->
-  <section class="bg-accent text-white">
-    <div class="container-page py-14 grid md:grid-cols-2 gap-10 items-center">
-      <div>
-        <h2 class="font-serif text-white">Join the lab.</h2>
-        <p class="mt-3 text-white/90 max-w-prose">
-          We're recruiting motivated PhD students, postdocs, and undergraduates to work on electrochemical materials, batteries, and sustainable processing.
-        </p>
-      </div>
-      <div class="md:text-right">
-        <a href="/join-us/" class="inline-flex items-center gap-2 bg-white text-accent px-5 py-3 no-underline hover:bg-paper transition-colors text-sm font-medium">
-          Open positions <Icon name="arrow-right" size={16} />
+  <section class="container-page py-10 border-t border-rule">
+    <h2 class="font-serif text-2xl mb-6 text-center">Highlights</h2>
+
+    <nav aria-label="Years" class="flex flex-wrap justify-center gap-2 mb-10">
+      {groups.map((g) => (
+        <a href={`#${g.id}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+          {g.label} <span class="text-ink-muted">({g.items.length})</span>
         </a>
-      </div>
+      ))}
+    </nav>
+
+    <div class="space-y-12">
+      {groups.map((g) => (
+        <section id={g.id} class="scroll-mt-24">
+          <h3 class="font-serif text-3xl border-b border-rule pb-3 mb-6 text-center">{g.label}</h3>
+          <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
+            {g.items.map((item: any) => (
+              <figure class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)] max-w-sm">
+                <a href={item.href ?? item.src} target="_blank" rel="noopener" class:list={['block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}>
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    loading="lazy"
+                    decoding="async"
+                    class:list={[
+                      'w-full aspect-[4/3] transition-transform duration-300 group-hover:scale-[1.02]',
+                      item.fit === 'contain' ? 'object-contain p-4' : 'object-cover',
+                    ]}
+                  />
+                </a>
+                {(item.caption || item.date) && (
+                  <figcaption class="mt-2 flex flex-col items-center gap-1 text-xs text-ink-muted text-center">
+                    {item.caption && <span class="text-ink-soft">{item.caption}</span>}
+                    {item.date && <span class="font-mono">{item.date}</span>}
+                  </figcaption>
+                )}
+              </figure>
+            ))}
+          </div>
+        </section>
+      ))}
     </div>
   </section>
 </BaseLayout>
