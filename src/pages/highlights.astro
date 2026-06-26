@@ -63,7 +63,7 @@ const years = [...byYear.keys()].sort((a, b) => {
           <h3 class="font-serif text-3xl border-b border-rule pb-3 mb-6 text-center">{y === 'undated' ? 'Undated' : y}</h3>
           <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
             {byYear.get(y)!.map((item: any) => (
-              <figure class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-22px)] max-w-sm">
+              <figure class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)] max-w-sm">
                 <a href={item.href ?? item.src} target="_blank" rel="noopener" class:list={['block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}>
                   <img
                     src={item.src}
