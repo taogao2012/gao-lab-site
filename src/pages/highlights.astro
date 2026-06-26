@@ -14,17 +14,35 @@ const highlights = galleryItems
   .sort((a, b) => (+new Date(b.date ?? 0)) - (+new Date(a.date ?? 0)));
 
 const yearOf = (d?: string) => (d ? new Date(d).getFullYear() : null);
-const byYear = new Map<number | 'undated', typeof highlights>();
+const byYear = new Map<number, typeof highlights>();
+const undated: typeof highlights = [] as any;
 for (const h of highlights) {
-  const y = yearOf(h.date) ?? 'undated';
+  const y = yearOf(h.date);
+  if (y == null) { undated.push(h as any); continue; }
   if (!byYear.has(y)) byYear.set(y, [] as any);
   byYear.get(y)!.push(h as any);
 }
-const years = [...byYear.keys()].sort((a, b) => {
-  if (a === 'undated') return 1;
-  if (b === 'undated') return -1;
-  return (b as number) - (a as number);
-});
+
+// Years newest -> oldest. Any year with fewer than four items is folded into
+// the next (older) year so each displayed group fills the four-wide grid.
+const sortedYears = [...byYear.keys()].sort((a, b) => b - a);
+const groups: { id: string; label: string; items: typeof highlights }[] = [];
+let span: number[] = [];
+let spanItems: typeof highlights = [] as any;
+for (const y of sortedYears) {
+  span.push(y);
+  spanItems.push(...byYear.get(y)!);
+  if (spanItems.length >= 4) {
+    const hi = span[0], lo = span[span.length - 1];
+    groups.push({ id: `year-${hi}`, label: hi === lo ? `${hi}` : `${lo}–${hi}`, items: spanItems });
+    span = []; spanItems = [] as any;
+  }
+}
+if (span.length) {
+  const hi = span[0], lo = span[span.length - 1];
+  groups.push({ id: `year-${hi}`, label: hi === lo ? `${hi}` : `${lo}–${hi}`, items: spanItems });
+}
+if (undated.length) groups.push({ id: 'year-undated', label: 'Undated', items: undated });
 ---
 
 <BaseLayout
@@ -32,7 +50,7 @@ const years = [...byYear.keys()].sort((a, b) => {
   description="Research milestones, awards, and grants from the SuPER Lab."
 >
   <section class="container-page pt-10 pb-6">
-    <div class="max-w-2xl mx-auto text-center mb-6">
+    <div class="max-w-3xl mx-auto text-center mb-6">
       <p class="font-serif text-3xl md:text-4xl font-semibold text-accent">SuPER Lab</p>
       <p class="mt-2 text-sm md:text-base text-ink-soft">
         <span class="font-bold text-accent">Su</span>stainable
@@ -43,7 +61,7 @@ const years = [...byYear.keys()].sort((a, b) => {
       <p class="mt-4 font-serif text-xl md:text-2xl leading-snug tracking-tight text-ink">
         Electrochemical Engineering <span class="text-accent">for a sustainable energy future.</span>
       </p>
-      <p class="mt-3 text-sm md:text-base text-ink-soft leading-relaxed">
+      <p class="mt-3 text-sm md:text-base text-ink-soft leading-relaxed" style="text-wrap: balance">
         We design materials, electrolytes, and processes that enable the next generation of batteries, reactors, and separations — for grid-scale energy storage and clean manufacturing.
       </p>
     </div>
@@ -84,19 +102,19 @@ const years = [...byYear.keys()].sort((a, b) => {
     <h2 class="font-serif text-2xl mb-6 text-center">Highlights</h2>
 
     <nav aria-label="Years" class="flex flex-wrap justify-center gap-2 mb-10">
-      {years.map((y) => (
-        <a href={`#year-${y}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
-          {y === 'undated' ? 'Undated' : y} <span class="text-ink-muted">({byYear.get(y)!.length})</span>
+      {groups.map((g) => (
+        <a href={`#${g.id}`} class="text-xs px-2.5 py-1 border border-rule no-underline text-ink-soft hover:border-accent hover:text-accent transition-colors">
+          {g.label} <span class="text-ink-muted">({g.items.length})</span>
         </a>
       ))}
     </nav>
 
     <div class="space-y-12">
-      {years.map((y) => (
-        <section id={`year-${y}`} class="scroll-mt-24">
-          <h3 class="font-serif text-3xl border-b border-rule pb-3 mb-6 text-center">{y === 'undated' ? 'Undated' : y}</h3>
+      {groups.map((g) => (
+        <section id={g.id} class="scroll-mt-24">
+          <h3 class="font-serif text-3xl border-b border-rule pb-3 mb-6 text-center">{g.label}</h3>
           <div class="flex flex-wrap justify-center gap-6 lg:gap-8">
-            {byYear.get(y)!.map((item: any) => (
+            {g.items.map((item: any) => (
               <figure class="group w-full sm:w-[calc(50%-12px)] lg:w-[calc(25%-24px)] max-w-sm">
                 <a href={item.href ?? item.src} target="_blank" rel="noopener" class:list={['block overflow-hidden border border-rule no-underline', item.fit === 'contain' ? 'bg-white' : 'bg-paper']}>
                   <img
