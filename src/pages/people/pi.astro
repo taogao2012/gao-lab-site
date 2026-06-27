@@ -81,7 +81,7 @@ const personJsonLd = {
             {cv.education.map((e: any) => (
               <li class="border-l-2 border-rule pl-4">
                 <p class="font-mono text-xs text-ink-muted">{e.years}</p>
-                <p class="font-serif text-base text-ink mt-0.5">{e.institution}</p>
+                <p class="font-serif text-base font-semibold text-ink mt-0.5">{e.institution}</p>
                 <p class="text-sm text-ink-soft">
                   {e.degree}
                   {e.advisor && (
@@ -105,7 +105,7 @@ const personJsonLd = {
             {cv.appointments.map((a) => (
               <li class="border-l-2 border-rule pl-4">
                 <p class="font-mono text-xs text-ink-muted">{a.years}</p>
-                <p class="font-serif text-base text-ink mt-0.5">{a.institution}</p>
+                <p class="font-serif text-base font-semibold text-ink mt-0.5">{a.institution}</p>
                 <p class="text-sm text-ink-soft">{a.role}</p>
               </li>
             ))}
