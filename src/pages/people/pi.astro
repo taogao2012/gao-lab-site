@@ -118,7 +118,7 @@ const personJsonLd = {
             {cv.awards.map((a: any) => (
               <li class="border-l-2 border-rule pl-4">
                 <p class="font-mono text-xs text-ink-muted">{a.year}</p>
-                <p class="font-serif text-base text-ink mt-0.5">
+                <p class="font-serif text-base font-semibold text-ink mt-0.5">
                   {a.url ? (
                     <a href={a.url} target="_blank" rel="noopener" class="no-underline hover:text-accent">{a.name}</a>
                   ) : (
