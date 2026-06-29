@@ -13,7 +13,7 @@ export const slides: Slide[] = [
   {
     image: '/images/slideshow/super-lab-moves-to-ncstate-2026.jpg',
     caption: 'SuPER Lab is moving to NC State — a Top-15 public engineering program (U.S. News) — this summer!',
-    href: '/images/slideshow/super-lab-moves-to-ncstate-2026.jpg',
+    href: 'https://engr.ncsu.edu/about/facts-and-rankings/',
   },
   {
     image: '/images/slideshow/nsf-career.png',
