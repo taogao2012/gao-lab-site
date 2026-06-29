@@ -12,7 +12,7 @@ export type Slide = {
 export const slides: Slide[] = [
   {
     image: '/images/slideshow/super-lab-moves-to-ncstate-2026.jpg',
-    caption: 'SuPER Lab is moving from the University of Utah to NC State this summer!',
+    caption: 'SuPER Lab is moving to NC State — a Top-15 public engineering program (U.S. News) — this summer!',
     href: '/images/slideshow/super-lab-moves-to-ncstate-2026.jpg',
   },
   {
