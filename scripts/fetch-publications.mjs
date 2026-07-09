@@ -25,23 +25,51 @@ const PI_FIRST_INITIAL = 'T';
 // if desired; left unset so no personal email is committed to the repo.
 const POLITE_EMAIL = process.env.OPENALEX_MAILTO || '';
 
-// OpenAlex's author.orcid filter still returns works where the ORCID isn't
-// attached to any authorship record (name-only matches). Tao Gao is common,
-// so we require the ORCID to actually appear in authorships[].
-const ORCID_VARIANTS = [
-  `https://orcid.org/${ORCID}`,
-  `http://orcid.org/${ORCID}`,
-  ORCID,
-];
-
 const EXCLUDED_TYPES = new Set(['erratum', 'editorial', 'letter', 'retraction', 'paratext']);
 
-function hasPiOrcid(work) {
-  for (const a of work.authorships ?? []) {
-    const o = a.author?.orcid ?? '';
-    if (ORCID_VARIANTS.some((v) => o.includes(v))) return true;
+// "Tao Gao" is a very common name. OpenAlex's author disambiguation periodically
+// MERGES several distinct "Tao Gao" people into one author record and stamps our
+// ORCID across the whole blob — so every merged work then carries the ORCID in
+// authorships[], and a per-work ORCID check passes junk (titanium fatigue,
+// lead-bismuth corrosion, cancer biology, …). See git history for the incident.
+//
+// The authoritative list of which works are actually the PI's is the PI's own
+// ORCID record (https://pub.orcid.org), which the PI controls. So we fetch that,
+// build the set of DOIs (and, as a fallback, normalized titles) claimed on ORCID,
+// and keep only OpenAlex works that intersect it. OpenAlex is still the source of
+// rich metadata (citations, venue, abstract); ORCID decides membership.
+// Truly-new papers not yet on ORCID can be added via overrides.additions[].
+function normTitle(t) {
+  return (t ?? '').toLowerCase().replace(/&[a-z]+;/g, ' ').replace(/[^a-z0-9]+/g, '');
+}
+
+async function fetchOrcidWorkKeys() {
+  const url = `https://pub.orcid.org/v3.0/${ORCID}/works`;
+  const res = await fetch(url, { headers: { Accept: 'application/json' } });
+  if (!res.ok) throw new Error(`ORCID HTTP ${res.status}: ${await res.text()}`);
+  const data = await res.json();
+  const dois = new Set();
+  const titles = new Set();
+  for (const g of data.group ?? []) {
+    const s = (g['work-summary'] ?? [])[0];
+    if (!s) continue;
+    const t = s.title?.title?.value;
+    if (t) titles.add(normTitle(t));
+    for (const ext of s['external-ids']?.['external-id'] ?? []) {
+      if ((ext['external-id-type'] ?? '').toLowerCase() === 'doi') {
+        const v = (ext['external-id-value'] ?? '').replace(/^https?:\/\/doi\.org\//i, '').toLowerCase();
+        if (v) dois.add(v);
+      }
+    }
   }
-  return false;
+  return { dois, titles };
+}
+
+function isPiWork(work, keys) {
+  const doi = work.doi ? work.doi.replace(/^https?:\/\/doi\.org\//i, '').toLowerCase() : null;
+  if (doi && keys.dois.has(doi)) return true;
+  const t = normTitle(work.title || work.display_name);
+  return t.length > 8 && keys.titles.has(t);
 }
 
 const overridesPath = join(projectRoot, 'src/data/publications.overrides.json');
@@ -154,10 +182,29 @@ function applyOverrides(works) {
 }
 
 console.log(`Fetching publications for ORCID ${ORCID} from OpenAlex…`);
+const orcidKeys = await fetchOrcidWorkKeys();
+console.log(`  ORCID record claims ${orcidKeys.dois.size} DOIs / ${orcidKeys.titles.size} titles (authoritative membership list)`);
+
+// The ORCID record is authoritative but can be INCOMPLETE (the PI hasn't claimed
+// every real paper). So we also honor a CV-sourced whitelist: any DOI the PI has
+// hand-curated in overrides (selected / corresponding / coFirst) is unambiguously
+// theirs and is kept even if absent from ORCID. This preserves recall on real work
+// while ORCID + whitelist together exclude the same-name / mis-merged contamination.
+// (redactions are handled later in applyOverrides and still get dropped.)
+const overrideWhitelist = new Set(
+  [...(overrides.selected ?? []), ...(overrides.corresponding ?? []), ...(overrides.coFirst ?? [])]
+    .map((d) => d.toLowerCase()),
+);
+function keep(work) {
+  if (isPiWork(work, orcidKeys)) return true;
+  const doi = work.doi ? work.doi.replace(/^https?:\/\/doi\.org\//i, '').toLowerCase() : null;
+  return !!doi && overrideWhitelist.has(doi);
+}
+
 const raw = await fetchAll();
 console.log(`  fetched ${raw.length} candidates from OpenAlex`);
-const strict = raw.filter(hasPiOrcid);
-console.log(`  kept ${strict.length} with verified ORCID match (dropped ${raw.length - strict.length} name-only matches)`);
+const strict = raw.filter(keep);
+console.log(`  kept ${strict.length} matched to ORCID record or CV whitelist (dropped ${raw.length - strict.length} same-name / mis-merged works)`);
 const typed = strict.filter((w) => !EXCLUDED_TYPES.has((w.type ?? '').toLowerCase()));
 console.log(`  kept ${typed.length} after dropping erratum/editorial/letter/retraction`);
 const normalized = typed.map(normalize);

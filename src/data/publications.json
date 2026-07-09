@@ -1,244 +1,63 @@
 {
-  "$generatedAt": "2026-05-11T00:11:53.409234Z",
-  "$source": "OpenAlex (ORCID 0000-0003-0204-3269) merged with publications.overrides.json (Python bootstrap)",
-  "count": 112,
+  "$generatedAt": "2026-07-09T12:38:35.853Z",
+  "$source": "OpenAlex (ORCID 0000-0003-0204-3269) merged with publications.overrides.json",
+  "count": 95,
   "byYear": {
     "2013": 1,
     "2014": 2,
-    "2015": 13,
-    "2016": 12,
-    "2017": 16,
+    "2015": 10,
+    "2016": 9,
+    "2017": 14,
     "2018": 12,
-    "2019": 9,
-    "2020": 5,
-    "2021": 5,
+    "2019": 8,
+    "2020": 3,
+    "2021": 3,
     "2022": 13,
     "2023": 3,
-    "2024": 3,
-    "2025": 9,
-    "2026": 2
+    "2024": 4,
+    "2025": 10,
+    "2026": 3
   },
   "items": [
     {
-      "id": "patent:US-12237091",
-      "doi": null,
-      "title": "Continuous separation of radionuclides by shock electrodialysis",
-      "year": 2025,
-      "date": "2025-02-25",
-      "type": "patent",
-      "citations": 0,
-      "venue": "US Patent 12,237,091 (granted)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/US12237091",
-      "abstract": null,
+      "id": "https://openalex.org/W7127071066",
+      "doi": "10.1021/acs.jpcc.5c06609",
+      "title": "Thermodynamics of Transition Metal Electrodeposition in Concentrated Aqueous Electrolytes",
+      "year": 2026,
+      "date": "2026-02-02",
+      "type": "article",
+      "citations": 1,
+      "venue": "The Journal of Physical Chemistry C",
+      "volume": "130",
+      "issue": "6",
+      "firstPage": "2091",
+      "lastPage": "2106",
+      "oaUrl": null,
+      "abstract": "Electrodeposition of transition metals (TMs) is important for energy storage and sustainable metal production (such as ironmaking). Although M 2+ /M redoxes, including Fe 2+ /Fe, have been investigated in concentrated aqueous electrolytes, thermodynamic measurements and modeling of the equilibrium M 2+ /M potential considering metal–chloride complexation in highly concentrated electrolytes remain elusive. For the first time, we systematically examine how a concentrated electrolyte affects the thermodynamics of TM electrodeposition by combining experimental, theoretical, and computational methods. Our study revealed that the electrodeposition potentials ( E eq ) of a wide range of TMs (Fe, Cr, Co, Ni, Zn) are strongly dependent on the electrolyte concentration. The classical thermodynamic model, the Nernst equation, cannot quantify such concentration dependence due to its neglect of metal–anion complexation, a unique structural feature of concentrated aqueous electrolytes of TM ions due to their strong cation–anion interaction. By examining the energy landscape of the electrodeposition reaction together with the metal–ligand complexation equilibria, we develop a thermodynamic model…",
       "authors": [
-        {
-          "name": "Kameron M. Conforti",
-          "isPI": false
-        },
-        {
-          "name": "Mohammad A. Alkhadra",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Huanhuan Tian",
-          "isPI": false
-        },
-        {
-          "name": "Martin Z. Bazant",
-          "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:WO-2025245086",
-      "doi": null,
-      "title": "Iron production by direct electrolysis of iron ore",
-      "year": 2025,
-      "date": "2025-11-27",
-      "type": "patent",
-      "citations": 0,
-      "venue": "PCT Patent Application WO 2025/245086 A1 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/WO2025245086A1",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
         {
           "name": "Jing Liu",
           "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:WO-2025235655",
-      "doi": null,
-      "title": "Carboxylate ester-based electrolytes for sodium batteries",
-      "year": 2025,
-      "date": "2025-11-13",
-      "type": "patent",
-      "citations": 0,
-      "venue": "PCT Patent Application WO 2025/235655 A1 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/WO2025235655A1",
-      "abstract": null,
-      "authors": [
+        },
         {
-          "name": "Tao Gao",
-          "isPI": true
+          "name": "Thomas M. Webb",
+          "isPI": false
+        },
+        {
+          "name": "Juliana Ortiz-Castillo",
+          "isPI": false
         },
         {
           "name": "Yunan Qin",
           "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:US-20250046878",
-      "doi": null,
-      "title": "Electrolytes for fast-charging and low-temperature lithium-ion batteries",
-      "year": 2025,
-      "date": "2025-02-06",
-      "type": "patent",
-      "citations": 0,
-      "venue": "US Patent Application 2025/0046878 A1 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/US20250046878A1",
-      "abstract": null,
-      "authors": [
+        },
         {
           "name": "Tao Gao",
           "isPI": true
-        },
-        {
-          "name": "Zongjian Li",
-          "isPI": false
         }
       ],
-      "kind": "patent",
       "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:WO-2024243029",
-      "doi": null,
-      "title": "Systems and methods for lithium extraction from aqueous feedstocks",
-      "year": 2024,
-      "date": "2024-11-28",
-      "type": "patent",
-      "citations": 0,
-      "venue": "PCT Patent Application WO 2024/243029 A2 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/WO2024243029A2",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yunan Qin",
-          "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:US-20240376621",
-      "doi": null,
-      "title": "High-efficiency electrolysis of iron ore for iron production",
-      "year": 2024,
-      "date": "2024-11-14",
-      "type": "patent",
-      "citations": 0,
-      "venue": "US Patent Application 2024/0376621 A1 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/US20240376621A1",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Jing Liu",
-          "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "patent:US-20230335771",
-      "doi": null,
-      "title": "Batteries with aqueous electrolytes reinforced by Mg and Ca ions",
-      "year": 2023,
-      "date": "2023-10-19",
-      "type": "patent",
-      "citations": 0,
-      "venue": "US Patent Application 2023/0335771 A1 (pending)",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://patents.google.com/patent/US20230335771A1",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Jing Liu",
-          "isPI": false
-        }
-      ],
-      "kind": "patent",
-      "selected": false,
-      "isCorresponding": false,
+      "isCorresponding": true,
       "isCoFirst": false
     },
     {
@@ -266,42 +85,40 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
     },
     {
-      "id": "https://openalex.org/W7127071066",
-      "doi": "10.1021/acs.jpcc.5c06609",
-      "title": "Thermodynamics of Transition Metal Electrodeposition in Concentrated Aqueous Electrolytes",
+      "id": "https://openalex.org/W7166556523",
+      "doi": "10.1021/acsenergylett.6c00918",
+      "title": "Ring-Size-Dependent Lactone Electrolytes for 4.5 V Sodium-Ion Batteries",
       "year": 2026,
-      "date": "2026-02-02",
+      "date": "2026-06-29",
       "type": "article",
       "citations": 0,
-      "venue": "The Journal of Physical Chemistry C",
-      "volume": "130",
-      "issue": "6",
-      "firstPage": "2091",
-      "lastPage": "2106",
+      "venue": "ACS Energy Letters",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
       "oaUrl": null,
-      "abstract": "Electrodeposition of transition metals (TMs) is important for energy storage and sustainable metal production (such as ironmaking). Although M2+/M redoxes, including Fe2+/Fe, have been investigated in concentrated aqueous electrolytes, thermodynamic measurements and modeling of the equilibrium M2+/M potential considering metal–chloride complexation in highly concentrated electrolytes remain elusive. For the first time, we systematically examine how a concentrated electrolyte affects the thermodynamics of TM electrodeposition by combining experimental, theoretical, and computational methods. Our study revealed that the electrodeposition potentials (Eeq) of a wide range of TMs (Fe, Cr, Co, Ni, Zn) are strongly dependent on the electrolyte concentration. The classical thermodynamic model, the Nernst equation, cannot quantify such concentration dependence due to its neglect of metal–anion complexation, a unique structural feature of concentrated aqueous electrolytes of TM ions due to their strong cation–anion interaction. By examining the energy landscape of the electrodeposition reaction together with the metal–ligand complexation equilibria, we develop a thermodynamic model that pred…",
+      "abstract": "Sodium-ion batteries cycled to 4.5 V offer low-cost, energy-dense storage but are limited by the poor oxidative stability of conventional carbonate electrolytes. Here, we introduce reaction-pathway engineering of electrolyte oxidation, redirecting oxidation from destructive decomposition into constructive interphase formation. We show for the first time that lactone oxidation at the cathode is self-limiting, building an oxidation-resistant cathode interphase whose ring-size dependence are consistent with, and inferred to arise from, a ring-opening polymerization pathway. Combining a structurally optimized lactone with a low-viscosity diluent and a solvation-regulating cosolvent that improves anode compatibility, we formulate a ternary electrolyte that enhances cycling stability: in HC/NaNFM cells operated to 4.5 V, it retains 60% capacity after 431 cycles versus 66 cycles for the carbonate baseline. A ring-size-dependent reactivity window governs the outcome: six- and seven-membered lactones balance reactivity and oxidation stability. This work reframes electrolyte solvents from passive ion-transport media to active reagents for interphase construction.",
       "authors": [
         {
-          "name": "Jing Liu",
-          "isPI": false
-        },
-        {
-          "name": "Thomas M. Webb",
-          "isPI": false
-        },
-        {
-          "name": "Juliana Ortiz-Castillo",
-          "isPI": false
-        },
-        {
           "name": "Yunan Qin",
+          "isPI": false
+        },
+        {
+          "name": "Richard Gonzalez",
+          "isPI": false
+        },
+        {
+          "name": "Seong-Gyu Choi",
+          "isPI": false
+        },
+        {
+          "name": "Ling Zang",
           "isPI": false
         },
         {
@@ -309,10 +126,8 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
-      "isCorresponding": true,
+      "isCorresponding": false,
       "isCoFirst": false
     },
     {
@@ -322,14 +137,14 @@
       "year": 2025,
       "date": "2025-10-02",
       "type": "article",
-      "citations": 32,
+      "citations": 49,
       "venue": "Science",
       "volume": "390",
       "issue": "6768",
       "firstPage": "eadq2541",
       "lastPage": "eadq2541",
       "oaUrl": null,
-      "abstract": "vacancy fraction, as well as temperature and electrolyte effects consistent with the theory, which could be used to guide the molecular design of lithium-ion battery interfaces.",
+      "abstract": "The underlying reaction mechanism in lithium-ion batteries remains poorly understood. We provide experimental and theoretical evidence that lithium intercalation occurs by coupled ion-electron transfer, where ion transfer across the electrode-electrolyte interface is facilitated by electron transfer to a neighboring redox site. Electrochemical measurements for a variety of common electrode and electrolyte materials reveal a universal dependence of the (de-)intercalation rate on Li + vacancy fraction, as well as temperature and electrolyte effects consistent with the theory, which could be used to guide the molecular design of lithium-ion battery interfaces.",
       "authors": [
         {
           "name": "Yirui Zhang",
@@ -400,8 +215,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": true,
       "isCorresponding": false,
       "isCoFirst": true
@@ -413,14 +226,14 @@
       "year": 2025,
       "date": "2025-01-01",
       "type": "article",
-      "citations": 3,
+      "citations": 5,
       "venue": "Chemical Science",
       "volume": "16",
       "issue": "35",
       "firstPage": "16205",
       "lastPage": "16217",
       "oaUrl": "https://pubs.rsc.org/en/content/articlepdf/2025/sc/d5sc04532k",
-      "abstract": ", an initial coulombic efficiency of 90.74%, and a capacity retention of 93.88% after 150 cycles.",
+      "abstract": "Nonaqueous magnesium redox flow batteries (Mg RFBs) with amine cathodes provide low-cost, high-energy-density, long-cycle-life energy storage. The redox potential and solubility of these amines are strongly shaped by their degree of conjugation.",
       "authors": [
         {
           "name": "Yunan Qin",
@@ -455,8 +268,6 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -506,92 +317,8 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W4407873281",
-      "doi": "10.2139/ssrn.5152257",
-      "title": "Maximizing the Benefit of Industrial Battery Energy Storage Through Incentive Stacking and Optimal Dispatch",
-      "year": 2025,
-      "date": "2025-01-01",
-      "type": "preprint",
-      "citations": 1,
-      "venue": "SSRN Electronic Journal",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://doi.org/10.2139/ssrn.5152257",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Jiwei Yao",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "John D. Hedengren",
-          "isPI": false
-        },
-        {
-          "name": "Kody M. Powell",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "preprint",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W4412399599",
-      "doi": "10.2139/ssrn.5351296",
-      "title": "Optimal Sizing of Battery Energy Storage Systems for Peak Shaving and Demand Response Using a Degradation-Aware Bo-Milp Framework",
-      "year": 2025,
-      "date": "2025-01-01",
-      "type": "preprint",
-      "citations": 0,
-      "venue": "SSRN Electronic Journal",
-      "volume": null,
-      "issue": null,
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://doi.org/10.2139/ssrn.5351296",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Jiwei Yao",
-          "isPI": false
-        },
-        {
-          "name": "Blake W. Billings",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "John D. Hedengren",
-          "isPI": false
-        },
-        {
-          "name": "Kody M. Powell",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "preprint",
-      "selected": false,
-      "isCorresponding": false,
       "isCoFirst": false
     },
     {
@@ -615,8 +342,6 @@
           "isPI": true
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -654,8 +379,6 @@
           "isPI": true
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -681,34 +404,33 @@
           "isPI": true
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
     },
     {
-      "id": "https://openalex.org/W4417499107",
-      "doi": "10.1016/j.enconman.2025.120947",
-      "title": "Optimal sizing of battery energy storage systems for peak shaving and demand response using a degradation-aware Bayesian Optimization-Mixed-Integer Linear Programming framework",
+      "id": "patent:US-12237091",
+      "doi": null,
+      "title": "Continuous separation of radionuclides by shock electrodialysis",
       "year": 2025,
-      "date": "2025-12-19",
-      "type": "article",
+      "date": "2025-02-25",
+      "type": "patent",
+      "kind": "patent",
       "citations": 0,
-      "venue": "Energy Conversion and Management",
-      "volume": "350",
+      "venue": "US Patent 12,237,091 (granted)",
+      "volume": null,
       "issue": null,
-      "firstPage": "120947",
-      "lastPage": "120947",
-      "oaUrl": "https://doi.org/10.1016/j.enconman.2025.120947",
-      "abstract": "• Degradation-aware framework co-optimizes energy storage systems’ size and dispatch. • Electrochemical model captures calendar and cycling aging impacts. • Stacked peak-shaving with demand response shift optimal system’s size. • Sensitivity sweeps reveal economic no-storage thresholds and sizing design charts. The increasing integration of renewable energy and rising electricity demand highlight the importance of battery energy storage systems for peak shaving and demand response. Unlike prior approaches that overlook operational impacts on degradation, this study proposes a Bayesian Optimization–Mixed Integer Linear Programming framework for optimal battery energy storage system sizing. In this framework, Mixed Integer Linear Programming determines short-term scheduling while a calibrated electrochemical model iteratively evaluates degradation. The central hypothesis is that the framework can efficiently identify optimal sizes that yield realistic and economically robust outcomes. The method is tested across three scenarios: peak shaving, peak shaving with energy-reduction demand response, and peak shaving with power-reduction demand response. Results show that the framework conv…",
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US12237091",
+      "abstract": null,
       "authors": [
         {
-          "name": "Jiwei Yao",
+          "name": "Kameron M. Conforti",
           "isPI": false
         },
         {
-          "name": "Blake W. Billings",
+          "name": "Mohammad A. Alkhadra",
           "isPI": false
         },
         {
@@ -716,16 +438,104 @@
           "isPI": true
         },
         {
-          "name": "John D. Hedengren",
+          "name": "Huanhuan Tian",
           "isPI": false
         },
         {
-          "name": "Kody M. Powell",
+          "name": "Martin Z. Bazant",
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:US-20250046878",
+      "doi": null,
+      "title": "Electrolytes for fast-charging and low-temperature lithium-ion batteries",
+      "year": 2025,
+      "date": "2025-02-06",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2025/0046878 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20250046878A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Zongjian Li",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2025235655",
+      "doi": null,
+      "title": "Carboxylate ester-based electrolytes for sodium batteries",
+      "year": 2025,
+      "date": "2025-11-13",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/235655 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025235655A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yunan Qin",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2025245086",
+      "doi": null,
+      "title": "Iron production by direct electrolysis of iron ore",
+      "year": 2025,
+      "date": "2025-11-27",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2025/245086 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2025245086A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
+        }
+      ],
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -737,7 +547,7 @@
       "year": 2024,
       "date": "2024-01-01",
       "type": "article",
-      "citations": 18,
+      "citations": 19,
       "venue": "Chemical Science",
       "volume": "15",
       "issue": "24",
@@ -771,53 +581,8 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W4401413787",
-      "doi": "10.3390/batteries10080283",
-      "title": "A Physics–Guided Machine Learning Approach for Capacity Fading Mechanism Detection and Fading Rate Prediction Using Early Cycle Data",
-      "year": 2024,
-      "date": "2024-08-08",
-      "type": "article",
-      "citations": 6,
-      "venue": "Batteries",
-      "volume": "10",
-      "issue": "8",
-      "firstPage": "283",
-      "lastPage": "283",
-      "oaUrl": "https://www.mdpi.com/2313-0105/10/8/283/pdf?version=1723112691",
-      "abstract": "Lithium–ion battery development necessitates predicting capacity fading using early cycle data to minimize testing time and costs. This study introduces a hybrid physics–guided data–driven approach to address this challenge by accurately determining the dominant fading mechanism and predicting the average capacity fading rate. Physics–guided features, derived from the electrochemical properties and behaviors within the battery, are extracted from the first five cycles to provide meaningful, interpretable, and predictive data. Unlike previous models that rely on a single regression approach, our method utilizes two separate regression models tailored to the identified dominant fading mechanisms. Our model achieves 95.6% accuracy in determining the dominant fading mechanism using data from the second cycle and a mean absolute percentage error of 17.09% in predicting lifetime capacity fade from the first five cycles. This represents a substantial improvement over state–of–the–art models, which have an error rate approximately three times higher. This study underscores the significance of physics–guided data characterization and the necessity of identifying the primary fading mechanism…",
-      "authors": [
-        {
-          "name": "Jiwei Yao",
-          "isPI": false
-        },
-        {
-          "name": "Qiang Gao",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Benben Jiang",
-          "isPI": false
-        },
-        {
-          "name": "Kody M. Powell",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
       "isCoFirst": false
     },
     {
@@ -865,11 +630,69 @@
           "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
+    },
+    {
+      "id": "patent:US-20240376621",
+      "doi": null,
+      "title": "High-efficiency electrolysis of iron ore for iron production",
+      "year": 2024,
+      "date": "2024-11-14",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "US Patent Application 2024/0376621 A1 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/US20240376621A1",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "patent:WO-2024243029",
+      "doi": null,
+      "title": "Systems and methods for lithium extraction from aqueous feedstocks",
+      "year": 2024,
+      "date": "2024-11-28",
+      "type": "patent",
+      "kind": "patent",
+      "citations": 0,
+      "venue": "PCT Patent Application WO 2024/243029 A2 (pending)",
+      "volume": null,
+      "issue": null,
+      "firstPage": null,
+      "lastPage": null,
+      "oaUrl": "https://patents.google.com/patent/WO2024243029A2",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yunan Qin",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W4323363587",
@@ -904,8 +727,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -947,51 +768,36 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
     },
     {
-      "id": "https://openalex.org/W4385339643",
-      "doi": "10.2139/ssrn.4523738",
-      "title": "A Physics-Guided Machine Learning Approach for Capacity Fading Mechanism Detection and Fading Rate Prediction Using Early Cycle Data",
+      "id": "patent:US-20230335771",
+      "doi": null,
+      "title": "Batteries with aqueous electrolytes reinforced by Mg and Ca ions",
       "year": 2023,
-      "date": "2023-01-01",
-      "type": "preprint",
+      "date": "2023-10-19",
+      "type": "patent",
+      "kind": "patent",
       "citations": 0,
-      "venue": "SSRN Electronic Journal",
+      "venue": "US Patent Application 2023/0335771 A1 (pending)",
       "volume": null,
       "issue": null,
       "firstPage": null,
       "lastPage": null,
-      "oaUrl": "http://dx.doi.org/10.2139/ssrn.4523738",
+      "oaUrl": "https://patents.google.com/patent/US20230335771A1",
       "abstract": null,
       "authors": [
         {
-          "name": "Jiwei Yao",
-          "isPI": false
-        },
-        {
-          "name": "Qiang Gao",
-          "isPI": false
-        },
-        {
-          "name": "Benson Jiang",
-          "isPI": false
-        },
-        {
-          "name": "Kody M. Powell",
-          "isPI": false
-        },
-        {
           "name": "Tao Gao",
           "isPI": true
+        },
+        {
+          "name": "Jing Liu",
+          "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "preprint",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -1003,7 +809,7 @@
       "year": 2022,
       "date": "2022-01-01",
       "type": "article",
-      "citations": 82,
+      "citations": 84,
       "venue": "Energy & Environmental Science",
       "volume": "15",
       "issue": "12",
@@ -1049,8 +855,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1062,7 +866,7 @@
       "year": 2022,
       "date": "2022-03-07",
       "type": "article",
-      "citations": 72,
+      "citations": 74,
       "venue": "Energy storage materials",
       "volume": "48",
       "issue": null,
@@ -1108,8 +912,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1121,14 +923,14 @@
       "year": 2022,
       "date": "2022-04-20",
       "type": "article",
-      "citations": 64,
+      "citations": 71,
       "venue": "Advanced Materials",
       "volume": "34",
       "issue": "23",
       "firstPage": "e2202063",
       "lastPage": "e2202063",
       "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202202063",
-      "abstract": "at -82 °C), electrochemical stability window (3.35 V), and reduced chemical reactivity. A proton battery is assembled using AiCE as the solid electrolyte membrane. Benefitting from the wider electrochemical stability window, reduced corrosivity, and excellent ionic selectivity of AiCE, the two main problems (gassing and cyclability) of proton batteries are successfully solved. This work draws attention to the element cross-over problem in proton batteries and the generic \"acid-in-clay\" solid electrolyte approach with superfast proton transport, outstanding selectivity, and improved stability for room- to cryogenic-temperature protonic applications.",
+      "abstract": "Abstract Proton conduction underlies many important electrochemical technologies. A family of new proton electrolytes is reported: acid‐in‐clay electrolyte (AiCE) prepared by integrating fast proton carriers in a natural phyllosilicate clay network, which can be made into thin‐film (tens of micrometers) fluid‐impervious membranes. The chosen example systems (sepiolite–phosphoric acid) rank top among the solid proton conductors in terms of proton conductivities (15 mS cm −1 at 25 °C, 0.023 mS cm −1 at −82 °C), electrochemical stability window (3.35 V), and reduced chemical reactivity. A proton battery is assembled using AiCE as the solid electrolyte membrane. Benefitting from the wider electrochemical stability window, reduced corrosivity, and excellent ionic selectivity of AiCE, the two main problems (gassing and cyclability) of proton batteries are successfully solved. This work draws attention to the element cross‐over problem in proton batteries and the generic “acid‐in‐clay” solid electrolyte approach with superfast proton transport, outstanding selectivity, and improved stability for room‐ to cryogenic‐temperature protonic applications.",
       "authors": [
         {
           "name": "Shitong Wang",
@@ -1223,8 +1025,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1236,7 +1036,7 @@
       "year": 2022,
       "date": "2022-05-12",
       "type": "article",
-      "citations": 49,
+      "citations": 57,
       "venue": "ACS Central Science",
       "volume": "8",
       "issue": "6",
@@ -1278,8 +1078,6 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1291,14 +1089,14 @@
       "year": 2022,
       "date": "2022-05-24",
       "type": "article",
-      "citations": 36,
+      "citations": 37,
       "venue": "ACS Applied Materials & Interfaces",
       "volume": "14",
       "issue": "22",
       "firstPage": "26014",
       "lastPage": "26023",
       "oaUrl": null,
-      "abstract": "), the capacity retention is at least 300% higher than that with a bare Li electrode. Further physical characterizations of electrodes confirm the effect of SHIPN in enhancing the interfacial stability and suppressing Li dendrite growth. Our results will provide insights into rationally designing soft and hybrid materials toward stable LMBs at different temperatures.",
+      "abstract": "Although numerous studies on polymeric protective films to stabilize lithium (Li)-metal electrodes have been reported, the construction of self-healing polymers that enables the long-term operation of Li-metal batteries (LMBs) at relatively low temperatures has rarely been demonstrated. Herein, a highly stretchable, autonomous self-healable, and ionic-conducting polymer network (SHIPN) is synthesized as an efficient protective film for LMBs. The network backbone, synthesized from copolymerization of poly(ethylene glycol)-mono-methacrylate (PEGMMA) and 2-[[(butylamino)carbonyl]oxy]ethyl acrylate (BCOE), is chemically cross-linked via diisocyanate. With SHIPN-modified electrodes, enhanced electrochemical performance can be achieved in Li/Cu, Li/Li, and Li/LiFePO4 (Li/LFP) cells. The SHIPN@Li/LFP cell delivers a capacity retention of 85.6% after 500 cycles at 5 °C, resulting from the low-temperature self-healability of SHIPN. In full cells with a high-mass-loading LFP cathode (∼17 mg cm–2), the capacity retention is at least 300% higher than that with a bare Li electrode. Further physical characterizations of electrodes confirm the effect of SHIPN in enhancing the interfacial stabilit…",
       "authors": [
         {
           "name": "Feiyuan Sun",
@@ -1341,8 +1139,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -1354,14 +1150,14 @@
       "year": 2022,
       "date": "2022-07-13",
       "type": "article",
-      "citations": 34,
+      "citations": 36,
       "venue": "ACS Applied Materials & Interfaces",
       "volume": "14",
       "issue": "29",
       "firstPage": "33004",
       "lastPage": "33012",
       "oaUrl": null,
-      "abstract": "(LFP)||gr full cells were further tested, and it is found that the resistance of cells builds up during cycling due to gelation of the electrolyte, which limits the cycling performance of full cells. Potential strategies to address this limitation are discussed.",
+      "abstract": "To enable the mass adoption of electric vehicles, the charging performance of Li-ion batteries needs to be significantly enhanced. The development of electrolytes with enhanced transport properties and faster interfacial reaction is one critical approach to realize fast charging within 10 min. Most current electrolyte studies are focusing on ester-based electrolytes. In this work, an ether-based electrolyte is reported, which shows remarkably better charging performance than commercial carbonate electrolytes and other reported ester-based electrolytes in both half and full cells. Electrochemical and spectroscopic characterization shows that the superior charging performance of the reported electrolyte is due to significantly reduced SEI resistance and charge transfer resistance. Cycling tests show remarkable stability in Li||graphite (gr) half cells, suggesting the potential of the electrolytes to enhance battery charging performance. LiFePO4 (LFP)||gr full cells were further tested, and it is found that the resistance of cells builds up during cycling due to gelation of the electrolyte, which limits the cycling performance of full cells. Potential strategies to address this limita…",
       "authors": [
         {
           "name": "Zongjian Li",
@@ -1380,8 +1176,6 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1423,8 +1217,55 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
+      "selected": false,
+      "isCorresponding": true,
+      "isCoFirst": false
+    },
+    {
+      "id": "https://openalex.org/W4282569843",
+      "doi": "10.1002/smll.202201094",
+      "title": "Enhancing Li‐Ion Transport in Solid Electrolytes by Confined Water",
+      "year": 2022,
+      "date": "2022-06-13",
+      "type": "article",
+      "citations": 11,
+      "venue": "Small",
+      "volume": "18",
+      "issue": "29",
+      "firstPage": "e2201094",
+      "lastPage": "e2201094",
+      "oaUrl": null,
+      "abstract": "Abstract Developing new oxide solid electrolytes with fast Li‐ion transport and high stability is an important step to realize high‐performance solid‐state Li‐ion batteries. Hydrate materials containing confined water widely exist in nature or can be easily synthesized. However, they have seldom been explored as Li‐ion solid electrolytes due to the stereotype that the presence of water limits the electrochemical stability window of a solid electrolyte. In this work, it is demonstrated that confined water can enhance Li‐ion transport while not compromising the stability window of solid electrolytes using Li–H–Ti–O quaternary compounds as an example system. Three Li–H–Ti–O quaternary compounds containing different amounts of confined water are synthesized, and their ionic conductivity and electrochemical stability are compared. The compound containing structural pseudo‐water is demonstrated to have an ionic conductivity that is 2–3 order of magnitude higher than the water‐free Li 4 Ti 5 O 12 and similar stability window. A solid‐state battery is made with this new compound as the solid electrolyte, and good rate and cycling performance are achieved, which demonstrates the promise of…",
+      "authors": [
+        {
+          "name": "Yutong Li",
+          "isPI": false
+        },
+        {
+          "name": "Shitong Wang",
+          "isPI": false
+        },
+        {
+          "name": "Zunqiu Xiao",
+          "isPI": false
+        },
+        {
+          "name": "Jin Leng",
+          "isPI": false
+        },
+        {
+          "name": "Zhongtai Zhang",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Zilong Tang",
+          "isPI": false
+        }
+      ],
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1458,59 +1299,47 @@
           "isPI": true
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
     },
     {
-      "id": "https://openalex.org/W4282569843",
-      "doi": "10.1002/smll.202201094",
-      "title": "Enhancing Li‐Ion Transport in Solid Electrolytes by Confined Water",
+      "id": "https://openalex.org/W4292657291",
+      "doi": "10.1002/asia.202200587",
+      "title": "Exploring Carbonyl Chemistry in Non‐aqueous Mg Flow Batteries",
       "year": 2022,
-      "date": "2022-06-13",
+      "date": "2022-08-22",
       "type": "article",
-      "citations": 9,
-      "venue": "Small",
-      "volume": "18",
-      "issue": "29",
-      "firstPage": "e2201094",
-      "lastPage": "e2201094",
+      "citations": 2,
+      "venue": "Chemistry - An Asian Journal",
+      "volume": "17",
+      "issue": "21",
+      "firstPage": "e202200587",
+      "lastPage": "e202200587",
       "oaUrl": null,
-      "abstract": "and similar stability window. A solid-state battery is made with this new compound as the solid electrolyte, and good rate and cycling performance are achieved, which demonstrates the promise of using such confined-water-containing compounds as Li-ion solid electrolytes. The knowledge and insights gained in this work open a new direction for designing solid electrolytes for future solid-state Li-ion batteries. Broadly, by confining water into solid crystal structures, new design freedoms for tailing the properties of ceramic materials are introduced, which creates new opportunities in designing novel materials to address critical problems in various engineering fields.",
+      "abstract": "Non-aqueous redox flow batteries (RFBs) are emerging electrochemical technologies for grid energy storage. Non-aqueous Mg RFBs that use Mg metal as the anode are especially promising due to various benefits of the Mg metal anode, including its low potential, high volumetric capacity, SEI-free, highly reversible operation and low cost. Despite the potential, there are rarely any studies on developing non-aqueous Mg RFBs. Herein, a non-aqueous Mg redox flow battery using a polymer catholyte is reported. Through rational molecular engineering, a carbonyl-based moiety is combined with a polyethylene glycol moiety to achieve a polymer with high voltage and high solubility in the ether-based electrolyte. A series of polymers with different polyethylene glycol chain lengths are synthesized and their performances are measured first at the molecular level, and then at the device level in a Mg redox flow battery using a Mg foil as the anode, the polymer solution as the catholyte and a porous membrane as the separator. The flow battery delivers a voltage of 1.8 V, a maximum capacity of 475 mAh/L, an average Coulombic efficiency of 90.5%, an average voltage efficiency of 67.4%, an energy effic…",
       "authors": [
         {
-          "name": "Yutong Li",
+          "name": "Yunan Qin",
           "isPI": false
         },
         {
-          "name": "Shitong Wang",
+          "name": "Kathryn Holguin",
           "isPI": false
         },
         {
-          "name": "Zunqiu Xiao",
+          "name": "Dillon Fehlau",
           "isPI": false
         },
         {
-          "name": "Jin Leng",
-          "isPI": false
-        },
-        {
-          "name": "Zhongtai Zhang",
+          "name": "Chao Luo",
           "isPI": false
         },
         {
           "name": "Tao Gao",
           "isPI": true
-        },
-        {
-          "name": "Zilong Tang",
-          "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1624,51 +1453,6 @@
           "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "preprint",
-      "selected": false,
-      "isCorresponding": true,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W4292657291",
-      "doi": "10.1002/asia.202200587",
-      "title": "Exploring Carbonyl Chemistry in Non‐aqueous Mg Flow Batteries",
-      "year": 2022,
-      "date": "2022-08-22",
-      "type": "article",
-      "citations": 2,
-      "venue": "Chemistry - An Asian Journal",
-      "volume": "17",
-      "issue": "21",
-      "firstPage": "e202200587",
-      "lastPage": "e202200587",
-      "oaUrl": null,
-      "abstract": "Non-aqueous redox flow batteries (RFBs) are emerging electrochemical technologies for grid energy storage. Non-aqueous Mg RFBs that use Mg metal as the anode are especially promising due to various benefits of the Mg metal anode, including its low potential, high volumetric capacity, SEI-free, highly reversible operation and low cost. Despite the potential, there are rarely any studies on developing non-aqueous Mg RFBs. Herein, a non-aqueous Mg redox flow battery using a polymer catholyte is reported. Through rational molecular engineering, a carbonyl-based moiety is combined with a polyethylene glycol moiety to achieve a polymer with high voltage and high solubility in the ether-based electrolyte. A series of polymers with different polyethylene glycol chain lengths are synthesized and their performances are measured first at the molecular level, and then at the device level in a Mg redox flow battery using a Mg foil as the anode, the polymer solution as the catholyte and a porous membrane as the separator. The flow battery delivers a voltage of 1.8 V, a maximum capacity of 475 mAh/L, an average Coulombic efficiency of 90.5%, an average voltage efficiency of 67.4%, an energy effic…",
-      "authors": [
-        {
-          "name": "Yunan Qin",
-          "isPI": false
-        },
-        {
-          "name": "Kathryn Holguin",
-          "isPI": false
-        },
-        {
-          "name": "Dillon Fehlau",
-          "isPI": false
-        },
-        {
-          "name": "Chao Luo",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
       "isCoFirst": false
@@ -1718,8 +1502,6 @@
           "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -1745,8 +1527,6 @@
           "isPI": true
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -1758,7 +1538,7 @@
       "year": 2021,
       "date": "2021-01-22",
       "type": "article",
-      "citations": 374,
+      "citations": 388,
       "venue": "Joule",
       "volume": "5",
       "issue": "2",
@@ -1808,189 +1588,9 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
-    },
-    {
-      "id": "https://openalex.org/W3195462895",
-      "doi": "10.1016/j.xcrp.2021.100537",
-      "title": "End-of-life or second-life options for retired electric vehicle batteries",
-      "year": 2021,
-      "date": "2021-08-01",
-      "type": "article",
-      "citations": 283,
-      "venue": "Cell Reports Physical Science",
-      "volume": "2",
-      "issue": "8",
-      "firstPage": "100537",
-      "lastPage": "100537",
-      "oaUrl": "https://doi.org/10.1016/j.xcrp.2021.100537",
-      "abstract": "E-mobility, especially electric cars, has been scaling up rapidly because of technological advances in lithium-ion batteries (LIBs). However, LIBs degrade significantly with service life cycles. With the current increase in the adoption of electric vehicles (EVs), a large volume of retired LIB packs, which can no longer provide satisfactory performance to power an EV, will soon appear. Various end-of-life (EOL) options are under development, such as recycling and recovery. Recently, stakeholders have become more confident that giving the retired batteries a second life by reusing them in less-demanding applications, such as stationary energy storage, may create new value pools in the energy and transportation sectors. In this perspective, we evaluate the feasibility of second-life battery applications, from economic and technological perspectives, based on the latest industrial reports and technical publications.",
-      "authors": [
-        {
-          "name": "Juner Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Ian Mathews",
-          "isPI": false
-        },
-        {
-          "name": "Dongsheng Ren",
-          "isPI": false
-        },
-        {
-          "name": "Wei Li",
-          "isPI": false
-        },
-        {
-          "name": "Daniel A. Cogswell",
-          "isPI": false
-        },
-        {
-          "name": "Bobin Xing",
-          "isPI": false
-        },
-        {
-          "name": "Tobias Sedlatschek",
-          "isPI": false
-        },
-        {
-          "name": "Sai Nithin R. Kantareddy",
-          "isPI": false
-        },
-        {
-          "name": "Mengchao Yi",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yong Xia",
-          "isPI": false
-        },
-        {
-          "name": "Qing Zhou",
-          "isPI": false
-        },
-        {
-          "name": "Tomasz Wierzbicki",
-          "isPI": false
-        },
-        {
-          "name": "Martin Z. Bazant",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W3128753104",
-      "doi": "10.1016/j.ensm.2021.01.033",
-      "title": "Cation-synergy stabilizing anion redox of Chevrel phase Mo6S8 in aluminum ion battery",
-      "year": 2021,
-      "date": "2021-01-30",
-      "type": "article",
-      "citations": 52,
-      "venue": "Energy storage materials",
-      "volume": "37",
-      "issue": null,
-      "firstPage": "87",
-      "lastPage": "93",
-      "oaUrl": null,
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Yuxin Tong",
-          "isPI": false
-        },
-        {
-          "name": "Ang Gao",
-          "isPI": false
-        },
-        {
-          "name": "Qinghua Zhang",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Jinming Yue",
-          "isPI": false
-        },
-        {
-          "name": "Fanqi Meng",
-          "isPI": false
-        },
-        {
-          "name": "Yue Gong",
-          "isPI": false
-        },
-        {
-          "name": "Shibo Xi",
-          "isPI": false
-        },
-        {
-          "name": "Zejing Lin",
-          "isPI": false
-        },
-        {
-          "name": "Minglei Mao",
-          "isPI": false
-        },
-        {
-          "name": "Si‐Yuan Peng",
-          "isPI": false
-        },
-        {
-          "name": "Xuefeng Wang",
-          "isPI": false
-        },
-        {
-          "name": "Dongdong Xiao",
-          "isPI": false
-        },
-        {
-          "name": "Dong Su",
-          "isPI": false
-        },
-        {
-          "name": "Yanhong Luo",
-          "isPI": false
-        },
-        {
-          "name": "Hong Li",
-          "isPI": false
-        },
-        {
-          "name": "Liquan Chen",
-          "isPI": false
-        },
-        {
-          "name": "Liumin Suo",
-          "isPI": false
-        },
-        {
-          "name": "Lin Gu",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W3168977011",
@@ -2033,8 +1633,6 @@
           "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2076,8 +1674,6 @@
           "isPI": false
         }
       ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2089,7 +1685,7 @@
       "year": 2020,
       "date": "2020-01-01",
       "type": "article",
-      "citations": 240,
+      "citations": 246,
       "venue": "Energy & Environmental Science",
       "volume": "13",
       "issue": "8",
@@ -2167,8 +1763,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2180,14 +1774,14 @@
       "year": 2020,
       "date": "2020-06-17",
       "type": "article",
-      "citations": 130,
+      "citations": 133,
       "venue": "Proceedings of the National Academy of Sciences",
       "volume": "117",
       "issue": "26",
       "firstPage": "14712",
       "lastPage": "14720",
       "oaUrl": "https://www.osti.gov/biblio/1633811",
-      "abstract": "The superior electrochemical performance of the chemical bonding-stabilized C/S composite renders it a promising cathode material for high-energy and long-cycle-life LSBs.",
+      "abstract": "Significance Sulfur is a promising cathode material for rechargeable lithium batteries due to its high capacity, low cost, abundance, and high sustainability. However, lithium sulfur batteries suffer from poor cycle life and low energy density under lean electrolyte conditions because of the dissolution of lithium polysulfide intermediates. Here, we report that the chemical bonding between sulfur and carbon/oxygen in an oxygen-rich dense carbon host can stabilize sulfur and improve the stability of lean electrolyte lithium sulfur batteries. This work opens up a way to develop chemical bonding-stabilized sulfur materials for stable and high-energy lithium sulfur batteries.",
       "authors": [
         {
           "name": "Chao Luo",
@@ -2226,8 +1820,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2239,7 +1831,7 @@
       "year": 2020,
       "date": "2020-01-01",
       "type": "article",
-      "citations": 99,
+      "citations": 104,
       "venue": "Energy & Environmental Science",
       "volume": "13",
       "issue": "7",
@@ -2285,109 +1877,9 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
-    },
-    {
-      "id": "https://openalex.org/W3015578378",
-      "doi": "10.1016/j.eml.2020.100705",
-      "title": "Microstructural deformation patterns of a highly orthotropic polypropylene separator of lithium-ion batteries: Mechanism, model, and theory",
-      "year": 2020,
-      "date": "2020-04-07",
-      "type": "article",
-      "citations": 27,
-      "venue": "Extreme Mechanics Letters",
-      "volume": "37",
-      "issue": null,
-      "firstPage": "100705",
-      "lastPage": "100705",
-      "oaUrl": null,
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Zhexin Pan",
-          "isPI": false
-        },
-        {
-          "name": "Juner Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Hongyi Xu",
-          "isPI": false
-        },
-        {
-          "name": "Tobias Sedlatschek",
-          "isPI": false
-        },
-        {
-          "name": "Xiaowei Zhang",
-          "isPI": false
-        },
-        {
-          "name": "Wei Li",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yong Xia",
-          "isPI": false
-        },
-        {
-          "name": "Tomasz Wierzbicki",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W3025689104",
-      "doi": "10.1149/ma2020-012447mtgabs",
-      "title": "Understanding the Interplay between Li Intercalation and Li Plating Using Single Graphite Particle Electrochemistry",
-      "year": 2020,
-      "date": "2020-05-01",
-      "type": "article",
-      "citations": 0,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2020-01",
-      "issue": "2",
-      "firstPage": "447",
-      "lastPage": "447",
-      "oaUrl": null,
-      "abstract": "Potential safety hazard of lithium ion batteries, their long recharging time and performance degradation during usage are the major obstacles that prevent the wide adoption of electric vehicles in our society. Lithium plating on graphite anode is considered the leading cause of thermal runaway, degradation and the barrier for fast charging. However, the onset of lithium plating on graphite anodes is not well understood. For the first time, we resolved the spatial dynamics of lithiation of a single graphite particle using in-situ optical microscopy, and shed light on the interplay between lithium intercalation and plating. Enabled by simultaneously monitoring of the voltage, phase transformation and lithium plating, we are able to elucidate the energetics and kinetics of the two competing reactions, and establish a comprehensive mechanistic picture of Li plating mechanism on graphite anode. The proposed mechanism was further validated by simulation using a 1-D phase field model. This work is therefore providing insights on guidelines of designing graphite anode and operating LiB for reducing the risk of lithium plating.",
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "William C. Chueh",
-          "isPI": false
-        },
-        {
-          "name": "Ju Li",
-          "isPI": false
-        },
-        {
-          "name": "Martin Z. Bazant",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2978606705",
@@ -2396,14 +1888,14 @@
       "year": 2019,
       "date": "2019-10-01",
       "type": "review",
-      "citations": 245,
+      "citations": 251,
       "venue": "Angewandte Chemie International Edition",
       "volume": "58",
       "issue": "49",
       "firstPage": "17820",
       "lastPage": "17826",
       "oaUrl": "https://www.osti.gov/biblio/1767522",
-      "abstract": "after 100 cycles in Al batteries. DFT calculations, X-ray photoelectron spectroscopy, Raman, and FTIR show that the electron-deficient pyrazine sites in PHATN are the redox centers to reversibly react with metal ions.",
+      "abstract": "Abstract The lack of high‐power and stable cathodes prohibits the development of rechargeable metal (Na, Mg, Al) batteries. Herein, poly(hexaazatrinaphthalene) (PHATN), an environmentally benign, abundant and sustainable polymer, is employed as a universal cathode material for these batteries. In Na‐ion batteries (NIBs), PHATN delivers a reversible capacity of 220 mAh g −1 at 50 mA g −1 , corresponding to the energy density of 440 Wh kg −1 , and still retains 100 mAh g −1 at 10 Ag −1 after 50 000 cycles, which is among the best performances in NIBs. Such an exceptional performance is also observed in more challenging Mg and Al batteries. PHATN retains reversible capacities of 110 mAh g −1 after 200 cycles in Mg batteries and 92 mAh g −1 after 100 cycles in Al batteries. DFT calculations, X‐ray photoelectron spectroscopy, Raman, and FTIR show that the electron‐deficient pyrazine sites in PHATN are the redox centers to reversibly react with metal ions.",
       "authors": [
         {
           "name": "Minglei Mao",
@@ -2470,8 +1962,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2533,55 +2023,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2944421497",
-      "doi": "10.1016/j.ijimpeng.2019.05.003",
-      "title": "Mechanism of strengthening of battery resistance under dynamic loading",
-      "year": 2019,
-      "date": "2019-05-08",
-      "type": "article",
-      "citations": 90,
-      "venue": "International Journal of Impact Engineering",
-      "volume": "131",
-      "issue": null,
-      "firstPage": "78",
-      "lastPage": "84",
-      "oaUrl": null,
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Juner Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Hailing Luo",
-          "isPI": false
-        },
-        {
-          "name": "Wei Li",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yong Xia",
-          "isPI": false
-        },
-        {
-          "name": "Tomasz Wierzbicki",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2643,8 +2084,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -2686,8 +2125,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -2699,7 +2136,7 @@
       "year": 2019,
       "date": "2019-09-05",
       "type": "article",
-      "citations": 72,
+      "citations": 74,
       "venue": "Nature Communications",
       "volume": "10",
       "issue": "1",
@@ -2729,8 +2166,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -2742,7 +2177,7 @@
       "year": 2019,
       "date": "2019-08-09",
       "type": "article",
-      "citations": 61,
+      "citations": 63,
       "venue": "Advanced Functional Materials",
       "volume": "29",
       "issue": "40",
@@ -2772,8 +2207,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2785,7 +2218,7 @@
       "year": 2019,
       "date": "2019-12-03",
       "type": "article",
-      "citations": 59,
+      "citations": 60,
       "venue": "Environmental Science & Technology",
       "volume": "54",
       "issue": "1",
@@ -2815,8 +2248,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2854,8 +2285,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2867,7 +2296,7 @@
       "year": 2018,
       "date": "2018-04-12",
       "type": "article",
-      "citations": 3187,
+      "citations": 3232,
       "venue": "Nature Materials",
       "volume": "17",
       "issue": "6",
@@ -2917,8 +2346,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -2930,7 +2357,7 @@
       "year": 2018,
       "date": "2018-01-01",
       "type": "review",
-      "citations": 577,
+      "citations": 584,
       "venue": "Chemical Society Reviews",
       "volume": "47",
       "issue": "23",
@@ -2956,73 +2383,8 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": true,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2788890201",
-      "doi": "10.1016/j.joule.2018.02.007",
-      "title": "Interphase Engineering Enabled All-Ceramic Lithium Battery",
-      "year": 2018,
-      "date": "2018-02-28",
-      "type": "article",
-      "citations": 468,
-      "venue": "Joule",
-      "volume": "2",
-      "issue": "3",
-      "firstPage": "497",
-      "lastPage": "508",
-      "oaUrl": "http://www.cell.com/article/S2542435118300539/pdf",
-      "abstract": null,
-      "authors": [
-        {
-          "name": "Fudong Han",
-          "isPI": false
-        },
-        {
-          "name": "Jie Yue",
-          "isPI": false
-        },
-        {
-          "name": "Cheng Chen",
-          "isPI": false
-        },
-        {
-          "name": "Ning Zhao",
-          "isPI": false
-        },
-        {
-          "name": "Xiulin Fan",
-          "isPI": false
-        },
-        {
-          "name": "Zhaohui Ma",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Fei Wang",
-          "isPI": false
-        },
-        {
-          "name": "Xiangxin Guo",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
       "isCoFirst": false
     },
     {
@@ -3032,7 +2394,7 @@
       "year": 2018,
       "date": "2018-04-02",
       "type": "article",
-      "citations": 463,
+      "citations": 471,
       "venue": "Nature Chemistry",
       "volume": "10",
       "issue": "5",
@@ -3082,8 +2444,67 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "https://openalex.org/W2788890201",
+      "doi": "10.1016/j.joule.2018.02.007",
+      "title": "Interphase Engineering Enabled All-Ceramic Lithium Battery",
+      "year": 2018,
+      "date": "2018-02-28",
+      "type": "article",
+      "citations": 470,
+      "venue": "Joule",
+      "volume": "2",
+      "issue": "3",
+      "firstPage": "497",
+      "lastPage": "508",
+      "oaUrl": "http://www.cell.com/article/S2542435118300539/pdf",
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Fudong Han",
+          "isPI": false
+        },
+        {
+          "name": "Jie Yue",
+          "isPI": false
+        },
+        {
+          "name": "Cheng Chen",
+          "isPI": false
+        },
+        {
+          "name": "Ning Zhao",
+          "isPI": false
+        },
+        {
+          "name": "Xiulin Fan",
+          "isPI": false
+        },
+        {
+          "name": "Zhaohui Ma",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Fei Wang",
+          "isPI": false
+        },
+        {
+          "name": "Xiangxin Guo",
+          "isPI": false
+        },
+        {
+          "name": "Chunsheng Wang",
+          "isPI": false
+        }
+      ],
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3095,7 +2516,7 @@
       "year": 2018,
       "date": "2018-03-12",
       "type": "article",
-      "citations": 426,
+      "citations": 434,
       "venue": "Joule",
       "volume": "2",
       "issue": "5",
@@ -3157,8 +2578,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3166,18 +2585,18 @@
     {
       "id": "https://openalex.org/W2895703752",
       "doi": "10.1039/c8ee01883a",
-      "title": "A rechargeable aqueous Zn<sup>2+</sup>-battery with high power density and a long cycle-life",
+      "title": "A rechargeable aqueous Zn <sup>2+</sup> -battery with high power density and a long cycle-life",
       "year": 2018,
       "date": "2018-01-01",
       "type": "article",
-      "citations": 308,
+      "citations": 309,
       "venue": "Energy & Environmental Science",
       "volume": "11",
       "issue": "11",
       "firstPage": "3168",
       "lastPage": "3175",
       "oaUrl": "https://www.osti.gov/servlets/purl/1476764",
-      "abstract": "The bivalence of Zn<sup>2+</sup> was delocalized by multiple atoms through the p–d hybridization, rendering its high mobility.",
+      "abstract": "The bivalence of Zn <sup>2+</sup> was delocalized by multiple atoms through the p–d hybridization, rendering its high mobility.",
       "authors": [
         {
           "name": "Fei Wang",
@@ -3220,8 +2639,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3233,7 +2650,7 @@
       "year": 2018,
       "date": "2018-01-02",
       "type": "article",
-      "citations": 307,
+      "citations": 308,
       "venue": "Nano Energy",
       "volume": "45",
       "issue": null,
@@ -3283,8 +2700,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3296,7 +2711,7 @@
       "year": 2018,
       "date": "2018-01-01",
       "type": "article",
-      "citations": 275,
+      "citations": 280,
       "venue": "Energy & Environmental Science",
       "volume": "11",
       "issue": "5",
@@ -3350,8 +2765,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3363,14 +2776,14 @@
       "year": 2018,
       "date": "2018-04-28",
       "type": "article",
-      "citations": 216,
+      "citations": 219,
       "venue": "Angewandte Chemie International Edition",
       "volume": "57",
       "issue": "24",
       "firstPage": "7146",
       "lastPage": "7150",
       "oaUrl": "https://www.osti.gov/biblio/1437068",
-      "abstract": ") at an extremely fast rate. The ion-coordination charge storage mechanism of PI@CNT is systemically investigated. Full cells using PI@CNT cathodes and corresponding metal anodes exhibit long cycle life (>10000 cycles), fast kinetics (>20 C), and wide operating temperature range (-40 to 50 °C), making the low-cost industrial polyimides universal cathodes for different multivalent metal batteries. The stable ion-coordinated mechanism opens a new foundation for the development of high-energy and high-power multivalent batteries.",
+      "abstract": "Abstract Low‐cost multivalent battery chemistries (Mg 2+ , Al 3+ ) have been extensively investigated for large‐scale energy storage applications. However, their commercialization is plagued by the poor power density and cycle life of cathodes. A universal polyimides@CNT (PI@CNT) cathode is now presented that can reversibly store various cations with different valences (Li + , Mg 2+ , Al 3+ ) at an extremely fast rate. The ion‐coordination charge storage mechanism of PI@CNT is systemically investigated. Full cells using PI@CNT cathodes and corresponding metal anodes exhibit long cycle life (&gt;10000 cycles), fast kinetics (&gt;20 C), and wide operating temperature range (−40 to 50 °C), making the low‐cost industrial polyimides universal cathodes for different multivalent metal batteries. The stable ion‐coordinated mechanism opens a new foundation for the development of high‐energy and high‐power multivalent batteries.",
       "authors": [
         {
           "name": "Xiulin Fan",
@@ -3425,8 +2838,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3438,14 +2849,14 @@
       "year": 2018,
       "date": "2018-06-07",
       "type": "article",
-      "citations": 178,
+      "citations": 179,
       "venue": "Nature Communications",
       "volume": "9",
       "issue": "1",
       "firstPage": "2324",
       "lastPage": "2324",
       "oaUrl": "https://www.nature.com/articles/s41467-018-04476-2.pdf",
-      "abstract": "with a decay rate of 0.03% per cycle is achieved. The anion's and cation's co-substitutions thermodynamically reduce conversion reaction potential and shift the reaction from less-reversible intercalation-conversion reaction in iron fluoride to a highly reversible intercalation-extrusion reaction in doped material. The co-substitution strategy to tune the thermodynamic features of the reactions could be extended to other high energy conversion materials for improved performance.",
+      "abstract": "Abstract Iron fluoride, an intercalation-conversion cathode for lithium ion batteries, promises a high theoretical energy density of 1922 Wh kg –1 . However, poor electrochemical reversibility due to repeated breaking/reformation of metal fluoride bonds poses a grand challenge for its practical application. Here we report that both a high reversibility over 1000 cycles and a high capacity of 420 mAh g −1 can be realized by concerted doping of cobalt and oxygen into iron fluoride. In the doped nanorods, an energy density of ~1000 Wh kg − 1 with a decay rate of 0.03% per cycle is achieved. The anion’s and cation’s co-substitutions thermodynamically reduce conversion reaction potential and shift the reaction from less-reversible intercalation-conversion reaction in iron fluoride to a highly reversible intercalation-extrusion reaction in doped material. The co-substitution strategy to tune the thermodynamic features of the reactions could be extended to other high energy conversion materials for improved performance.",
       "authors": [
         {
           "name": "Xiulin Fan",
@@ -3516,8 +2927,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3529,14 +2938,14 @@
       "year": 2018,
       "date": "2018-08-01",
       "type": "article",
-      "citations": 155,
+      "citations": 157,
       "venue": "Angewandte Chemie International Edition",
       "volume": "57",
       "issue": "37",
       "firstPage": "11978",
       "lastPage": "11981",
       "oaUrl": "https://www.osti.gov/biblio/1466598",
-      "abstract": "O transport during the charge/discharge cycles, with the water activity serving as the key parameter determining the direction of water movement and the cycling stability.",
+      "abstract": "Abstract The effect of H 2 O in electrolytes and in electrode lattices on the thermodynamics and kinetics of reversible multivalent‐ion intercalation chemistry based on a model platform of layered VOPO 4 has been investigated. The presence of H 2 O at the electrolyte/electrode interface plays a key role in assisting Zn 2+ diffusion from electrolyte to the surface, while H 2 O in the lattice structure alters the working potential. More importantly, a dynamic equilibrium between bulk electrode and electrolyte is eventually reached for H 2 O transport during the charge/discharge cycles, with the water activity serving as the key parameter determining the direction of water movement and the cycling stability.",
       "authors": [
         {
           "name": "Fei Wang",
@@ -3575,8 +2984,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3588,7 +2995,7 @@
       "year": 2018,
       "date": "2018-04-05",
       "type": "article",
-      "citations": 137,
+      "citations": 141,
       "venue": "ACS Applied Materials & Interfaces",
       "volume": "10",
       "issue": "17",
@@ -3642,8 +3049,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3655,14 +3060,14 @@
       "year": 2017,
       "date": "2017-07-14",
       "type": "article",
-      "citations": 1824,
+      "citations": 1854,
       "venue": "Journal of the American Chemical Society",
       "volume": "139",
       "issue": "29",
       "firstPage": "9775",
       "lastPage": "9778",
       "oaUrl": null,
-      "abstract": "insertion/extraction process with high reversibility and cycling stability. To our best knowledge, it is the first report on rechargeable aqueous batteries with a consequent ion-insertion reaction mechanism.",
+      "abstract": "Rechargeable aqueous Zn/MnO 2 battery chemistry in a neutral or mildly acidic electrolyte has attracted extensive attention recently because all the components (anode, cathode, and electrolyte) in a Zn/MnO 2 battery are safe, abundant, and sustainable. However, the reaction mechanism of the MnO 2 cathode remains a topic of discussion. Herein, we design a highly reversible aqueous Zn/MnO 2 battery where the binder-free MnO 2 cathode was fabricated by in situ electrodeposition of MnO 2 on carbon fiber paper in mild acidic ZnSO 4 +MnSO 4 electrolyte. Electrochemical and structural analysis identify that the MnO 2 cathode experience a consequent H + and Zn 2+ insertion/extraction process with high reversibility and cycling stability. To our best knowledge, it is the first report on rechargeable aqueous batteries with a consequent ion-insertion reaction mechanism.",
       "authors": [
         {
           "name": "Wei Sun",
@@ -3709,8 +3114,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -3722,7 +3125,7 @@
       "year": 2017,
       "date": "2017-11-30",
       "type": "article",
-      "citations": 516,
+      "citations": 525,
       "venue": "Journal of the American Chemical Society",
       "volume": "139",
       "issue": "51",
@@ -3796,8 +3199,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3809,14 +3210,14 @@
       "year": 2017,
       "date": "2017-10-04",
       "type": "article",
-      "citations": 365,
+      "citations": 369,
       "venue": "ACS Central Science",
       "volume": "3",
       "issue": "10",
       "firstPage": "1121",
       "lastPage": "1128",
       "oaUrl": "https://doi.org/10.1021/acscentsci.7b00361",
-      "abstract": "and poly pyromellitic dianhydride, were developed and employed as cathode and anode electrodes, respectively. Based on comparisons of the aqueous and nonaqueous systems, the role of water is identified to be critical in the Mg ion mobility in the intercalation host but remaining little detrimental to its non-diffusion controlled process. Compared with the previously reported Mg ion cell delivers an unprecedented high power density of 6400 W kg ion cell delivers an unprecedented high power density of 6400 W kg while retaining 92% of the initial capacity after 6000 cycles, pushing the Mg ion cell to a brand new stage.",
+      "abstract": "High Resolution Image Download MS PowerPoint Slide Nonaqueous rechargeable magnesium (Mg) batteries suffer from the complicated and moisture-sensitive electrolyte chemistry. Besides electrolytes, the practicality of a Mg battery is also confined by the absence of high-performance electrode materials due to the intrinsically slow Mg 2+ diffusion in the solids. In this work, we demonstrated a rechargeable aqueous magnesium ion battery (AMIB) concept of high energy density, fast kinetics, and reversibility. Using a superconcentration approach we expanded the electrochemical stability window of the aqueous electrolyte to 2.0 V. More importantly, two new Mg ion host materials, Li superconcentration approach we expanded the electrochemical stability window of the aqueous electrolyte to 2.0 V. More importantly, two new Mg ion host materials, Li 3 V 2 (PO 4 ) 3 and poly pyromellitic dianhydride, were developed and employed as cathode and anode electrodes, respectively. Based on comparisons of the aqueous and nonaqueous systems, the role of water is identified to be critical in the Mg ion mobility in the intercalation host but remaining little detrimental to its non-diffusion controlled pro…",
       "authors": [
         {
           "name": "Fei Wang",
@@ -3855,8 +3256,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -3868,14 +3267,14 @@
       "year": 2017,
       "date": "2017-01-10",
       "type": "article",
-      "citations": 322,
+      "citations": 327,
       "venue": "Nature Communications",
       "volume": "8",
       "issue": "1",
       "firstPage": "14083",
       "lastPage": "14083",
       "oaUrl": "https://www.nature.com/articles/ncomms14083.pdf",
-      "abstract": ") than all other reported rechargeable magnesium batteries using intercalation cathodes. This study demonstrates that the liquid-solid two-phase reaction mechanism is promising in addressing the kinetic limitation of rechargeable magnesium batteries.",
+      "abstract": "Abstract Rechargeable magnesium batteries have attracted considerable attention because of their potential high energy density and low cost. However, their development has been severely hindered because of the lack of appropriate cathode materials. Here we report a rechargeable magnesium/iodine battery, in which the soluble iodine reacts with Mg 2+ to form a soluble intermediate and then an insoluble final product magnesium iodide. The liquid–solid two-phase reaction pathway circumvents solid-state Mg 2+ diffusion and ensures a large interfacial reaction area, leading to fast reaction kinetics and high reaction reversibility. As a result, the rechargeable magnesium/iodine battery shows a better rate capability (180 mAh g −1 at 0.5 C and 140 mAh g −1 at 1 C) and a higher energy density (∼400 Wh kg −1 ) than all other reported rechargeable magnesium batteries using intercalation cathodes. This study demonstrates that the liquid–solid two-phase reaction mechanism is promising in addressing the kinetic limitation of rechargeable magnesium batteries.",
       "authors": [
         {
           "name": "Huajun Tian",
@@ -3922,8 +3321,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -3935,14 +3332,14 @@
       "year": 2017,
       "date": "2017-10-16",
       "type": "article",
-      "citations": 216,
+      "citations": 217,
       "venue": "Advanced Materials",
       "volume": "29",
       "issue": "44",
       "firstPage": null,
       "lastPage": null,
       "oaUrl": "https://www.osti.gov/biblio/1399616",
-      "abstract": ", and output voltage of 2.4 V can be delivered during >4000 cycles, which is far superior to reported aqueous energy storage devices at the same power level. Moreover, the full cell shows unprecedented tolerance to mechanical stress such as bending and cutting, where it not only does not catastrophically fail, as most nonaqueous cells would, but also maintains cell performance and continues to operate in ambient environment, a unique feature apparently derived from the high stability of the \"water-in-salt\" gel polymer electrolyte.",
+      "abstract": "Abstract A flexible and wearable aqueous symmetrical lithium‐ion battery is developed using a single LiVPO 4 F material as both cathode and anode in a “water‐in‐salt” gel polymer electrolyte. The symmetric lithium‐ion chemistry exhibits high energy and power density and long cycle life, due to the formation of a robust solid electrolyte interphase consisting of Li 2 CO 3 ‐LiF, which enables fast Li‐ion transport. Energy densities of 141 Wh kg −1 , power densities of 20 600 W kg −1 , and output voltage of 2.4 V can be delivered during &gt;4000 cycles, which is far superior to reported aqueous energy storage devices at the same power level. Moreover, the full cell shows unprecedented tolerance to mechanical stress such as bending and cutting, where it not only does not catastrophically fail, as most nonaqueous cells would, but also maintains cell performance and continues to operate in ambient environment, a unique feature apparently derived from the high stability of the “water‐in‐salt” gel polymer electrolyte.",
       "authors": [
         {
           "name": "Chongyin Yang",
@@ -4001,8 +3398,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4072,8 +3467,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4085,14 +3478,14 @@
       "year": 2017,
       "date": "2017-08-29",
       "type": "article",
-      "citations": 190,
+      "citations": 191,
       "venue": "Angewandte Chemie International Edition",
       "volume": "56",
       "issue": "43",
       "firstPage": "13526",
       "lastPage": "13530",
       "oaUrl": "https://www.osti.gov/biblio/1393995",
-      "abstract": "redox processes and that the large voltage hysteresis is mainly due to the Mg anode overpotential.",
+      "abstract": "Abstract The redox chemistry of magnesium and its application in rechargeable Mg batteries has received increasing attention owing to the unique benefits of Mg metal electrodes, namely high reversibility without dendrite formation, low reduction potentials, and high specific capacities. The Mg/S couple is of particular interest owing to its high energy density and low cost. Previous reports have confirmed the feasibility of a rechargeable Mg/S battery; however, only limited cycling stability was achieved, and the complicated procedure for the preparation of the electrolytes has significantly compromised the benefits of Mg/S chemistry and hindered the development of Mg/S batteries. Herein, we report the development of the first rechargeable Mg/S battery with a MgTFSI 2 /MgCl 2 /DME electrolyte (DME=1,2‐dimethoxyethane, TFSI=bis(trifluoromethanesulfonyl)imide) and realize the best cycling stability among all reported Mg/S batteries by suppressing polysulfide dissolution. Mechanistic studies show that the battery works via S 0 /MgS x redox processes and that the large voltage hysteresis is mainly due to the Mg anode overpotential.",
       "authors": [
         {
           "name": "Tao Gao",
@@ -4123,8 +3516,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4136,14 +3527,14 @@
       "year": 2017,
       "date": "2017-03-16",
       "type": "article",
-      "citations": 154,
+      "citations": 155,
       "venue": "Accounts of Chemical Research",
       "volume": "50",
       "issue": "4",
       "firstPage": "1022",
       "lastPage": "1031",
       "oaUrl": null,
-      "abstract": "as an example material. After that, we have a discussion on the methodology for using electrochemical techniques to investigate new material features. It is our hope that this Account can serve as a call for more endeavors into the development of novel electrochemical tools for battery research.",
+      "abstract": "Conspectus Understanding of the thermodynamic and kinetic properties of electrode materials is of great importance to develop new materials for high performance rechargeable batteries. Compared with computational understanding of physical and chemical properties of electrode materials, experimental methods provide direct and convenient evaluation of these properties. Often, the information gained from experimental work can not only offer feedback for the computational methods but also provide useful insights for improving the performance of materials. However, accurate experimental quantification of some properties can still be challenging. Among them, chemical diffusion coefficient is one representative example. It is one of the most crucial parameters determining the kinetics of intercalation compounds, which are by far the dominant electrode type used in rechargeable batteries. Therefore, it is of significance to quantitatively evaluate this parameter. For this purpose, various electrochemical techniques have been invented, for example, galvanostatic intermittent titration technique (GITT), potentiostatic intermittent titration technique (PITT), electrochemical impedance spectro…",
       "authors": [
         {
           "name": "Yujie Zhu",
@@ -4166,8 +3557,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -4225,8 +3614,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
@@ -4245,7 +3632,7 @@
       "firstPage": null,
       "lastPage": null,
       "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.201704313",
-      "abstract": "-DME electrolyte, as well as the associated kinetics are thoroughly investigated. The results here reveal that sulfur undergoes a consecutive staging pathway in which the formation and chain-shortening of polysulfide occur at early stage accompanied by the dissolution of long-chain polysulfide, and solid-state transition from short-chain polysulfide to magnesium sulfide occurs at late stage. The former process is much faster than the latter due to the synergetic effect of the mediating effect of dissolved polysulfide and the fast diffusion of Mg ion in the amorphous intermediate.",
+      "abstract": "Abstract Rechargeable magnesium/sulfur battery is of significant interest because its energy density (1700 Wh kg −1 and 3200 Wh L −1 ) is among the highest of all battery chemistries (lower than Li/O 2 and Mg/O 2 but comparable to Li/S), and Mg metal allows reversible operation (100% Coulombic efficiency) with no dendrite formation. This great promise is already justified in some early reports. However, lack of mechanistic study of sulfur reaction in the Mg cation environment has severely hindered our understanding and prevents effective measures for performance improvement. In this work, the very first systematic fundamental study on Mg/S system is conducted by combining experimental methods with computational approach. The thermodynamics and reaction pathway of sulfur cathode in MgTFSI 2 –DME electrolyte, as well as the associated kinetics are thoroughly investigated. The results here reveal that sulfur undergoes a consecutive staging pathway in which the formation and chain‐shortening of polysulfide occur at early stage accompanied by the dissolution of long‐chain polysulfide, and solid‐state transition from short‐chain polysulfide to magnesium sulfide occurs at late stage. The…",
       "authors": [
         {
           "name": "Tao Gao",
@@ -4292,8 +3679,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4305,7 +3690,7 @@
       "year": 2017,
       "date": "2017-06-08",
       "type": "article",
-      "citations": 132,
+      "citations": 133,
       "venue": "Nano Energy",
       "volume": "38",
       "issue": null,
@@ -4339,8 +3724,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4352,7 +3735,7 @@
       "year": 2017,
       "date": "2017-10-26",
       "type": "article",
-      "citations": 128,
+      "citations": 129,
       "venue": "Chem",
       "volume": "3",
       "issue": "6",
@@ -4382,8 +3765,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4395,7 +3776,7 @@
       "year": 2017,
       "date": "2017-07-22",
       "type": "article",
-      "citations": 123,
+      "citations": 124,
       "venue": "Electrochemistry Communications",
       "volume": "82",
       "issue": null,
@@ -4445,8 +3826,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4464,8 +3843,8 @@
       "issue": "9",
       "firstPage": "9048",
       "lastPage": "9056",
-      "oaUrl": null,
-      "abstract": ") on carbon cloth, this composite showed 1256 mAh/g discharge capacity with more than 99% capacity retention after 200 cycles.",
+      "oaUrl": "https://figshare.com/articles/journal_contribution/Reverse_Microemulsion_Synthesis_of_Sulfur_Graphene_Composite_for_Lithium_Sulfur_Batteries/27783567",
+      "abstract": "Due to its high theoretical capacity, high energy density, and easy availability, the lithium–sulfur (Li–S) system is considered to be the most promising candidate for electric and hybrid electric vehicle applications. Sulfur/carbon cathode in Li–S batteries still suffers, however, from low Coulombic efficiency and poor cycle life when sulfur loading and the ratio of sulfur to carbon are high. Here, we address these challenges by fabricating a sulfur/carboxylated–graphene composite using a reverse (water-in-oil) microemulsion technique. The fabricated sulfur–graphene composite cathode, which contains only 6 wt % graphene, can dramatically improve the cycling stability as well as provide high capacity. The electrochemical performance of the sulfur–graphene composite is further enhanced after loading into a three-dimensional heteroatom-doped (boron and nitrogen) carbon-cloth current collector. Even at high sulfur loading (∼8 mg/cm 2 ) on carbon cloth, this composite showed 1256 mAh/g discharge capacity with more than 99% capacity retention after 200 cycles.",
       "authors": [
         {
           "name": "Mohammad Rejaul Kaiser",
@@ -4508,82 +3887,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2735502459",
-      "doi": "10.1149/ma2017-02/4/372",
-      "title": "Revisiting the Electrochemical Stability of Solid Electrolytes",
-      "year": 2017,
-      "date": "2017-09-01",
-      "type": "article",
-      "citations": 1,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2017-02",
-      "issue": "4",
-      "firstPage": "372",
-      "lastPage": "372",
-      "oaUrl": null,
-      "abstract": "The development of a high-performance bulk-type all-solid-state lithium battery requires a better understanding of the high interfacial resistance between the electrode and solid electrolyte. In this presentation, we propose that the electrochemical stability window of solid electrolyte was overestimated by the conventional experimental method, and the electrochemical decompositions of solid electrolyte could cause high interfacial resistance in the bulk-type solid-state battery depending on the conducting properties of the decomposition interphases. A novel experimental method using a Li/electrolyte/electrolyte-carbon cell was proposed to approach the intrinsic stability window of the most promising solid electrolytes, Li 10 GeP 2 S 12 (LGPS) and garnet-type Li 7 La 3 Zr 2 O 12 (LLZO). The results indicate that both of these solid electrolyte materials have much narrower electrochemical window than claimed. The decomposition products for both electrolytes were also characterized by XPS test. Suppressing the unwanted electrochemical decomposition of solid electrolyte at the interface is critical for achieving a high performance bulk-type solid-state battery. The idea is supported b…",
-      "authors": [
-        {
-          "name": "Fudong Han",
-          "isPI": false
-        },
-        {
-          "name": "Jie Yue",
-          "isPI": false
-        },
-        {
-          "name": "Xiulin Fan",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2735802551",
-      "doi": "10.1149/ma2017-02/48/2075",
-      "title": "(Invited) Multivalent Metal/Sulfur Chemistries for High Energy Density Rechargeable Batteries",
-      "year": 2017,
-      "date": "2017-09-01",
-      "type": "article",
-      "citations": 0,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2017-02",
-      "issue": "48",
-      "firstPage": "2075",
-      "lastPage": "2075",
-      "oaUrl": null,
-      "abstract": "The increasing demand for high energy density batteries urges the community to seek novel chemistries. Among them, Li/S and Li-O2 have received the most attentions due to their great potential and the community's extensive experience in Li chemistry. In contrast, multivalent chemistries (Mg and Al) attract less attention despite of their unique and remarkable advantages. Although their higher reduction potentials (Mg=-2.36V vs SHE; Al=-1.3V vs SHE) compromises battery voltages, their less reactive nature has enabled a better (elec)chemical compatibility at the metal/electrolyte interface, which eliminates any surface layer and leads to a high coulombic efficiency (100%) for metal deposition/striping. This is crucial for a rechargeable battery chemistry based on metal anode, because the formation of surface layer would cause continuous consumption of electrolyte during repeated cycling. Furthermore, the deposition of multivalent metal (Mg and Al) shows uniform morphology with no whiskers (‘dendrite’) below Sand’s time, which eliminates the possibility of whiskers penetrating through separators and internal short circuit of the battery. This feature allows multivalent metal batteries…",
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4595,7 +3898,7 @@
       "year": 2016,
       "date": "2016-04-27",
       "type": "article",
-      "citations": 731,
+      "citations": 733,
       "venue": "Angewandte Chemie International Edition",
       "volume": "55",
       "issue": "25",
@@ -4665,8 +3968,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4678,7 +3979,7 @@
       "year": 2016,
       "date": "2016-06-20",
       "type": "article",
-      "citations": 388,
+      "citations": 395,
       "venue": "Nano Letters",
       "volume": "16",
       "issue": "7",
@@ -4720,8 +4021,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4733,7 +4032,7 @@
       "year": 2016,
       "date": "2016-07-15",
       "type": "article",
-      "citations": 273,
+      "citations": 277,
       "venue": "Angewandte Chemie International Edition",
       "volume": "55",
       "issue": "34",
@@ -4795,8 +4094,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4804,7 +4101,7 @@
     {
       "id": "https://openalex.org/W2538839692",
       "doi": "10.1039/c6ee02604d",
-      "title": "Stabilizing high voltage LiCoO<sub>2</sub> cathode in aqueous electrolyte with interphase-forming additive",
+      "title": "Stabilizing high voltage LiCoO <sub>2</sub> cathode in aqueous electrolyte with interphase-forming additive",
       "year": 2016,
       "date": "2016-01-01",
       "type": "article",
@@ -4815,7 +4112,7 @@
       "firstPage": "3666",
       "lastPage": "3673",
       "oaUrl": null,
-      "abstract": "High voltage LiCoO<sub>2</sub> was stabilized in aqueous electrolytes by the cathode electrolyte interphase through electrochemical oxidation of the tris(trimethylsilyl) borate additive.",
+      "abstract": "High voltage LiCoO <sub>2</sub> was stabilized in aqueous electrolytes by the cathode electrolyte interphase through electrochemical oxidation of the tris(trimethylsilyl) borate additive.",
       "authors": [
         {
           "name": "Fei Wang",
@@ -4858,8 +4155,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4871,7 +4166,7 @@
       "year": 2016,
       "date": "2016-12-14",
       "type": "article",
-      "citations": 135,
+      "citations": 137,
       "venue": "Advanced Energy Materials",
       "volume": "7",
       "issue": "8",
@@ -4913,8 +4208,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4926,7 +4219,7 @@
       "year": 2016,
       "date": "2016-08-03",
       "type": "article",
-      "citations": 111,
+      "citations": 112,
       "venue": "Advanced Functional Materials",
       "volume": "26",
       "issue": "39",
@@ -4968,8 +4261,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -4981,7 +4272,7 @@
       "year": 2016,
       "date": "2016-05-10",
       "type": "article",
-      "citations": 107,
+      "citations": 108,
       "venue": "ACS Nano",
       "volume": "10",
       "issue": "5",
@@ -5023,8 +4314,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5036,7 +4325,7 @@
       "year": 2016,
       "date": "2016-10-24",
       "type": "article",
-      "citations": 96,
+      "citations": 97,
       "venue": "Nano Energy",
       "volume": "30",
       "issue": null,
@@ -5074,8 +4363,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5129,157 +4416,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2309920419",
-      "doi": "10.1149/ma2016-03/2/663",
-      "title": "Electrochemical Stability of Li<sub>10</sub>GeP<sub>2</sub>S<sub>12</sub> and Li<sub>7</sub>La<sub>3</sub>Zr<sub>2</sub>O<sub>12 </sub>Solid Electrolytes",
-      "year": 2016,
-      "date": "2016-06-10",
-      "type": "article",
-      "citations": 3,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2016-03",
-      "issue": "2",
-      "firstPage": "663",
-      "lastPage": "663",
-      "oaUrl": null,
-      "abstract": "The electrochemical stability window of solid electrolyte is overestimated by the conventional experimental method using a Li/electrolyte/inert metal semi-blocking electrode because of the slow kinetics of the decomposition reactions due to the small contact area between LGPS and inert metal. Since the battery is cycled in the overestimated stability window, the decomposition of the solid electrolyte at the interfaces occurs but has been ignored as a cause for high interfacial resistances in previous studies, limiting the performance improvement of the bulk-type solid-state battery despite the decades of research efforts. Thus, there is an urgent need to identify the intrinsic stability window of the solid electrolyte. We propose a new experimental method to measure the intrinsic electrochemical stability window of solid electrolytes using a Li/electrolyte/electrolyte-carbon cell. The Li/electrolyte/electrolyte-C cell provides improved kinetics from large and continuous physical contacts between solid electrolyte and carbon to facilitate the thermodynamically favorable decomposition reactions of the solid electrolyte. Moreover, the use of the Li/electrolyte/electrolyte-C cell mimic…",
-      "authors": [
-        {
-          "name": "Fudong Han",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yujie Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Jie Yue",
-          "isPI": false
-        },
-        {
-          "name": "Yizhou Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Yifei Mo",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2952836251",
-      "doi": "10.1002/chin.201607009",
-      "title": "ChemInform Abstract: “Water‐in‐Salt” Electrolyte Enables High‐Voltage Aqueous Lithium‐Ion Chemistries.",
-      "year": 2016,
-      "date": "2016-01-01",
-      "type": "article",
-      "citations": 3,
-      "venue": "ChemInform",
-      "volume": "47",
-      "issue": "7",
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": null,
-      "abstract": "Abstract Highly concentrated aqueous solutions of LiN(SO 2 CF 3 ) 2 (5—20 M at 25 °C) are used as an electrolyte in a CR2032‐type coin cell containing either LiMn 2 O 4 or LiNi 0.8 Co 0.15 Al 0.05 O 2 as the cathode and Cu‐leached Mo 6 S 8 Chevrel phase as the anode separated by glass fiber fabrics.",
-      "authors": [
-        {
-          "name": "Liumin Suo",
-          "isPI": false
-        },
-        {
-          "name": "Oleg Borodin",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Marco Olguin",
-          "isPI": false
-        },
-        {
-          "name": "Janet Ho",
-          "isPI": false
-        },
-        {
-          "name": "Xiulin Fan",
-          "isPI": false
-        },
-        {
-          "name": "Chao Luo",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        },
-        {
-          "name": "Kang Xu",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2341468224",
-      "doi": "10.1149/ma2016-03/2/1133",
-      "title": "Rechargeable Nonaqueous Aluminum Sulfur Battery",
-      "year": 2016,
-      "date": "2016-06-10",
-      "type": "article",
-      "citations": 0,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2016-03",
-      "issue": "2",
-      "firstPage": "1133",
-      "lastPage": "1133",
-      "oaUrl": null,
-      "abstract": "Rechargeable aluminum batteries attracted growing attentions in recent years as one candidate beyond lithium ion battery system. This is due to the great potential of aluminum metal anode owing to its high capacity (2.98 Ah/g and 8.05 Ah/cc), its negative electrochemical potential (-1.67 V vs. NHE), and its highest abundancy among metals in earth crust. Moreover, aluminum has significantly lower reactivity towards moisture and air compared to Li, Na and Mg. Reversible Al deposition/stripping in room temperature is extremely challenging due to the tendency of Al to form real passivation on its surface with both poor ionic and electronic conductivity. Nevertheless, use of aluminum anode was shown to be possible by in ionic liquid based electrolyte (RTIL-AlCl3) with up to 100% coulombic efficiency for aluminum deposition/stripping. As a high capacity cathode material (1,675 mAh/g), sulfur has attracted intense interest in Li/S, Mg/S and Na/S systems. A rechargeable Al/S battery is also of great interest because the full cell capacity could achieve 1072 mAh/g-(total electrode mass) and voltage could achieve ~1.25 V, estimated from the Gibbs formation energy of Aluminum sulfide( -724 kJ…",
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Malachi Noked",
-          "isPI": false
-        },
-        {
-          "name": "Kang Xu",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5291,14 +4427,14 @@
       "year": 2015,
       "date": "2015-11-19",
       "type": "article",
-      "citations": 3636,
+      "citations": 3706,
       "venue": "Science",
       "volume": "350",
       "issue": "6263",
       "firstPage": "938",
       "lastPage": "943",
       "oaUrl": null,
-      "abstract": "A concentrated effort for battery safety Aqueous electrolytes are limited to run below 1.23 V to avoid degradation. Suo et al. smash through this limit with an aqueous salt solution containing lithium (Li) bis(trifluoromethane sulfonyl)imide to create an electrolyte that has an electrochemical window of 3 V (see the Perspective by Smith and Dunn). They used extremely high-concentration solutions, which suppressed hydrogen evolution and electrode oxidation. At these concentrations, the Li solvation shell changes because there simply is not enough water to neutralize the Li + charge. Thus, flammable organic electrolytes could potentially be replaced with a safer aqueous alternative. Science , this issue p. 938 ; see also p. 918",
+      "abstract": "Lithium-ion batteries raise safety, environmental, and cost concerns, which mostly arise from their nonaqueous electrolytes. The use of aqueous alternatives is limited by their narrow electrochemical stability window (1.23 volts), which sets an intrinsic limit on the practical voltage and energy output. We report a highly concentrated aqueous electrolyte whose window was expanded to ~3.0 volts with the formation of an electrode-electrolyte interphase. A full lithium-ion battery of 2.3 volts using such an aqueous electrolyte was demonstrated to cycle up to 1000 times, with nearly 100% coulombic efficiency at both low (0.15 coulomb) and high (4.5 coulombs) discharge and charge rates.",
       "authors": [
         {
           "name": "Liumin Suo",
@@ -5337,8 +4473,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": true,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5350,7 +4484,7 @@
       "year": 2015,
       "date": "2015-03-04",
       "type": "article",
-      "citations": 386,
+      "citations": 390,
       "venue": "ACS Nano",
       "volume": "9",
       "issue": "3",
@@ -5392,8 +4526,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5405,14 +4537,14 @@
       "year": 2015,
       "date": "2015-04-30",
       "type": "article",
-      "citations": 353,
+      "citations": 356,
       "venue": "Advanced Materials",
       "volume": "27",
       "issue": "23",
       "firstPage": "3473",
       "lastPage": "3483",
       "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.201500180",
-      "abstract": "A single-material battery is prepared using Li10GeP2S12 as the electrolyte, anode, and cathode, based on the Li–S and Ge–S components in Li10GeP2S12 acting as the active centers for its cathode and anode performance, respectively. The single-Li10GeP2S12 battery exhibits a remarkably low interfacial resistance due to the improvement of interfacial contact and interactions, and the suppression of interfacial strain/stress. As a service to our authors and readers, this journal provides supporting information supplied by the authors. Such materials are peer reviewed and may be re-organized for online delivery, but are not copy-edited or typeset. Technical support issues arising from supporting information (other than missing files) should be addressed to the authors. Please note: The publisher is not responsible for the content or functionality of any supporting information supplied by the authors. Any queries (other than missing content) should be directed to the corresponding author for the article.",
+      "abstract": "A single-material battery is prepared using Li10GeP2S12 as the electrolyte, anode, and cathode, based on the Li-S and Ge-S components in Li10GeP2S12 acting as the active centers for its cathode and anode performance, respectively. The single-Li10GeP2S12 battery exhibits a remarkably low interfacial resistance due to the improvement of interfacial contact and interactions, and the suppression of interfacial strain/stress.",
       "authors": [
         {
           "name": "Fudong Han",
@@ -5435,34 +4567,44 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
     },
     {
-      "id": "https://openalex.org/W1955453862",
-      "doi": "10.1002/aenm.201500174",
-      "title": "Superior Stable Self‐Healing SnP<sub>3</sub> Anode for Sodium‐Ion Batteries",
+      "id": "https://openalex.org/W2260342793",
+      "doi": "10.1021/jacs.5b07820",
+      "title": "Enhancing the Reversibility of Mg/S Battery Chemistry through Li<sup>+</sup> Mediation",
       "year": 2015,
-      "date": "2015-06-26",
+      "date": "2015-09-11",
       "type": "article",
-      "citations": 221,
-      "venue": "Advanced Energy Materials",
-      "volume": "5",
-      "issue": "18",
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.201500174",
-      "abstract": "A SnP3 anode material with a theoretical volumetric capacity of 6890 mAh cm−3 is investigated for Na-ion batteries. The SnP3/C can deliver a reversible capacity of 810 mAh g−1 at a current density of 150 mA g−1 for 150 cycles. The superior performance is attributed to the strong bonding interaction of P and Sn after desodiation. As a service to our authors and readers, this journal provides supporting information supplied by the authors. Such materials are peer reviewed and may be re-organized for online delivery, but are not copy-edited or typeset. Technical support issues arising from supporting information (other than missing files) should be addressed to the authors. Please note: The publisher is not responsible for the content or functionality of any supporting information supplied by the authors. Any queries (other than missing content) should be directed to the corresponding author for the article.",
+      "citations": 252,
+      "venue": "Journal of the American Chemical Society",
+      "volume": "137",
+      "issue": "38",
+      "firstPage": "12388",
+      "lastPage": "12393",
+      "oaUrl": null,
+      "abstract": "Mg metal is a promising anode material for next generation rechargeable battery due to its dendrite-free deposition and high capacity. However, the best cathode for rechargeable Mg battery was based on high molecular weight MgxMo3S4, thus rendering full cell energetically uncompetitive. To increase energy density, high capacity cathode material like sulfur is proposed. However, to date, only limited work has been reported on Mg/S system, all plagued by poor reversibility attributed to the formation of electrochemically inactive MgSx species. Here, we report a new strategy, based on the effect of Li(+) in activating MgSx species, to conjugate a dendrite-free Mg anode with a reversible polysulfide cathode and present a truly reversible Mg/S battery with capacity up to 1000 mAh/gs for more than 30 cycles. Mechanistic insights supported by spectroscopic and microscopic characterization strongly suggest that the reversibility arises from chemical reactivation of MgSx by Li(+).",
       "authors": [
         {
-          "name": "Xiulin Fan",
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Malachi Noked",
           "isPI": false
         },
         {
-          "name": "Jianfeng Mao",
+          "name": "Alex Pearse",
+          "isPI": false
+        },
+        {
+          "name": "Eleanor Gillette",
+          "isPI": false
+        },
+        {
+          "name": "Xiulin Fan",
           "isPI": false
         },
         {
@@ -5478,15 +4620,19 @@
           "isPI": false
         },
         {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Fudong Han",
+          "name": "Marshall A. Schroeder",
           "isPI": false
         },
         {
-          "name": "Sz‐Chian Liou",
+          "name": "Kang Xu",
+          "isPI": false
+        },
+        {
+          "name": "Sang Bok Lee",
+          "isPI": false
+        },
+        {
+          "name": "Gary W. Rubloff",
           "isPI": false
         },
         {
@@ -5494,8 +4640,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5507,7 +4651,7 @@
       "year": 2015,
       "date": "2015-12-23",
       "type": "article",
-      "citations": 220,
+      "citations": 222,
       "venue": "ACS Nano",
       "volume": "10",
       "issue": "1",
@@ -5541,8 +4685,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5596,8 +4738,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5643,8 +4783,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5652,7 +4790,7 @@
     {
       "id": "https://openalex.org/W2000283821",
       "doi": "10.1039/c5ta01007a",
-      "title": "Scalable synthesis of Na<sub>3</sub>V<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>/C porous hollow spheres as a cathode for Na-ion batteries",
+      "title": "Scalable synthesis of Na <sub>3</sub> V <sub>2</sub> (PO <sub>4</sub> ) <sub>3</sub> /C porous hollow spheres as a cathode for Na-ion batteries",
       "year": 2015,
       "date": "2015-01-01",
       "type": "article",
@@ -5663,7 +4801,7 @@
       "firstPage": "10378",
       "lastPage": "10385",
       "oaUrl": null,
-      "abstract": "Aerosol synthesized Na<sub>3</sub>V<sub>2</sub>(PO<sub>4</sub>)<sub>3</sub>/C porous hollow spheres provide an excellent surface area and mechanical strength, resulting in superior sodiation/desodiation performance.",
+      "abstract": "Aerosol synthesized Na <sub>3</sub> V <sub>2</sub> (PO <sub>4</sub> ) <sub>3</sub> /C porous hollow spheres provide an excellent surface area and mechanical strength, resulting in superior sodiation/desodiation performance.",
       "authors": [
         {
           "name": "Jianfeng Mao",
@@ -5686,8 +4824,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5699,7 +4835,7 @@
       "year": 2015,
       "date": "2015-12-10",
       "type": "article",
-      "citations": 87,
+      "citations": 88,
       "venue": "Advanced Functional Materials",
       "volume": "26",
       "issue": "5",
@@ -5741,8 +4877,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5796,153 +4930,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2029909164",
-      "doi": "10.1002/smll.201570023",
-      "title": "Sodium-Ion Batteries: An Advanced MoS<sub>2</sub>/Carbon Anode for High-Performance Sodium-Ion Batteries (Small 4/2015)",
-      "year": 2015,
-      "date": "2015-01-01",
-      "type": "article",
-      "citations": 10,
-      "venue": "Small",
-      "volume": "11",
-      "issue": "4",
-      "firstPage": "472",
-      "lastPage": "472",
-      "oaUrl": "https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/smll.201570023",
-      "abstract": "The working principle of sodium-ion batteries is depicted by C. Wang and co-workers, who use molybdenum disulfide/carbon nanoflowers as an anode material and sodium metal as a counter electrode. Their devices demonstrate the best cycling performance of MoS2 for Na-ion batteries reported so far. The characteristic layered structure of MoS2 is shown in the bottom right of the main image, and the reversible conversion mechnism of MoS2 during sodiation/desodiation is confirmed on page 473.",
-      "authors": [
-        {
-          "name": "Jingjing Wang",
-          "isPI": false
-        },
-        {
-          "name": "Chao Luo",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Alex Langrock",
-          "isPI": false
-        },
-        {
-          "name": "A. C. Mignerey",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2291717004",
-      "doi": "10.1149/ma2015-02/3/305",
-      "title": "High Capacity Magnesium Metal Rechargeable Battery Enabled By Dual Ion Chemistry",
-      "year": 2015,
-      "date": "2015-07-07",
-      "type": "article",
-      "citations": 0,
-      "venue": "ECS Meeting Abstracts",
-      "volume": "MA2015-02",
-      "issue": "3",
-      "firstPage": "305",
-      "lastPage": "305",
-      "oaUrl": null,
-      "abstract": "Electrochemical energy storage is the core technology for the success of green transportation and renewable energy. Among existing energy storage chemistries, magnesium metal rechargeable batteries (MRB) are receiving growing attention due to the abundance of magnesium and its highly reversible and dendrite-free deposition/dissolution in Grignard–based complex electrolyte, which enables the exploit of the high capacity magnesium anode(2233 mAh/g).These merits have made MRB a promising candidate system to store electrochemical energy. However, the strong coulombic interaction between an intercalation host and the bivalent Mg 2+ makes the solid state diffusion of the latter rather sluggish, resulting in low Mg 2+ intercalation level, large polarization during charge/discharge and/or rapid capacity decay for common cathode materials. To solve the problem, we developed a high capacity MRB by coupling TiS 2 with magnesium foil in a dual-ion chemistry(Mg 2+ /Li + ). The battery operates by Li + insertion/extraction at cathode and Mg deposition/dissolution at anode. The battery simultaneously combines high-capacity/high-voltage, fast Li + intercalation of TiS 2 and the high-capacity/dendr…",
-      "authors": [
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Malachi Noked",
-          "isPI": false
-        },
-        {
-          "name": "Liumin Suo",
-          "isPI": false
-        },
-        {
-          "name": "Fudong Han",
-          "isPI": false
-        },
-        {
-          "name": "Yujie Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Chao Luo",
-          "isPI": false
-        },
-        {
-          "name": "Kang Xu",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": false,
-      "kind": "conference",
-      "selected": false,
-      "isCorresponding": false,
-      "isCoFirst": false
-    },
-    {
-      "id": "https://openalex.org/W2950816292",
-      "doi": "10.1002/chin.201533015",
-      "title": "ChemInform Abstract: A Battery Made from a Single Material.",
-      "year": 2015,
-      "date": "2015-07-28",
-      "type": "article",
-      "citations": 0,
-      "venue": "ChemInform",
-      "volume": "46",
-      "issue": "33",
-      "firstPage": null,
-      "lastPage": null,
-      "oaUrl": null,
-      "abstract": "Abstract A new high energy single‐material all‐solid‐state lithium ion battery is reported wherein the cathode, electrolyte, and anode consists of Li 10 GeP 2 S 12 mixed with electronically conductive carbon.",
-      "authors": [
-        {
-          "name": "Fudong Han",
-          "isPI": false
-        },
-        {
-          "name": "Tao Gao",
-          "isPI": true
-        },
-        {
-          "name": "Yujie Zhu",
-          "isPI": false
-        },
-        {
-          "name": "Karen J. Gaskell",
-          "isPI": false
-        },
-        {
-          "name": "Chunsheng Wang",
-          "isPI": false
-        }
-      ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -5954,7 +4941,7 @@
       "year": 2014,
       "date": "2014-09-25",
       "type": "article",
-      "citations": 441,
+      "citations": 442,
       "venue": "Small",
       "volume": "11",
       "issue": "4",
@@ -5988,8 +4975,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -6039,8 +5024,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
@@ -6090,8 +5073,6 @@
           "isPI": false
         }
       ],
-      "isJournal": true,
-      "kind": "journal",
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": false
