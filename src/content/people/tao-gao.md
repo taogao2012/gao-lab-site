@@ -1,6 +1,6 @@
 ---
 name: "Tao Gao"
-role: "Principal Investigator · Associate Professor (Effective July 1st, 2026)"
+role: "Principal Investigator · Associate Professor"
 status: "pi"
 scholar: "https://scholar.google.com/citations?user=73w5AAcAAAAJ&hl=en"
 linkedin: "https://www.linkedin.com/in/taogao/"
@@ -10,7 +10,7 @@ order: 1
 interests: ["electrochemistry", "energy storage", "sustainable processing", "critical materials"]
 ---
 
-Tao Gao will be an Associate Professor in the Department of Chemical and Biomolecular Engineering at North Carolina State University starting July 1st, 2026, where he leads the SuPER Lab. He founded the lab in August 2020 at the University of Utah. His research uses electrochemistry as a unifying lens to attack two of the hardest problems in clean energy: storing electricity at grid scale and decarbonizing the heavy-industry processes that supply our materials.
+Tao Gao is an Associate Professor in the Department of Chemical and Biomolecular Engineering at North Carolina State University, where he leads the SuPER Lab. He founded the lab in August 2020 at the University of Utah before moving to NC State in July 2026. His research uses electrochemistry as a unifying lens to attack two of the hardest problems in clean energy: storing electricity at grid scale and decarbonizing the heavy-industry processes that supply our materials.
 
 **Research.** Dr. Gao has led many research projects as the PI spanning fundamental research (including NSF CAREER) and applied research supported by DOE, DoD, and industry sponsors. He has published over 80 peer-reviewed research papers across his career, including in *Science*, *Nature Communications*, *Journal of the American Chemical Society*, and others. Honors include the NSF CAREER Award, the ACS Energy & Fuels Division Early Career Scientist award, Clarivate Highly Cited Researcher recognition, etc. He has given over 30 invited talks at ECS, ACS, MRS, and AIChE meetings, workshops, and peer universities.
 
