@@ -202,13 +202,19 @@ console.log(`  ORCID record claims ${orcidKeys.dois.size} DOIs / ${orcidKeys.tit
 
 // The ORCID record is authoritative but can be INCOMPLETE (the PI hasn't claimed
 // every real paper). So we also honor a CV-sourced whitelist: any DOI the PI has
-// hand-curated in overrides (selected / corresponding / coFirst) is unambiguously
-// theirs and is kept even if absent from ORCID. This preserves recall on real work
+// hand-curated in overrides (selected / corresponding / coFirst / whitelist) is
+// unambiguously theirs and is kept even if absent from ORCID. `whitelist` covers
+// papers where the PI is a middle/co-author (no role flag) but the CV confirms
+// authorship. This preserves recall on real work
 // while ORCID + whitelist together exclude the same-name / mis-merged contamination.
 // (redactions are handled later in applyOverrides and still get dropped.)
 const overrideWhitelist = new Set(
-  [...(overrides.selected ?? []), ...(overrides.corresponding ?? []), ...(overrides.coFirst ?? [])]
-    .map((d) => d.toLowerCase()),
+  [
+    ...(overrides.selected ?? []),
+    ...(overrides.corresponding ?? []),
+    ...(overrides.coFirst ?? []),
+    ...(overrides.whitelist ?? []),
+  ].map((d) => d.toLowerCase()),
 );
 function keep(work) {
   if (isPiWork(work, orcidKeys)) return true;

@@ -1,6 +1,14 @@
 {
   "$comment": "Overrides and additions to the OpenAlex feed. The fetcher merges these with the OpenAlex result by DOI (case-insensitive). Use 'selected' to flag papers for the highlights row on the home page.",
   "$comment_roles": "'corresponding' and 'coFirst' are DOI lists (case-insensitive) flagging the PI's authorship role; they become item.isCorresponding / item.isCoFirst and render as superscript */† on the PI's name in PublicationList. Source of truth is the PI's CV (legend there: '# equal contribution; * corresponding author'). Keep in sync when reconciling the CV.",
+  "$comment_whitelist": "DOIs the CV confirms are the PI's (as a middle/co-author, so not in selected/corresponding/coFirst) but which are NOT on the PI's ORCID record, so the fetcher's ORCID-membership filter would otherwise drop them. Whitelisting keeps the OpenAlex candidate and enriches it with live metadata (citations, venue). Only add DOIs verified against the CV.",
+  "whitelist": [
+    "10.1016/j.ensm.2021.01.033",
+    "10.1016/j.xcrp.2021.100537",
+    "10.3390/batteries10080283",
+    "10.1016/j.enconman.2025.120947",
+    "10.1016/j.eml.2020.100705"
+  ],
   "selected": [
     "10.1126/science.adq2541",
     "10.1038/s41557-024-01646-2",

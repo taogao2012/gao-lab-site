@@ -1,7 +1,7 @@
 {
-  "$generatedAt": "2026-07-11T12:15:00.241Z",
+  "$generatedAt": "2026-07-11T12:40:47.283Z",
   "$source": "OpenAlex (ORCID 0000-0003-0204-3269) merged with publications.overrides.json",
-  "count": 95,
+  "count": 100,
   "byYear": {
     "2013": 1,
     "2014": 2,
@@ -10,12 +10,12 @@
     "2017": 14,
     "2018": 12,
     "2019": 8,
-    "2020": 3,
-    "2021": 3,
+    "2020": 4,
+    "2021": 5,
     "2022": 13,
     "2023": 3,
-    "2024": 4,
-    "2025": 10,
+    "2024": 5,
+    "2025": 11,
     "2026": 3
   },
   "items": [
@@ -328,6 +328,48 @@
       "isCoFirst": false
     },
     {
+      "id": "https://openalex.org/W4417499107",
+      "doi": "10.1016/j.enconman.2025.120947",
+      "title": "Optimal sizing of battery energy storage systems for peak shaving and demand response using a degradation-aware Bayesian Optimization-Mixed-Integer Linear Programming framework",
+      "year": 2025,
+      "date": "2025-12-19",
+      "type": "article",
+      "kind": "journal",
+      "citations": 1,
+      "venue": "Energy Conversion and Management",
+      "volume": "350",
+      "issue": null,
+      "firstPage": "120947",
+      "lastPage": "120947",
+      "oaUrl": "https://doi.org/10.1016/j.enconman.2025.120947",
+      "abstract": "• Degradation-aware framework co-optimizes energy storage systems’ size and dispatch. • Electrochemical model captures calendar and cycling aging impacts. • Stacked peak-shaving with demand response shift optimal system’s size. • Sensitivity sweeps reveal economic no-storage thresholds and sizing design charts. The increasing integration of renewable energy and rising electricity demand highlight the importance of battery energy storage systems for peak shaving and demand response. Unlike prior approaches that overlook operational impacts on degradation, this study proposes a Bayesian Optimization–Mixed Integer Linear Programming framework for optimal battery energy storage system sizing. In this framework, Mixed Integer Linear Programming determines short-term scheduling while a calibrated electrochemical model iteratively evaluates degradation. The central hypothesis is that the framework can efficiently identify optimal sizes that yield realistic and economically robust outcomes. The method is tested across three scenarios: peak shaving, peak shaving with energy-reduction demand response, and peak shaving with power-reduction demand response. Results show that the framework conv…",
+      "authors": [
+        {
+          "name": "Jiwei Yao",
+          "isPI": false
+        },
+        {
+          "name": "Blake W. Billings",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "John D. Hedengren",
+          "isPI": false
+        },
+        {
+          "name": "Kody M. Powell",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
       "id": "https://openalex.org/W4416568005",
       "doi": "10.1149/ma2025-02251375mtgabs",
       "title": "High-Efficiency Low-Temperature Electrolytic Ironmaking in Acidic Environment Enabled by Novel Electrolyte Design",
@@ -593,6 +635,48 @@
       ],
       "selected": false,
       "isCorresponding": true,
+      "isCoFirst": false
+    },
+    {
+      "id": "https://openalex.org/W4401413787",
+      "doi": "10.3390/batteries10080283",
+      "title": "A Physics–Guided Machine Learning Approach for Capacity Fading Mechanism Detection and Fading Rate Prediction Using Early Cycle Data",
+      "year": 2024,
+      "date": "2024-08-08",
+      "type": "article",
+      "kind": "journal",
+      "citations": 6,
+      "venue": "Batteries",
+      "volume": "10",
+      "issue": "8",
+      "firstPage": "283",
+      "lastPage": "283",
+      "oaUrl": "https://www.mdpi.com/2313-0105/10/8/283/pdf?version=1723112691",
+      "abstract": "Lithium–ion battery development necessitates predicting capacity fading using early cycle data to minimize testing time and costs. This study introduces a hybrid physics–guided data–driven approach to address this challenge by accurately determining the dominant fading mechanism and predicting the average capacity fading rate. Physics–guided features, derived from the electrochemical properties and behaviors within the battery, are extracted from the first five cycles to provide meaningful, interpretable, and predictive data. Unlike previous models that rely on a single regression approach, our method utilizes two separate regression models tailored to the identified dominant fading mechanisms. Our model achieves 95.6% accuracy in determining the dominant fading mechanism using data from the second cycle and a mean absolute percentage error of 17.09% in predicting lifetime capacity fade from the first five cycles. This represents a substantial improvement over state–of–the–art models, which have an error rate approximately three times higher. This study underscores the significance of physics–guided data characterization and the necessity of identifying the primary fading mechanism…",
+      "authors": [
+        {
+          "name": "Jiwei Yao",
+          "isPI": false
+        },
+        {
+          "name": "Qiang Gao",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Benben Jiang",
+          "isPI": false
+        },
+        {
+          "name": "Kody M. Powell",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
       "isCoFirst": false
     },
     {
@@ -1620,6 +1704,182 @@
       "isCoFirst": true
     },
     {
+      "id": "https://openalex.org/W3195462895",
+      "doi": "10.1016/j.xcrp.2021.100537",
+      "title": "End-of-life or second-life options for retired electric vehicle batteries",
+      "year": 2021,
+      "date": "2021-08-01",
+      "type": "article",
+      "kind": "journal",
+      "citations": 291,
+      "venue": "Cell Reports Physical Science",
+      "volume": "2",
+      "issue": "8",
+      "firstPage": "100537",
+      "lastPage": "100537",
+      "oaUrl": "https://doi.org/10.1016/j.xcrp.2021.100537",
+      "abstract": "E-mobility, especially electric cars, has been scaling up rapidly because of technological advances in lithium-ion batteries (LIBs). However, LIBs degrade significantly with service life cycles. With the current increase in the adoption of electric vehicles (EVs), a large volume of retired LIB packs, which can no longer provide satisfactory performance to power an EV, will soon appear. Various end-of-life (EOL) options are under development, such as recycling and recovery. Recently, stakeholders have become more confident that giving the retired batteries a second life by reusing them in less-demanding applications, such as stationary energy storage, may create new value pools in the energy and transportation sectors. In this perspective, we evaluate the feasibility of second-life battery applications, from economic and technological perspectives, based on the latest industrial reports and technical publications.",
+      "authors": [
+        {
+          "name": "Juner Zhu",
+          "isPI": false
+        },
+        {
+          "name": "Ian Mathews",
+          "isPI": false
+        },
+        {
+          "name": "Dongsheng Ren",
+          "isPI": false
+        },
+        {
+          "name": "Wei Li",
+          "isPI": false
+        },
+        {
+          "name": "Daniel A. Cogswell",
+          "isPI": false
+        },
+        {
+          "name": "Bobin Xing",
+          "isPI": false
+        },
+        {
+          "name": "Tobias Sedlatschek",
+          "isPI": false
+        },
+        {
+          "name": "Sai Nithin R. Kantareddy",
+          "isPI": false
+        },
+        {
+          "name": "Mengchao Yi",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yong Xia",
+          "isPI": false
+        },
+        {
+          "name": "Qing Zhou",
+          "isPI": false
+        },
+        {
+          "name": "Tomasz Wierzbicki",
+          "isPI": false
+        },
+        {
+          "name": "Martin Z. Bazant",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
+      "id": "https://openalex.org/W3128753104",
+      "doi": "10.1016/j.ensm.2021.01.033",
+      "title": "Cation-synergy stabilizing anion redox of Chevrel phase Mo6S8 in aluminum ion battery",
+      "year": 2021,
+      "date": "2021-01-30",
+      "type": "article",
+      "kind": "journal",
+      "citations": 54,
+      "venue": "Energy storage materials",
+      "volume": "37",
+      "issue": null,
+      "firstPage": "87",
+      "lastPage": "93",
+      "oaUrl": null,
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Yuxin Tong",
+          "isPI": false
+        },
+        {
+          "name": "Ang Gao",
+          "isPI": false
+        },
+        {
+          "name": "Qinghua Zhang",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Jinming Yue",
+          "isPI": false
+        },
+        {
+          "name": "Fanqi Meng",
+          "isPI": false
+        },
+        {
+          "name": "Yue Gong",
+          "isPI": false
+        },
+        {
+          "name": "Shibo Xi",
+          "isPI": false
+        },
+        {
+          "name": "Zejing Lin",
+          "isPI": false
+        },
+        {
+          "name": "Minglei Mao",
+          "isPI": false
+        },
+        {
+          "name": "Si‐Yuan Peng",
+          "isPI": false
+        },
+        {
+          "name": "Xuefeng Wang",
+          "isPI": false
+        },
+        {
+          "name": "Dongdong Xiao",
+          "isPI": false
+        },
+        {
+          "name": "Dong Su",
+          "isPI": false
+        },
+        {
+          "name": "Yanhong Luo",
+          "isPI": false
+        },
+        {
+          "name": "Hong Li",
+          "isPI": false
+        },
+        {
+          "name": "Liquan Chen",
+          "isPI": false
+        },
+        {
+          "name": "Liumin Suo",
+          "isPI": false
+        },
+        {
+          "name": "Lin Gu",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
+    },
+    {
       "id": "https://openalex.org/W3168977011",
       "doi": "10.1149/ma2021-012159mtgabs",
       "title": "The Mechanism of Li Plating on Graphite Particles",
@@ -1912,6 +2172,64 @@
       "selected": false,
       "isCorresponding": false,
       "isCoFirst": true
+    },
+    {
+      "id": "https://openalex.org/W3015578378",
+      "doi": "10.1016/j.eml.2020.100705",
+      "title": "Microstructural deformation patterns of a highly orthotropic polypropylene separator of lithium-ion batteries: Mechanism, model, and theory",
+      "year": 2020,
+      "date": "2020-04-07",
+      "type": "article",
+      "kind": "journal",
+      "citations": 27,
+      "venue": "Extreme Mechanics Letters",
+      "volume": "37",
+      "issue": null,
+      "firstPage": "100705",
+      "lastPage": "100705",
+      "oaUrl": null,
+      "abstract": null,
+      "authors": [
+        {
+          "name": "Zhexin Pan",
+          "isPI": false
+        },
+        {
+          "name": "Juner Zhu",
+          "isPI": false
+        },
+        {
+          "name": "Hongyi Xu",
+          "isPI": false
+        },
+        {
+          "name": "Tobias Sedlatschek",
+          "isPI": false
+        },
+        {
+          "name": "Xiaowei Zhang",
+          "isPI": false
+        },
+        {
+          "name": "Wei Li",
+          "isPI": false
+        },
+        {
+          "name": "Tao Gao",
+          "isPI": true
+        },
+        {
+          "name": "Yong Xia",
+          "isPI": false
+        },
+        {
+          "name": "Tomasz Wierzbicki",
+          "isPI": false
+        }
+      ],
+      "selected": false,
+      "isCorresponding": false,
+      "isCoFirst": false
     },
     {
       "id": "https://openalex.org/W2978606705",
