@@ -27,6 +27,20 @@ const POLITE_EMAIL = process.env.OPENALEX_MAILTO || '';
 
 const EXCLUDED_TYPES = new Set(['erratum', 'editorial', 'letter', 'retraction', 'paratext']);
 
+// Publication category shown on the site (drives /publications, /preprints,
+// /conferences tabs). Derived from venue name + OpenAlex work type. Patents
+// come only from overrides and carry their own `kind`.
+const CONFERENCE_VENUES = ['ECS Meeting Abstracts', 'MRS Online Proceedings', 'AIChE Proceedings'];
+const PREPRINT_VENUES = ['SSRN Electronic Journal', 'ChemRxiv', 'arXiv', 'Research Square', 'bioRxiv', 'ESS Open Archive'];
+
+function classifyKind(venue, type) {
+  const v = venue ?? '';
+  if (CONFERENCE_VENUES.some((c) => v.includes(c))) return 'conference';
+  if (PREPRINT_VENUES.some((p) => v.includes(p))) return 'preprint';
+  if ((type ?? '').toLowerCase() === 'preprint') return 'preprint';
+  return 'journal';
+}
+
 // "Tao Gao" is a very common name. OpenAlex's author disambiguation periodically
 // MERGES several distinct "Tao Gao" people into one author record and stamps our
 // ORCID across the whole blob — so every merged work then carries the ORCID in
@@ -139,6 +153,7 @@ function normalize(work) {
     year: work.publication_year ?? null,
     date: work.publication_date ?? null,
     type: work.type ?? null,
+    kind: classifyKind(venue, work.type),
     citations: work.cited_by_count ?? 0,
     venue,
     volume: work.biblio?.volume ?? null,
