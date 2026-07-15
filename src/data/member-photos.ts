@@ -21,6 +21,7 @@ const nameToPhoto: Record<string, string> = {
   'Xiayueyang Mei': '/images/people/xiayueyang-mei.jpg',
   'Mohammed A. Al-Ibrahim': '/images/people/mohammed-al-ibrahim.jpg',
   'Zongjian (Zach) Li': '/images/people/zongjian-li.jpg',
+  'Yuxin Li': '/images/people/yuxin-li.jpg',
 
   // Recent grad alumni
   'Yunan (Yana) Qin': '/images/people/yunan-qin.jpg',
