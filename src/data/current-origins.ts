@@ -31,4 +31,6 @@ export const origins: AlumniDestination[] = [
     logo: '/images/logos/utah.svg', url: 'https://www.utah.edu' },
   { name: 'University of Pennsylvania', short: 'Penn',
     logo: '/images/logos/upenn.svg', url: 'https://www.upenn.edu' },
+  { name: 'Virginia Tech', short: 'Virginia Tech',
+    logo: '/images/logos/vt.svg', url: 'https://www.vt.edu' },
 ];
