@@ -50,7 +50,7 @@ const anyCoFirst = items.some((p) => p.isCoFirst);
       )}
       <div class="flex-1 min-w-0">
         <h3 class="font-serif text-lg leading-snug text-ink">
-          <a href={p.doi ? `https://doi.org/${p.doi}` : p.id} target="_blank" rel="noopener" class="no-underline hover:text-accent">
+          <a href={p.doi ? `https://doi.org/${p.doi}` : (p.oaUrl ?? p.id)} target="_blank" rel="noopener" class="no-underline hover:text-accent">
             {p.title}
           </a>
         </h3>

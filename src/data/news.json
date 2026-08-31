@@ -1,6 +1,9 @@
 {
   "$source": "Conference / meeting / seminar presentations sourced from G:\\My Drive\\4-Conferences,Meetings and Seminars\\ — folder names give the venue and date, file names inside often give the presentation title. Other entries (papers, grants, recognitions, people, milestones) scraped from the live site. Zoom interviews and private industry meetings excluded; on-site interviews labeled as seminars. Future-dated entries are intentionally omitted.",
   "items": [
+    { "date": "2026-08-19", "title": "Professor Gao is teaching CHE 205, Chemical Process Principles, the first core course of the chemical engineering curriculum, to sophomores this year", "tags": ["teaching"] },
+    { "date": "2026-08-17", "title": "Yuxin joins the SuPER Lab as a PhD student from Virginia Tech. Welcome, Yuxin!", "tags": ["people"] },
+    { "date": "2026-07-27", "title": "Professor Gao gave an invited seminar at the Department of Chemistry, Korea Advanced Institute of Science and Technology (KAIST), Daejeon, South Korea", "tags": ["talk", "seminar"] },
     { "date": "2026-05-18", "title": "Jaemin joins the SuPER Lab as a postdoctoral researcher from WPI. Welcome, Jaemin!", "tags": ["people"] },
     { "date": "2026-05-01", "title": "Santhana joins the SuPER Lab from Wayne State University. Welcome, Santhana!", "tags": ["people"] },
     { "date": "2026-04-26", "title": "Professor Gao gave an invited talk at the MRS Spring Meeting, Honolulu, HI, on \"Transition metal halide complexation and the reactivity of metal deposition in aqueous electrolytes\"", "tags": ["talk", "conference"] },

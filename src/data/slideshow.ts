@@ -21,11 +21,6 @@ export const slides: Slide[] = [
     href: 'https://www.che.utah.edu/career-tao-gao-is-exploring-iron-chemistry-for-green-applications/',
   },
   {
-    image: '/images/slideshow/doe-grant.jpg',
-    caption: 'SuPER AI lab awarded DOE grant on co-production of Li, Mg, K',
-    href: '/news/',
-  },
-  {
     image: '/images/slideshow/science-insertion-kinetics.png',
     caption: 'Our work on the insertion reaction kinetics is published in Science',
     href: 'https://www.science.org/doi/abs/10.1126/science.adq2541',
