@@ -52,8 +52,8 @@ function resolved(m: CourseMaterials): CourseMaterials {
   };
 }
 
-// Featured courses (two-column layout, Battery on the left).
-const featuredTitles = ['Battery Technology and Manufacturing', 'Mass Transfer and Separation'];
+// Featured courses (current course first, then the recurring ones).
+const featuredTitles = ['Chemical Process Principles', 'Battery Technology and Manufacturing', 'Mass Transfer and Separation'];
 const featured = featuredTitles
   .map((t) => cv.courses.find((c) => c.title === t))
   .filter((c): c is (typeof cv.courses)[number] => !!c);
@@ -65,7 +65,7 @@ const otherCourses = cv.courses.filter((c) => !featuredTitles.includes(c.title))
   description="Courses taught by Prof. Tao Gao at North Carolina State University, Department of Chemical and Biomolecular Engineering."
 >
   <section class="container-page py-12">
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
       {featured.map((c) => {
         const m = resolved(materials[c.title] ?? {});
         const hasAnyDownload = m.syllabus || (m.lectures && m.lectures.length > 0);
@@ -77,7 +77,8 @@ const otherCourses = cv.courses.filter((c) => !featuredTitles.includes(c.title))
             <p class="font-mono text-xs text-ink-muted">{c.code}</p>
             <h2 class="font-serif text-2xl text-ink mt-1">{c.title}</h2>
             <p class="text-sm text-ink-soft mt-2">{c.terms}</p>
-            <p class="text-xs text-ink-muted mt-1">Enrollment {c.enrollment}</p>
+            {c.enrollment && <p class="text-xs text-ink-muted mt-1">Enrollment {c.enrollment}</p>}
+            {'note' in c && c.note && <p class="text-sm text-ink-soft mt-3">{c.note}</p>}
 
             {hasAnyDownload && (
               <div class="mt-4 flex flex-col gap-2 text-sm">
@@ -116,7 +117,7 @@ const otherCourses = cv.courses.filter((c) => !featuredTitles.includes(c.title))
             <li class="py-5">
               <p class="font-mono text-xs text-ink-muted">{c.code}</p>
               <p class="font-serif text-lg text-ink mt-1">{c.title}</p>
-              <p class="text-sm text-ink-soft mt-1">{c.terms} · Enrollment {c.enrollment}</p>
+              <p class="text-sm text-ink-soft mt-1">{c.terms}{c.enrollment ? ` · Enrollment ${c.enrollment}` : ''}</p>
             </li>
           ))}
         </ol>

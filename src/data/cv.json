@@ -194,6 +194,7 @@
     "American Chemical Society, Member (since 07/2019)"
   ],
   "courses": [
+    { "code": "CHE 205", "title": "Chemical Process Principles", "terms": "Fall 2026", "enrollment": "", "note": "The first core course of the chemical engineering curriculum, taken by sophomores. Introduces material and energy balances on chemical processes — the foundation for every course that follows in the major." },
     { "code": "EN CH 3603", "title": "Mass Transfer and Separation", "terms": "Spring 2023, 2024, 2025, 2026", "enrollment": ">240" },
     { "code": "EN CH 5308/6308", "title": "Battery Technology and Manufacturing", "terms": "Fall 2023, 2024, 2025", "enrollment": ">60" },
     { "code": "EN CH 5950/6960", "title": "Electrochemical Systems for Energy Storage", "terms": "Fall 2021, 2022", "enrollment": ">40" },

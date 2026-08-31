@@ -38,6 +38,7 @@ export const site = {
         { label: 'AI and Machine Learning', href: '/research/03-ai-powered-design/' },
       ],
     },
+    { label: 'Teaching', href: '/teaching/' },
     {
       label: 'People',
       href: '/people/',
