@@ -1,6 +1,6 @@
 {
   "$source": "Parsed from CV_Tao_GAO_Academia_2026_0306.docx — the canonical source of truth for PI information. Re-run scripts/parse-cv.mjs after updating the .docx.",
-  "asOf": "2026-03-06",
+  "asOf": "2026-08-30",
   "person": {
     "name": "Tao Gao",
     "title": "Associate Professor",
@@ -108,6 +108,7 @@
       { "year": 2022, "title": "Understanding Li deposition mechanism on graphite, silicon and copper for Li-ion and Li metal batteries", "venue": "ACS Spring Meeting", "location": "San Diego, CA", "date": "2022-03" }
     ],
     "contributed": [
+      { "year": 2026, "title": "Transition Metal Halide Complexation and Metal Deposition Reactivity in Aqueous Electrolytes", "venue": "ACS Northwest Regional Meeting (NORM 2026)", "location": "Boise, ID", "date": "2026-06-29" },
       { "year": 2025, "title": "Thermodynamics of Transition Metal Deposition in Concentrated Electrolytes: Experiment and Theory", "venue": "AIChE Meeting", "location": "Boston", "date": "2025-11-03" },
       { "year": 2025, "title": "High-Efficiency Low-Temperature Electrolytic Ironmaking in Acidic Environment Enabled by Novel Electrolyte Design", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-15" },
       { "year": 2025, "title": "Metal-Chloride Complexation and its Effect on the Thermodynamics and Transport of Aqueous Electrolytes", "venue": "ECS Fall Meeting", "location": "Chicago", "date": "2025-10-15" },
@@ -116,6 +117,7 @@
       { "year": 2023, "title": "Li deposition mechanism: a perspective by combining imaging with theoretical analysis", "venue": "MRS Spring Meeting", "location": "San Francisco", "date": "2023-04-12" }
     ],
     "seminars": [
+      { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy Storage and Processing", "venue": "Department of Chemistry, Korea Advanced Institute of Science and Technology (KAIST)", "location": "Daejeon, South Korea", "date": "2026-07-27" },
       { "year": 2026, "title": "Control Charge Transfer Reactions for Electrochemical Energy Storage and Separation", "venue": "Department of Chemical and Biomolecular Engineering, Case Western Reserve University", "location": "Cleveland, OH", "date": "2026-04-16" },
       { "year": 2026, "title": "Control Charge Transfer Reactions and Flow for Electrochemical Separation", "venue": "Department of Chemistry, University of Utah — Separation Seminar", "location": "Salt Lake City, UT", "date": "2026-04-03" },
       { "year": 2026, "title": "Understand and Control Charge Transfer Reactions for Electrochemical Energy and Manufacturing", "venue": "Department of Chemical Engineering, Brigham Young University", "location": "Provo, UT", "date": "2026-03-18" },
@@ -194,7 +196,7 @@
     "American Chemical Society, Member (since 07/2019)"
   ],
   "courses": [
-    { "code": "CHE 205", "title": "Chemical Process Principles", "terms": "Fall 2026", "enrollment": "", "note": "The first core course of the chemical engineering curriculum, taken by sophomores. Introduces material and energy balances on chemical processes — the foundation for every course that follows in the major." },
+    { "code": "CHE 205", "title": "Chemical Process Principles", "terms": "Fall 2026", "credits": "4 credit hours", "enrollment": "", "note": "The first core course of the chemical engineering curriculum, taken by sophomores. Engineering methods of treating material balances, stoichiometry, phase equilibrium calculations, thermophysics, thermochemistry and the first law of thermodynamics, with an introduction to equation-solving packages and spreadsheets for chemical engineering calculations." },
     { "code": "EN CH 3603", "title": "Mass Transfer and Separation", "terms": "Spring 2023, 2024, 2025, 2026", "enrollment": ">240" },
     { "code": "EN CH 5308/6308", "title": "Battery Technology and Manufacturing", "terms": "Fall 2023, 2024, 2025", "enrollment": ">60" },
     { "code": "EN CH 5950/6960", "title": "Electrochemical Systems for Energy Storage", "terms": "Fall 2021, 2022", "enrollment": ">40" },

@@ -76,7 +76,7 @@ const otherCourses = cv.courses.filter((c) => !featuredTitles.includes(c.title))
             )}
             <p class="font-mono text-xs text-ink-muted">{c.code}</p>
             <h2 class="font-serif text-2xl text-ink mt-1">{c.title}</h2>
-            <p class="text-sm text-ink-soft mt-2">{c.terms}</p>
+            <p class="text-sm text-ink-soft mt-2">{c.terms}{'credits' in c && c.credits ? ` · ${c.credits}` : ''}</p>
             {c.enrollment && <p class="text-xs text-ink-muted mt-1">Enrollment {c.enrollment}</p>}
             {'note' in c && c.note && <p class="text-sm text-ink-soft mt-3">{c.note}</p>}
 
